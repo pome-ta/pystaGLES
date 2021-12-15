@@ -1,3 +1,13 @@
+# 📝 2021/12/14
+
+## `EAGL` 設置
+
+EAGL のことを調べる
+
+
+[OpenGL ESを使用したiOS用3Dグラフィックス（2）]('https://secondflush2.blog.fc2.com/blog-entry-817.html)
+
+
 # 📝 2021/10/14
 
 とりま、`view.py` を写経ちう
