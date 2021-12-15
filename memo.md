@@ -8,6 +8,9 @@ EAGL のことを調べる
 [OpenGL ESを使用したiOS用3Dグラフィックス（2）]('https://secondflush2.blog.fc2.com/blog-entry-817.html)
 
 
+基本的に、全体的に進めた方がよさそう？
+
+
 # 📝 2021/10/14
 
 とりま、`view.py` を写経ちう
