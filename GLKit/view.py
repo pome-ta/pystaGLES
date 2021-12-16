@@ -1,5 +1,5 @@
 # coding: utf-8
-from objc_util import *
+from objc_util import ObjCClass, on_main_thread, create_objc_class
 import motion
 import ui
 
