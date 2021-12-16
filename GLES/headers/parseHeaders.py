@@ -3,6 +3,9 @@
 # For this function to work the current working
 # directory must be set to the same directory as all
 # the GLES header files
+
+
+# xxx: いらないかも
 import ast
 import os
 import re
@@ -19,7 +22,8 @@ def download_header_files(force_download=False):
   if not os.path.exists(os.path.join(os.getcwd(), headers[0])) or force_download:
     if VERBOSITY >= 0:
       print("Downloading headers...")
-    import urllib2
+    #import urllib2
+    import urllib.request, urllib.error
     for header in headers:
       if '2' in header:
         url = 'https://www.khronos.org/registry/gles/api/GLES2/%s'

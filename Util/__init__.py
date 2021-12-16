@@ -9,14 +9,14 @@ import ctypes
 from objc_util import *
 import math
 
-from GLES.gles1 import *
-from OpenGLES.GLES.gles2 import *
-from OpenGLES.GLES.gles3 import *
-from OpenGLES.GLES.headers.GLConstants import *
+#from GLES.gles1 import *
+#from OpenGLES.GLES.gles2 import *
+#from OpenGLES.GLES.gles3 import *
+#from OpenGLES.GLES.headers.GLConstants import *
 # import euclid
 
 from OpenGLES.GLKit.glkmath import vector3 as v3
-from OpenGLES.GLKit.glkmath import matrix4 as m4
+#from OpenGLES.GLKit.glkmath import matrix4 as m4
 
 __all__ = [
   "RenderCycle", "RenderObject", "LookObject", "Model", "Shader", "Physics"
