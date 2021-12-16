@@ -9,7 +9,7 @@ import ctypes
 from objc_util import *
 import math
 
-from OpenGLES.GLES.gles1 import *
+from GLES.gles1 import *
 from OpenGLES.GLES.gles2 import *
 from OpenGLES.GLES.gles3 import *
 from OpenGLES.GLES.headers.GLConstants import *
