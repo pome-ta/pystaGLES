@@ -50,4 +50,3 @@ __all__ = ['GLKMatrix2', 'GLKMatrix2Make', 'GLKMatrix2MakeWithArray']
 
 if __name__ == '__main__':
   print(GLKMatrix2())
-

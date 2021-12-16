@@ -102,4 +102,3 @@ if __name__ == '__main__':
     quaternion.GLKQuaternionMakeWithAngleAndAxis(40, 5, 8, 9))
   print(q)
   print(NSStringFromGLKQuaternion(q))
-

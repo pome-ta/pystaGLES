@@ -5,7 +5,8 @@ import vector3
 import matrix2
 import quaternion
 
-#from objc_util import *
+
+# from objc_util import *
 
 
 class m9(ctypes.Structure):
@@ -327,4 +328,3 @@ if __name__ == '__main__':
   print(m)
   print(GLKMatrix3GetColumn(m, 1))
   print(m2)
-

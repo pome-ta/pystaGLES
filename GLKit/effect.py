@@ -249,8 +249,8 @@ class GLKSkyboxEffect(object):
 if __name__ == "__main__":
     e = GLKBaseEffect()
     e.constantColor = GLKVector4(r=0.0, g=0.1, b=0.2, a=1)
-    print e
-    print e.constantColor
+      print(e)
+      print(e).constantColor
     print "REFLECTION MAP EFFECT"
     r = GLKReflectionMapEffect()
     print r

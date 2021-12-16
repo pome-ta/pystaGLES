@@ -251,4 +251,3 @@ if __name__ == '__main__':
   print(GLKVector2Minimum(v, GLKVector2MultiplyScalar(v, 35)))
   print(GLKVector2Normalize(GLKVector2AddScalar(v, 10)))
   print(GLKVector2AllGreaterThanScalar(v, 1.1))
-

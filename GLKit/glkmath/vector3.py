@@ -306,4 +306,3 @@ if __name__ == '__main__':
   print(GLKVector3AllGreaterThanScalar(v, 1.1))
   v1 = GLKVector3Make(5, 0, 0)
   print(GLKVector3Length(v1))
-

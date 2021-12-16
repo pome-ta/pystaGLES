@@ -94,7 +94,7 @@ class CannonJS(object):
                 func(*t['param'])
                 e = time.clock()
             except AttributeError as e:
-                print e
+                  print(e)
                 print url, t
             return False
     
@@ -159,7 +159,7 @@ class CannonJS(object):
                 rot = data['rot'][i]
                 self.object_rot(i, *rot)
         except Exception as e:
-            print e
+              print(e)
             
     def get_object_mat(self, oid):
         """
@@ -232,7 +232,7 @@ class CannonJS(object):
         """
         Very simple error logging if the webview failed to load something
         """
-        print error_code, error_msg
+          print(e)rror_code, error_msg
         
 
 _PhysicsWorld = None
@@ -275,4 +275,4 @@ if __name__ == '__main__':
         print c.get_object_mat(1)
         i += 1
         end = time.clock()
-    #     # print end - start
+    #     # print(e)nd - start

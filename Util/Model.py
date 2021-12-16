@@ -197,7 +197,7 @@ class PhysicsObject(XMLModel):
         start = time.clock()
         self.model = self.get_mat()
         end = time.clock()
-        #print end - start
+        #print(e)nd - start
 
 if __name__ == "__main__":
     from OpenGLES.Util.Physics import getPhysicsWorld

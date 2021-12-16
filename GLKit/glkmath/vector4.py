@@ -93,8 +93,8 @@ def GLKVector4Distance(vectorStart, vectorEnd):
   return math.sqrt(
     math.pow(vectorStart.x - vectorEnd.x,
              2) + math.pow(vectorStart.y - vectorEnd.y, 2) + math.pow(
-               vectorStart.z - vectorEnd.z, 2) + math.pow(
-                 vectorStart.w - vectorEnd.z, 2))
+      vectorStart.z - vectorEnd.z, 2) + math.pow(
+      vectorStart.w - vectorEnd.z, 2))
 
 
 def GLKVector4Negate(vector):
@@ -321,4 +321,3 @@ if __name__ == '__main__':
   print(GLKVector4Minimum(v, GLKVector4MultiplyScalar(v, 35)))
   print(GLKVector4Normalize(GLKVector4AddScalar(v, 10)))
   print(GLKVector4AllGreaterThanScalar(v, 1.1))
-

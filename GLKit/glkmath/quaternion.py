@@ -1,7 +1,7 @@
 # coding: utf-8
 import math
 import ctypes
-#from objc_util import *
+# from objc_util import *
 import vector3
 import vector4
 import matrix3
@@ -129,8 +129,8 @@ def GLKQuaternionConjugate(quaternion):
 
 def GLKQuaternionInvert(quaternion):
   scale = 1.0 / (
-    quaternion.q[0] * quaternion.q[0] + quaternion.q[1] * quaternion.q[1] +
-    quaternion.q[2] * quaternion.q[2] + quaternion.q[3] * quaternion.q[3])
+      quaternion.q[0] * quaternion.q[0] + quaternion.q[1] * quaternion.q[1] +
+      quaternion.q[2] * quaternion.q[2] + quaternion.q[3] * quaternion.q[3])
   return GLKQuaternionMakeWithArray([
     -quaternion.q[0] * scale, -quaternion.q[1] * scale,
     -quaternion.q[2] * scale, quaternion.q[3] * scale
@@ -183,4 +183,3 @@ if __name__ == '__main__':
   print(GLKQuaternionSubtract(GLKQuaternionAdd(q1, q2), q3))
   print(GLKQuaternionMultiply(q1, q3))
   print(GLKQuaternionLength(q2))
-

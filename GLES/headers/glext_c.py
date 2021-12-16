@@ -1,5 +1,6 @@
 # Generated Files. DO NOT EDIT
 # Generated on: 09/28/15 10:48:07
+# rewrite on: 2021/12/16
 import ctypes
 from objc_util import *
 from GLConstants import *
@@ -341,6 +342,7 @@ try:
     cfunc.argtypes = argtypes
     return cfunc(modeRGB, modeAlpha)
 
+
   # Check if the function actually exists
   f = c.glBlendEquationSeparateOES
   del f
@@ -368,6 +370,7 @@ try:
     cfunc.argtypes = argtypes
     return cfunc(srcRGB, dstRGB, srcAlpha, dstAlpha)
 
+
   # Check if the function actually exists
   f = c.glBlendFuncSeparateOES
   del f
@@ -387,6 +390,7 @@ try:
     cfunc.restype = restype
     cfunc.argtypes = argtypes
     return cfunc(mode)
+
 
   # Check if the function actually exists
   f = c.glBlendEquationOES
@@ -417,6 +421,7 @@ try:
     cfunc.argtypes = argtypes
     return cfunc(x, y, z, width, height)
 
+
   # Check if the function actually exists
   f = c.glDrawTexsOES
   del f
@@ -445,6 +450,7 @@ try:
     cfunc.restype = restype
     cfunc.argtypes = argtypes
     return cfunc(x, y, z, width, height)
+
 
   # Check if the function actually exists
   f = c.glDrawTexiOES
@@ -475,6 +481,7 @@ try:
     cfunc.argtypes = argtypes
     return cfunc(x, y, z, width, height)
 
+
   # Check if the function actually exists
   f = c.glDrawTexxOES
   del f
@@ -494,6 +501,7 @@ try:
     cfunc.restype = restype
     cfunc.argtypes = argtypes
     return cfunc(param0)
+
 
   # Check if the function actually exists
   f = c.glDrawTexsvOES
@@ -515,6 +523,7 @@ try:
     cfunc.argtypes = argtypes
     return cfunc(param0)
 
+
   # Check if the function actually exists
   f = c.glDrawTexivOES
   del f
@@ -534,6 +543,7 @@ try:
     cfunc.restype = restype
     cfunc.argtypes = argtypes
     return cfunc(param0)
+
 
   # Check if the function actually exists
   f = c.glDrawTexxvOES
@@ -564,6 +574,7 @@ try:
     cfunc.argtypes = argtypes
     return cfunc(x, y, z, width, height)
 
+
   # Check if the function actually exists
   f = c.glDrawTexfOES
   del f
@@ -583,6 +594,7 @@ try:
     cfunc.restype = restype
     cfunc.argtypes = argtypes
     return cfunc(param0)
+
 
   # Check if the function actually exists
   f = c.glDrawTexfvOES
@@ -607,6 +619,7 @@ try:
     cfunc.argtypes = argtypes
     return cfunc(target, image)
 
+
   # Check if the function actually exists
   f = c.glEGLImageTargetTexture2DOES
   del f
@@ -630,6 +643,7 @@ try:
     cfunc.argtypes = argtypes
     return cfunc(target, image)
 
+
   # Check if the function actually exists
   f = c.glEGLImageTargetRenderbufferStorageOES
   del f
@@ -649,6 +663,7 @@ try:
     cfunc.restype = restype
     cfunc.argtypes = argtypes
     return cfunc(func, ref)
+
 
   # Check if the function actually exists
   f = c.glAlphaFuncxOES
@@ -677,6 +692,7 @@ try:
     cfunc.argtypes = argtypes
     return cfunc(red, green, blue, alpha)
 
+
   # Check if the function actually exists
   f = c.glClearColorxOES
   del f
@@ -697,6 +713,7 @@ try:
     cfunc.argtypes = argtypes
     return cfunc(depth)
 
+
   # Check if the function actually exists
   f = c.glClearDepthxOES
   del f
@@ -716,6 +733,7 @@ try:
     cfunc.restype = restype
     cfunc.argtypes = argtypes
     return cfunc(plane, param0)
+
 
   # Check if the function actually exists
   f = c.glClipPlanexOES
@@ -744,6 +762,7 @@ try:
     cfunc.argtypes = argtypes
     return cfunc(red, green, blue, alpha)
 
+
   # Check if the function actually exists
   f = c.glColor4xOES
   del f
@@ -763,6 +782,7 @@ try:
     cfunc.restype = restype
     cfunc.argtypes = argtypes
     return cfunc(zNear, zFar)
+
 
   # Check if the function actually exists
   f = c.glDepthRangexOES
@@ -784,6 +804,7 @@ try:
     cfunc.argtypes = argtypes
     return cfunc(pname, param)
 
+
   # Check if the function actually exists
   f = c.glFogxOES
   del f
@@ -803,6 +824,7 @@ try:
     cfunc.restype = restype
     cfunc.argtypes = argtypes
     return cfunc(pname, param0)
+
 
   # Check if the function actually exists
   f = c.glFogxvOES
@@ -835,6 +857,7 @@ try:
     cfunc.argtypes = argtypes
     return cfunc(left, right, bottom, top, zNear, zFar)
 
+
   # Check if the function actually exists
   f = c.glFrustumxOES
   del f
@@ -855,6 +878,7 @@ try:
     cfunc.argtypes = argtypes
     return cfunc(pname, eqn)
 
+
   # Check if the function actually exists
   f = c.glGetClipPlanexOES
   del f
@@ -874,6 +898,7 @@ try:
     cfunc.restype = restype
     cfunc.argtypes = argtypes
     return cfunc(pname, param0)
+
 
   # Check if the function actually exists
   f = c.glGetFixedvOES
@@ -900,6 +925,7 @@ try:
     cfunc.argtypes = argtypes
     return cfunc(light, pname, param0)
 
+
   # Check if the function actually exists
   f = c.glGetLightxvOES
   del f
@@ -924,6 +950,7 @@ try:
     cfunc.restype = restype
     cfunc.argtypes = argtypes
     return cfunc(face, pname, param0)
+
 
   # Check if the function actually exists
   f = c.glGetMaterialxvOES
@@ -950,6 +977,7 @@ try:
     cfunc.argtypes = argtypes
     return cfunc(env, pname, param0)
 
+
   # Check if the function actually exists
   f = c.glGetTexEnvxvOES
   del f
@@ -975,6 +1003,7 @@ try:
     cfunc.argtypes = argtypes
     return cfunc(target, pname, param0)
 
+
   # Check if the function actually exists
   f = c.glGetTexParameterxvOES
   del f
@@ -995,6 +1024,7 @@ try:
     cfunc.argtypes = argtypes
     return cfunc(pname, param)
 
+
   # Check if the function actually exists
   f = c.glLightModelxOES
   del f
@@ -1014,6 +1044,7 @@ try:
     cfunc.restype = restype
     cfunc.argtypes = argtypes
     return cfunc(pname, param0)
+
 
   # Check if the function actually exists
   f = c.glLightModelxvOES
@@ -1040,6 +1071,7 @@ try:
     cfunc.argtypes = argtypes
     return cfunc(light, pname, param)
 
+
   # Check if the function actually exists
   f = c.glLightxOES
   del f
@@ -1065,6 +1097,7 @@ try:
     cfunc.argtypes = argtypes
     return cfunc(light, pname, param0)
 
+
   # Check if the function actually exists
   f = c.glLightxvOES
   del f
@@ -1085,6 +1118,7 @@ try:
     cfunc.argtypes = argtypes
     return cfunc(width)
 
+
   # Check if the function actually exists
   f = c.glLineWidthxOES
   del f
@@ -1104,6 +1138,7 @@ try:
     cfunc.restype = restype
     cfunc.argtypes = argtypes
     return cfunc(param0)
+
 
   # Check if the function actually exists
   f = c.glLoadMatrixxOES
@@ -1130,6 +1165,7 @@ try:
     cfunc.argtypes = argtypes
     return cfunc(face, pname, param)
 
+
   # Check if the function actually exists
   f = c.glMaterialxOES
   del f
@@ -1155,6 +1191,7 @@ try:
     cfunc.argtypes = argtypes
     return cfunc(face, pname, param0)
 
+
   # Check if the function actually exists
   f = c.glMaterialxvOES
   del f
@@ -1174,6 +1211,7 @@ try:
     cfunc.restype = restype
     cfunc.argtypes = argtypes
     return cfunc(param0)
+
 
   # Check if the function actually exists
   f = c.glMultMatrixxOES
@@ -1204,6 +1242,7 @@ try:
     cfunc.argtypes = argtypes
     return cfunc(target, s, t, r, q)
 
+
   # Check if the function actually exists
   f = c.glMultiTexCoord4xOES
   del f
@@ -1223,6 +1262,7 @@ try:
     cfunc.restype = restype
     cfunc.argtypes = argtypes
     return cfunc(nx, ny, nz)
+
 
   # Check if the function actually exists
   f = c.glNormal3xOES
@@ -1255,6 +1295,7 @@ try:
     cfunc.argtypes = argtypes
     return cfunc(left, right, bottom, top, zNear, zFar)
 
+
   # Check if the function actually exists
   f = c.glOrthoxOES
   del f
@@ -1274,6 +1315,7 @@ try:
     cfunc.restype = restype
     cfunc.argtypes = argtypes
     return cfunc(pname, param)
+
 
   # Check if the function actually exists
   f = c.glPointParameterxOES
@@ -1295,6 +1337,7 @@ try:
     cfunc.argtypes = argtypes
     return cfunc(pname, param0)
 
+
   # Check if the function actually exists
   f = c.glPointParameterxvOES
   del f
@@ -1315,6 +1358,7 @@ try:
     cfunc.argtypes = argtypes
     return cfunc(size)
 
+
   # Check if the function actually exists
   f = c.glPointSizexOES
   del f
@@ -1334,6 +1378,7 @@ try:
     cfunc.restype = restype
     cfunc.argtypes = argtypes
     return cfunc(factor, units)
+
 
   # Check if the function actually exists
   f = c.glPolygonOffsetxOES
@@ -1362,6 +1407,7 @@ try:
     cfunc.argtypes = argtypes
     return cfunc(angle, x, y, z)
 
+
   # Check if the function actually exists
   f = c.glRotatexOES
   del f
@@ -1383,6 +1429,7 @@ try:
     cfunc.argtypes = argtypes
     return cfunc(value, invert)
 
+
   # Check if the function actually exists
   f = c.glSampleCoveragexOES
   del f
@@ -1402,6 +1449,7 @@ try:
     cfunc.restype = restype
     cfunc.argtypes = argtypes
     return cfunc(x, y, z)
+
 
   # Check if the function actually exists
   f = c.glScalexOES
@@ -1428,6 +1476,7 @@ try:
     cfunc.argtypes = argtypes
     return cfunc(target, pname, param)
 
+
   # Check if the function actually exists
   f = c.glTexEnvxOES
   del f
@@ -1452,6 +1501,7 @@ try:
     cfunc.restype = restype
     cfunc.argtypes = argtypes
     return cfunc(target, pname, param0)
+
 
   # Check if the function actually exists
   f = c.glTexEnvxvOES
@@ -1478,6 +1528,7 @@ try:
     cfunc.argtypes = argtypes
     return cfunc(target, pname, param)
 
+
   # Check if the function actually exists
   f = c.glTexParameterxOES
   del f
@@ -1503,6 +1554,7 @@ try:
     cfunc.argtypes = argtypes
     return cfunc(target, pname, param0)
 
+
   # Check if the function actually exists
   f = c.glTexParameterxvOES
   del f
@@ -1523,6 +1575,7 @@ try:
     cfunc.argtypes = argtypes
     return cfunc(x, y, z)
 
+
   # Check if the function actually exists
   f = c.glTranslatexOES
   del f
@@ -1542,6 +1595,7 @@ try:
     cfunc.restype = restype
     cfunc.argtypes = argtypes
     return cfunc(renderbuffer)
+
 
   # Check if the function actually exists
   f = c.glIsRenderbufferOES
@@ -1566,6 +1620,7 @@ try:
     cfunc.argtypes = argtypes
     return cfunc(target, renderbuffer)
 
+
   # Check if the function actually exists
   f = c.glBindRenderbufferOES
   del f
@@ -1589,6 +1644,7 @@ try:
     cfunc.argtypes = argtypes
     return cfunc(n, renderbuffers)
 
+
   # Check if the function actually exists
   f = c.glDeleteRenderbuffersOES
   del f
@@ -1611,6 +1667,7 @@ try:
     cfunc.restype = restype
     cfunc.argtypes = argtypes
     return cfunc(n, renderbuffers)
+
 
   # Check if the function actually exists
   f = c.glGenRenderbuffersOES
@@ -1639,6 +1696,7 @@ try:
     cfunc.argtypes = argtypes
     return cfunc(target, internalformat, width, height)
 
+
   # Check if the function actually exists
   f = c.glRenderbufferStorageOES
   del f
@@ -1664,6 +1722,7 @@ try:
     cfunc.argtypes = argtypes
     return cfunc(target, pname, params)
 
+
   # Check if the function actually exists
   f = c.glGetRenderbufferParameterivOES
   del f
@@ -1683,6 +1742,7 @@ try:
     cfunc.restype = restype
     cfunc.argtypes = argtypes
     return cfunc(framebuffer)
+
 
   # Check if the function actually exists
   f = c.glIsFramebufferOES
@@ -1707,6 +1767,7 @@ try:
     cfunc.argtypes = argtypes
     return cfunc(target, framebuffer)
 
+
   # Check if the function actually exists
   f = c.glBindFramebufferOES
   del f
@@ -1729,6 +1790,7 @@ try:
     cfunc.restype = restype
     cfunc.argtypes = argtypes
     return cfunc(n, framebuffers)
+
 
   # Check if the function actually exists
   f = c.glDeleteFramebuffersOES
@@ -1753,6 +1815,7 @@ try:
     cfunc.argtypes = argtypes
     return cfunc(n, framebuffers)
 
+
   # Check if the function actually exists
   f = c.glGenFramebuffersOES
   del f
@@ -1772,6 +1835,7 @@ try:
     cfunc.restype = restype
     cfunc.argtypes = argtypes
     return cfunc(target)
+
 
   # Check if the function actually exists
   f = c.glCheckFramebufferStatusOES
@@ -1799,6 +1863,7 @@ try:
     cfunc.restype = restype
     cfunc.argtypes = argtypes
     return cfunc(target, attachment, renderbuffertarget, renderbuffer)
+
 
   # Check if the function actually exists
   f = c.glFramebufferRenderbufferOES
@@ -1829,6 +1894,7 @@ try:
     cfunc.argtypes = argtypes
     return cfunc(target, attachment, textarget, texture, level)
 
+
   # Check if the function actually exists
   f = c.glFramebufferTexture2DOES
   del f
@@ -1856,6 +1922,7 @@ try:
     cfunc.argtypes = argtypes
     return cfunc(target, attachment, pname, params)
 
+
   # Check if the function actually exists
   f = c.glGetFramebufferAttachmentParameterivOES
   del f
@@ -1876,6 +1943,7 @@ try:
     cfunc.argtypes = argtypes
     return cfunc(target)
 
+
   # Check if the function actually exists
   f = c.glGenerateMipmapOES
   del f
@@ -1895,6 +1963,7 @@ try:
     cfunc.restype = restype
     cfunc.argtypes = argtypes
     return cfunc(target)
+
 
   # Check if the function actually exists
   f = c.glUnmapBufferOES
@@ -1921,6 +1990,7 @@ try:
     cfunc.argtypes = argtypes
     return cfunc(target, pname, params)
 
+
   # Check if the function actually exists
   f = c.glGetBufferPointervOES
   del f
@@ -1942,6 +2012,7 @@ try:
     cfunc.argtypes = argtypes
     return cfunc(matrixpaletteindex)
 
+
   # Check if the function actually exists
   f = c.glCurrentPaletteMatrixOES
   del f
@@ -1961,6 +2032,7 @@ try:
     cfunc.restype = restype
     cfunc.argtypes = argtypes
     return cfunc(void)
+
 
   # Check if the function actually exists
   f = c.glLoadPaletteFromModelViewMatrixOES
@@ -1989,6 +2061,7 @@ try:
     cfunc.argtypes = argtypes
     return cfunc(size, type, stride, param0)
 
+
   # Check if the function actually exists
   f = c.glMatrixIndexPointerOES
   del f
@@ -2016,6 +2089,7 @@ try:
     cfunc.argtypes = argtypes
     return cfunc(size, type, stride, param0)
 
+
   # Check if the function actually exists
   f = c.glWeightPointerOES
   del f
@@ -2039,6 +2113,7 @@ try:
     cfunc.argtypes = argtypes
     return cfunc(mantissa, exponent)
 
+
   # Check if the function actually exists
   f = c.glQueryMatrixxOES
   del f
@@ -2058,6 +2133,7 @@ try:
     cfunc.restype = restype
     cfunc.argtypes = argtypes
     return cfunc(zNear, zFar)
+
 
   # Check if the function actually exists
   f = c.glDepthRangefOES
@@ -2090,6 +2166,7 @@ try:
     cfunc.argtypes = argtypes
     return cfunc(left, right, bottom, top, zNear, zFar)
 
+
   # Check if the function actually exists
   f = c.glFrustumfOES
   del f
@@ -2121,6 +2198,7 @@ try:
     cfunc.argtypes = argtypes
     return cfunc(left, right, bottom, top, zNear, zFar)
 
+
   # Check if the function actually exists
   f = c.glOrthofOES
   del f
@@ -2140,6 +2218,7 @@ try:
     cfunc.restype = restype
     cfunc.argtypes = argtypes
     return cfunc(plane, param0)
+
 
   # Check if the function actually exists
   f = c.glClipPlanefOES
@@ -2161,6 +2240,7 @@ try:
     cfunc.argtypes = argtypes
     return cfunc(pname, eqn)
 
+
   # Check if the function actually exists
   f = c.glGetClipPlanefOES
   del f
@@ -2180,6 +2260,7 @@ try:
     cfunc.restype = restype
     cfunc.argtypes = argtypes
     return cfunc(depth)
+
 
   # Check if the function actually exists
   f = c.glClearDepthfOES
@@ -2206,6 +2287,7 @@ try:
     cfunc.argtypes = argtypes
     return cfunc(coord, pname, param)
 
+
   # Check if the function actually exists
   f = c.glTexGenfOES
   del f
@@ -2230,6 +2312,7 @@ try:
     cfunc.restype = restype
     cfunc.argtypes = argtypes
     return cfunc(coord, pname, param0)
+
 
   # Check if the function actually exists
   f = c.glTexGenfvOES
@@ -2256,6 +2339,7 @@ try:
     cfunc.argtypes = argtypes
     return cfunc(coord, pname, param)
 
+
   # Check if the function actually exists
   f = c.glTexGeniOES
   del f
@@ -2280,6 +2364,7 @@ try:
     cfunc.restype = restype
     cfunc.argtypes = argtypes
     return cfunc(coord, pname, param0)
+
 
   # Check if the function actually exists
   f = c.glTexGenivOES
@@ -2306,6 +2391,7 @@ try:
     cfunc.argtypes = argtypes
     return cfunc(coord, pname, param)
 
+
   # Check if the function actually exists
   f = c.glTexGenxOES
   del f
@@ -2330,6 +2416,7 @@ try:
     cfunc.restype = restype
     cfunc.argtypes = argtypes
     return cfunc(coord, pname, param0)
+
 
   # Check if the function actually exists
   f = c.glTexGenxvOES
@@ -2356,6 +2443,7 @@ try:
     cfunc.argtypes = argtypes
     return cfunc(coord, pname, param0)
 
+
   # Check if the function actually exists
   f = c.glGetTexGenfvOES
   del f
@@ -2380,6 +2468,7 @@ try:
     cfunc.restype = restype
     cfunc.argtypes = argtypes
     return cfunc(coord, pname, param0)
+
 
   # Check if the function actually exists
   f = c.glGetTexGenivOES
@@ -2406,6 +2495,7 @@ try:
     cfunc.argtypes = argtypes
     return cfunc(coord, pname, param0)
 
+
   # Check if the function actually exists
   f = c.glGetTexGenxvOES
   del f
@@ -2425,6 +2515,7 @@ try:
     cfunc.restype = restype
     cfunc.argtypes = argtypes
     return cfunc(array)
+
 
   # Check if the function actually exists
   f = c.glBindVertexArrayOES
@@ -2446,6 +2537,7 @@ try:
     cfunc.argtypes = argtypes
     return cfunc(n, param0)
 
+
   # Check if the function actually exists
   f = c.glDeleteVertexArraysOES
   del f
@@ -2466,6 +2558,7 @@ try:
     cfunc.argtypes = argtypes
     return cfunc(n, param0)
 
+
   # Check if the function actually exists
   f = c.glGenVertexArraysOES
   del f
@@ -2485,6 +2578,7 @@ try:
     cfunc.restype = restype
     cfunc.argtypes = argtypes
     return cfunc(array)
+
 
   # Check if the function actually exists
   f = c.glIsVertexArrayOES
@@ -2517,6 +2611,7 @@ try:
     return cfunc(destinationTexture, sourceTexture, sourceBaseLevel,
                  sourceLevelCount)
 
+
   # Check if the function actually exists
   f = c.glCopyTextureLevelsAPPLE
   del f
@@ -2546,6 +2641,7 @@ try:
     cfunc.argtypes = argtypes
     return cfunc(param0, param1, param2, param3, param4)
 
+
   # Check if the function actually exists
   f = c.glRenderbufferStorageMultisampleAPPLE
   del f
@@ -2566,6 +2662,7 @@ try:
     cfunc.argtypes = argtypes
     return cfunc(void)
 
+
   # Check if the function actually exists
   f = c.glResolveMultisampleFramebufferAPPLE
   del f
@@ -2585,6 +2682,7 @@ try:
     cfunc.restype = restype
     cfunc.argtypes = argtypes
     return cfunc(pname, param0)
+
 
   # Check if the function actually exists
   f = c.glGetInteger64vAPPLE
@@ -2611,6 +2709,7 @@ try:
     cfunc.argtypes = argtypes
     return cfunc(target, numAttachments, param0)
 
+
   # Check if the function actually exists
   f = c.glDiscardFramebufferEXT
   del f
@@ -2635,6 +2734,7 @@ try:
     cfunc.restype = restype
     cfunc.argtypes = argtypes
     return cfunc(target, offset, length)
+
 
   # Check if the function actually exists
   f = c.glFlushMappedBufferRangeEXT
@@ -2664,6 +2764,7 @@ try:
     cfunc.restype = restype
     cfunc.argtypes = argtypes
     return cfunc(param0, param1, param2, param3, param4)
+
 
   # Check if the function actually exists
   f = c.glRenderbufferStorageMultisampleEXT
@@ -2696,6 +2797,7 @@ try:
     cfunc.argtypes = argtypes
     return cfunc(param0, param1, param2, param3, param4, param5)
 
+
   # Check if the function actually exists
   f = c.glFramebufferTexture2DMultisampleEXT
   del f
@@ -2722,6 +2824,7 @@ try:
     cfunc.restype = restype
     cfunc.argtypes = argtypes
     return cfunc(param0, param1, param2, param3)
+
 
   # Check if the function actually exists
   f = c.glMultiDrawArraysEXT
@@ -2752,6 +2855,7 @@ try:
     cfunc.argtypes = argtypes
     return cfunc(param0, param1, param2, param3, param4)
 
+
   # Check if the function actually exists
   f = c.glMultiDrawElementsEXT
   del f
@@ -2771,6 +2875,7 @@ try:
     cfunc.restype = restype
     cfunc.argtypes = argtypes
     return cfunc(void)
+
 
   # Check if the function actually exists
   f = c.glGetGraphicsResetStatusEXT
@@ -2809,6 +2914,7 @@ try:
     cfunc.argtypes = argtypes
     return cfunc(x, y, width, height, format, type, bufSize, voiddata)
 
+
   # Check if the function actually exists
   f = c.glReadnPixelsEXT
   del f
@@ -2835,6 +2941,7 @@ try:
     cfunc.restype = restype
     cfunc.argtypes = argtypes
     return cfunc(program, location, bufSize, floatparams)
+
 
   # Check if the function actually exists
   f = c.glGetnUniformfvEXT
@@ -2863,6 +2970,7 @@ try:
     cfunc.argtypes = argtypes
     return cfunc(program, location, bufSize, param0)
 
+
   # Check if the function actually exists
   f = c.glGetnUniformivEXT
   del f
@@ -2889,6 +2997,7 @@ try:
     cfunc.restype = restype
     cfunc.argtypes = argtypes
     return cfunc(target, levels, internalformat, width)
+
 
   # Check if the function actually exists
   f = c.glTexStorage1DEXT
@@ -2918,6 +3027,7 @@ try:
     cfunc.restype = restype
     cfunc.argtypes = argtypes
     return cfunc(target, levels, internalformat, width, height)
+
 
   # Check if the function actually exists
   f = c.glTexStorage2DEXT
@@ -2952,6 +3062,7 @@ try:
     cfunc.argtypes = argtypes
     return cfunc(target, levels, internalformat, width, height, depth)
 
+
   # Check if the function actually exists
   f = c.glTexStorage3DEXT
   del f
@@ -2980,6 +3091,7 @@ try:
     cfunc.restype = restype
     cfunc.argtypes = argtypes
     return cfunc(texture, target, levels, internalformat, width)
+
 
   # Check if the function actually exists
   f = c.glTextureStorage1DEXT
@@ -3013,6 +3125,7 @@ try:
     cfunc.restype = restype
     cfunc.argtypes = argtypes
     return cfunc(texture, target, levels, internalformat, width, height)
+
 
   # Check if the function actually exists
   f = c.glTextureStorage2DEXT
@@ -3050,6 +3163,7 @@ try:
     cfunc.argtypes = argtypes
     return cfunc(texture, target, levels, internalformat, width, height, depth)
 
+
   # Check if the function actually exists
   f = c.glTextureStorage3DEXT
   del f
@@ -3070,6 +3184,7 @@ try:
     cfunc.argtypes = argtypes
     return cfunc(param0, param1)
 
+
   # Check if the function actually exists
   f = c.glClipPlanefIMG
   del f
@@ -3089,6 +3204,7 @@ try:
     cfunc.restype = restype
     cfunc.argtypes = argtypes
     return cfunc(param0, param1)
+
 
   # Check if the function actually exists
   f = c.glClipPlanexIMG
@@ -3118,6 +3234,7 @@ try:
     cfunc.restype = restype
     cfunc.argtypes = argtypes
     return cfunc(param0, param1, param2, param3, param4)
+
 
   # Check if the function actually exists
   f = c.glRenderbufferStorageMultisampleIMG
@@ -3150,6 +3267,7 @@ try:
     cfunc.argtypes = argtypes
     return cfunc(param0, param1, param2, param3, param4, param5)
 
+
   # Check if the function actually exists
   f = c.glFramebufferTexture2DMultisampleIMG
   del f
@@ -3169,6 +3287,7 @@ try:
     cfunc.restype = restype
     cfunc.argtypes = argtypes
     return cfunc(param0, param1)
+
 
   # Check if the function actually exists
   f = c.glDeleteFencesNV
@@ -3190,6 +3309,7 @@ try:
     cfunc.argtypes = argtypes
     return cfunc(param0, param1)
 
+
   # Check if the function actually exists
   f = c.glGenFencesNV
   del f
@@ -3210,6 +3330,7 @@ try:
     cfunc.argtypes = argtypes
     return cfunc(param0)
 
+
   # Check if the function actually exists
   f = c.glIsFenceNV
   del f
@@ -3229,6 +3350,7 @@ try:
     cfunc.restype = restype
     cfunc.argtypes = argtypes
     return cfunc(param0)
+
 
   # Check if the function actually exists
   f = c.glTestFenceNV
@@ -3255,6 +3377,7 @@ try:
     cfunc.argtypes = argtypes
     return cfunc(param0, param1, param2)
 
+
   # Check if the function actually exists
   f = c.glGetFenceivNV
   del f
@@ -3275,6 +3398,7 @@ try:
     cfunc.argtypes = argtypes
     return cfunc(param0)
 
+
   # Check if the function actually exists
   f = c.glFinishFenceNV
   del f
@@ -3294,6 +3418,7 @@ try:
     cfunc.restype = restype
     cfunc.argtypes = argtypes
     return cfunc(param0, param1)
+
 
   # Check if the function actually exists
   f = c.glSetFenceNV
@@ -3319,6 +3444,7 @@ try:
     cfunc.restype = restype
     cfunc.argtypes = argtypes
     return cfunc(param0, size, param1)
+
 
   # Check if the function actually exists
   f = c.glGetDriverControlsQCOM
@@ -3347,6 +3473,7 @@ try:
     cfunc.argtypes = argtypes
     return cfunc(driverControl, bufSize, param0, param1)
 
+
   # Check if the function actually exists
   f = c.glGetDriverControlStringQCOM
   del f
@@ -3367,6 +3494,7 @@ try:
     cfunc.argtypes = argtypes
     return cfunc(driverControl)
 
+
   # Check if the function actually exists
   f = c.glEnableDriverControlQCOM
   del f
@@ -3386,6 +3514,7 @@ try:
     cfunc.restype = restype
     cfunc.argtypes = argtypes
     return cfunc(driverControl)
+
 
   # Check if the function actually exists
   f = c.glDisableDriverControlQCOM
@@ -3412,6 +3541,7 @@ try:
     cfunc.argtypes = argtypes
     return cfunc(param0, maxTextures, param1)
 
+
   # Check if the function actually exists
   f = c.glExtGetTexturesQCOM
   del f
@@ -3436,6 +3566,7 @@ try:
     cfunc.restype = restype
     cfunc.argtypes = argtypes
     return cfunc(param0, maxBuffers, param1)
+
 
   # Check if the function actually exists
   f = c.glExtGetBuffersQCOM
@@ -3462,6 +3593,7 @@ try:
     cfunc.argtypes = argtypes
     return cfunc(param0, maxRenderbuffers, param1)
 
+
   # Check if the function actually exists
   f = c.glExtGetRenderbuffersQCOM
   del f
@@ -3486,6 +3618,7 @@ try:
     cfunc.restype = restype
     cfunc.argtypes = argtypes
     return cfunc(param0, maxFramebuffers, param1)
+
 
   # Check if the function actually exists
   f = c.glExtGetFramebuffersQCOM
@@ -3516,6 +3649,7 @@ try:
     cfunc.argtypes = argtypes
     return cfunc(texture, face, level, pname, param0)
 
+
   # Check if the function actually exists
   f = c.glExtGetTexLevelParameterivQCOM
   del f
@@ -3540,6 +3674,7 @@ try:
     cfunc.restype = restype
     cfunc.argtypes = argtypes
     return cfunc(target, pname, param)
+
 
   # Check if the function actually exists
   f = c.glExtTexObjectStateOverrideiQCOM
@@ -3586,6 +3721,7 @@ try:
     return cfunc(target, level, xoffset, yoffset, zoffset, width, height,
                  depth, format, type, param0)
 
+
   # Check if the function actually exists
   f = c.glExtGetTexSubImageQCOM
   del f
@@ -3608,6 +3744,7 @@ try:
     cfunc.restype = restype
     cfunc.argtypes = argtypes
     return cfunc(target, param0)
+
 
   # Check if the function actually exists
   f = c.glExtGetBufferPointervQCOM
@@ -3634,6 +3771,7 @@ try:
     cfunc.argtypes = argtypes
     return cfunc(param0, maxShaders, param1)
 
+
   # Check if the function actually exists
   f = c.glExtGetShadersQCOM
   del f
@@ -3659,6 +3797,7 @@ try:
     cfunc.argtypes = argtypes
     return cfunc(param0, maxPrograms, param1)
 
+
   # Check if the function actually exists
   f = c.glExtGetProgramsQCOM
   del f
@@ -3678,6 +3817,7 @@ try:
     cfunc.restype = restype
     cfunc.argtypes = argtypes
     return cfunc(program)
+
 
   # Check if the function actually exists
   f = c.glExtIsProgramBinaryQCOM
@@ -3705,6 +3845,7 @@ try:
     cfunc.restype = restype
     cfunc.argtypes = argtypes
     return cfunc(program, shadertype, param0, param1)
+
 
   # Check if the function actually exists
   f = c.glExtGetProgramBinarySourceQCOM
@@ -3735,6 +3876,7 @@ try:
     cfunc.argtypes = argtypes
     return cfunc(x, y, width, height, preserveMask)
 
+
   # Check if the function actually exists
   f = c.glStartTilingQCOM
   del f
@@ -3755,6 +3897,7 @@ try:
     cfunc.argtypes = argtypes
     return cfunc(preserveMask)
 
+
   # Check if the function actually exists
   f = c.glEndTilingQCOM
   del f
@@ -3765,9 +3908,8 @@ except AttributeError as e:
     print('could not load the function')
     print(e)
 
-print(
-  'Loaded %i functions and failed to load %i functions of %i functions in the header glext.h'
-  % (loaded[0], loaded[1], sum(loaded)))
+print('Loaded %i functions and failed to load %i functions of %i functions in the header glext.h' % (
+loaded[0], loaded[1], sum(loaded)))
 
 __all__ = [
   'glBlendEquationSeparateOES', 'glBlendFuncSeparateOES', 'glBlendEquationOES',
@@ -3968,4 +4110,3 @@ __all__ = [
   'GLsizeiptr', 'GLclampx', 'void', 'GLvoid', 'GLsync', 'GLeglImageOES',
   'GLDEBUGPROCKHR', 'GLuint64'
 ]
-

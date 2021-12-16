@@ -279,8 +279,8 @@ def GLKMatrix4MakeLookAt(eyeX, eyeY, eyeZ, centerX, centerY, centerZ, upX, upY,
     u.v[0], v.v[0], n.v[0], 0.0, u.v[1], v.v[1], n.v[1], 0.0, u.v[2],
     v.v[2], n.v[2], 0.0, vector3.GLKVector3DotProduct(
       vector3.GLKVector3Negate(u), ev), vector3.GLKVector3DotProduct(
-        vector3.GLKVector3Negate(v), ev), vector3.GLKVector3DotProduct(
-          vector3.GLKVector3Negate(n), ev), 1.0
+      vector3.GLKVector3Negate(v), ev), vector3.GLKVector3DotProduct(
+      vector3.GLKVector3Negate(n), ev), 1.0
   ]
 
   return GLKMatrix4MakeWithArray(array)
@@ -341,40 +341,56 @@ def GLKMatrix4Transpose(matrix):
 def GLKMatrix4Multiply(matrixLeft, matrixRight):
   m = GLKMatrix4()
   m.m[
-    0] = matrixLeft.m[0] * matrixRight.m[0] + matrixLeft.m[4] * matrixRight.m[1] + matrixLeft.m[8] * matrixRight.m[2] + matrixLeft.m[12] * matrixRight.m[3]
+    0] = matrixLeft.m[0] * matrixRight.m[0] + matrixLeft.m[4] * matrixRight.m[1] + matrixLeft.m[8] * matrixRight.m[2] + \
+         matrixLeft.m[12] * matrixRight.m[3]
   m.m[
-    4] = matrixLeft.m[0] * matrixRight.m[4] + matrixLeft.m[4] * matrixRight.m[5] + matrixLeft.m[8] * matrixRight.m[6] + matrixLeft.m[12] * matrixRight.m[7]
+    4] = matrixLeft.m[0] * matrixRight.m[4] + matrixLeft.m[4] * matrixRight.m[5] + matrixLeft.m[8] * matrixRight.m[6] + \
+         matrixLeft.m[12] * matrixRight.m[7]
   m.m[
-    8] = matrixLeft.m[0] * matrixRight.m[8] + matrixLeft.m[4] * matrixRight.m[9] + matrixLeft.m[8] * matrixRight.m[10] + matrixLeft.m[12] * matrixRight.m[11]
+    8] = matrixLeft.m[0] * matrixRight.m[8] + matrixLeft.m[4] * matrixRight.m[9] + matrixLeft.m[8] * matrixRight.m[10] + \
+         matrixLeft.m[12] * matrixRight.m[11]
   m.m[
-    12] = matrixLeft.m[0] * matrixRight.m[12] + matrixLeft.m[4] * matrixRight.m[13] + matrixLeft.m[8] * matrixRight.m[14] + matrixLeft.m[12] * matrixRight.m[15]
+    12] = matrixLeft.m[0] * matrixRight.m[12] + matrixLeft.m[4] * matrixRight.m[13] + matrixLeft.m[8] * matrixRight.m[
+    14] + matrixLeft.m[12] * matrixRight.m[15]
 
   m.m[
-    1] = matrixLeft.m[1] * matrixRight.m[0] + matrixLeft.m[5] * matrixRight.m[1] + matrixLeft.m[9] * matrixRight.m[2] + matrixLeft.m[13] * matrixRight.m[3]
+    1] = matrixLeft.m[1] * matrixRight.m[0] + matrixLeft.m[5] * matrixRight.m[1] + matrixLeft.m[9] * matrixRight.m[2] + \
+         matrixLeft.m[13] * matrixRight.m[3]
   m.m[
-    5] = matrixLeft.m[1] * matrixRight.m[4] + matrixLeft.m[5] * matrixRight.m[5] + matrixLeft.m[9] * matrixRight.m[6] + matrixLeft.m[13] * matrixRight.m[7]
+    5] = matrixLeft.m[1] * matrixRight.m[4] + matrixLeft.m[5] * matrixRight.m[5] + matrixLeft.m[9] * matrixRight.m[6] + \
+         matrixLeft.m[13] * matrixRight.m[7]
   m.m[
-    9] = matrixLeft.m[1] * matrixRight.m[8] + matrixLeft.m[5] * matrixRight.m[9] + matrixLeft.m[9] * matrixRight.m[10] + matrixLeft.m[13] * matrixRight.m[11]
+    9] = matrixLeft.m[1] * matrixRight.m[8] + matrixLeft.m[5] * matrixRight.m[9] + matrixLeft.m[9] * matrixRight.m[10] + \
+         matrixLeft.m[13] * matrixRight.m[11]
   m.m[
-    13] = matrixLeft.m[1] * matrixRight.m[12] + matrixLeft.m[5] * matrixRight.m[13] + matrixLeft.m[9] * matrixRight.m[14] + matrixLeft.m[13] * matrixRight.m[15]
+    13] = matrixLeft.m[1] * matrixRight.m[12] + matrixLeft.m[5] * matrixRight.m[13] + matrixLeft.m[9] * matrixRight.m[
+    14] + matrixLeft.m[13] * matrixRight.m[15]
 
   m.m[
-    2] = matrixLeft.m[2] * matrixRight.m[0] + matrixLeft.m[6] * matrixRight.m[1] + matrixLeft.m[10] * matrixRight.m[2] + matrixLeft.m[14] * matrixRight.m[3]
+    2] = matrixLeft.m[2] * matrixRight.m[0] + matrixLeft.m[6] * matrixRight.m[1] + matrixLeft.m[10] * matrixRight.m[2] + \
+         matrixLeft.m[14] * matrixRight.m[3]
   m.m[
-    6] = matrixLeft.m[2] * matrixRight.m[4] + matrixLeft.m[6] * matrixRight.m[5] + matrixLeft.m[10] * matrixRight.m[6] + matrixLeft.m[14] * matrixRight.m[7]
+    6] = matrixLeft.m[2] * matrixRight.m[4] + matrixLeft.m[6] * matrixRight.m[5] + matrixLeft.m[10] * matrixRight.m[6] + \
+         matrixLeft.m[14] * matrixRight.m[7]
   m.m[
-    10] = matrixLeft.m[2] * matrixRight.m[8] + matrixLeft.m[6] * matrixRight.m[9] + matrixLeft.m[10] * matrixRight.m[10] + matrixLeft.m[14] * matrixRight.m[11]
+    10] = matrixLeft.m[2] * matrixRight.m[8] + matrixLeft.m[6] * matrixRight.m[9] + matrixLeft.m[10] * matrixRight.m[
+    10] + matrixLeft.m[14] * matrixRight.m[11]
   m.m[
-    14] = matrixLeft.m[2] * matrixRight.m[12] + matrixLeft.m[6] * matrixRight.m[13] + matrixLeft.m[10] * matrixRight.m[14] + matrixLeft.m[14] * matrixRight.m[15]
+    14] = matrixLeft.m[2] * matrixRight.m[12] + matrixLeft.m[6] * matrixRight.m[13] + matrixLeft.m[10] * matrixRight.m[
+    14] + matrixLeft.m[14] * matrixRight.m[15]
 
   m.m[
-    3] = matrixLeft.m[3] * matrixRight.m[0] + matrixLeft.m[7] * matrixRight.m[1] + matrixLeft.m[11] * matrixRight.m[2] + matrixLeft.m[15] * matrixRight.m[3]
+    3] = matrixLeft.m[3] * matrixRight.m[0] + matrixLeft.m[7] * matrixRight.m[1] + matrixLeft.m[11] * matrixRight.m[2] + \
+         matrixLeft.m[15] * matrixRight.m[3]
   m.m[
-    7] = matrixLeft.m[3] * matrixRight.m[4] + matrixLeft.m[7] * matrixRight.m[5] + matrixLeft.m[11] * matrixRight.m[6] + matrixLeft.m[15] * matrixRight.m[7]
+    7] = matrixLeft.m[3] * matrixRight.m[4] + matrixLeft.m[7] * matrixRight.m[5] + matrixLeft.m[11] * matrixRight.m[6] + \
+         matrixLeft.m[15] * matrixRight.m[7]
   m.m[
-    11] = matrixLeft.m[3] * matrixRight.m[8] + matrixLeft.m[7] * matrixRight.m[9] + matrixLeft.m[11] * matrixRight.m[10] + matrixLeft.m[15] * matrixRight.m[11]
+    11] = matrixLeft.m[3] * matrixRight.m[8] + matrixLeft.m[7] * matrixRight.m[9] + matrixLeft.m[11] * matrixRight.m[
+    10] + matrixLeft.m[15] * matrixRight.m[11]
   m.m[
-    15] = matrixLeft.m[3] * matrixRight.m[12] + matrixLeft.m[7] * matrixRight.m[13] + matrixLeft.m[11] * matrixRight.m[14] + matrixLeft.m[15] * matrixRight.m[15]
+    15] = matrixLeft.m[3] * matrixRight.m[12] + matrixLeft.m[7] * matrixRight.m[13] + matrixLeft.m[11] * matrixRight.m[
+    14] + matrixLeft.m[15] * matrixRight.m[15]
 
   return m
 
@@ -670,4 +686,3 @@ if __name__ == '__main__':
   print('GLKMatrix4Invert', mi)
   print('GLKMatrix4Multiply', GLKMatrix4Multiply(mi, mr))
   print(GLKMatrix4MakeLookAt(10, 10, -10, 0, 0, 0, 0, 1, 0))
-

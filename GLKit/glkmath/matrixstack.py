@@ -245,4 +245,3 @@ if __name__ == '__main__':
   print(GLKMatrixStackGetMatrix4(stack))
 
   GLKMatrixStackTranslate(stack, 10, 4, 8)
-
