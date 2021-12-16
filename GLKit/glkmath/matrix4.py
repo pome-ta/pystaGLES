@@ -16,33 +16,19 @@ class float16(ctypes.Structure):
 
 class m16(ctypes.Structure):
   _fields_ = [
-    ('m00', ctypes.c_float),
-    ('m01', ctypes.c_float),
-    ('m02', ctypes.c_float),
-    ('m03', ctypes.c_float),
-    ('m10', ctypes.c_float),
-    ('m11', ctypes.c_float),
-    ('m12', ctypes.c_float),
-    ('m13', ctypes.c_float),
-    ('m20', ctypes.c_float),
-    ('m21', ctypes.c_float),
-    ('m22', ctypes.c_float),
-    ('m23', ctypes.c_float),
-    ('m30', ctypes.c_float),
-    ('m31', ctypes.c_float),
-    ('m32', ctypes.c_float),
-    ('m33', ctypes.c_float),
+    ('m00', ctypes.c_float), ('m01', ctypes.c_float), ('m02', ctypes.c_float), ('m03', ctypes.c_float),
+    ('m10', ctypes.c_float), ('m11', ctypes.c_float), ('m12', ctypes.c_float), ('m13', ctypes.c_float),
+    ('m20', ctypes.c_float), ('m21', ctypes.c_float), ('m22', ctypes.c_float), ('m23', ctypes.c_float),
+    ('m30', ctypes.c_float), ('m31', ctypes.c_float), ('m32', ctypes.c_float), ('m33', ctypes.c_float),
   ]
 
 
 class GLKMatrix4(ctypes.Union):
   _anonymous_ = [
-    ('s1'),
-    ('s2'),
+    ('s1'), ('s2'),
   ]
   _fields_ = [
-    ('s1', float16),
-    ('s2', m16),
+    ('s1', float16), ('s2', m16),
   ]
 
   def __str__(self):
@@ -74,14 +60,24 @@ def GLKMatrix4Make(m00, m01, m02, m03, m10, m11, m12, m13, m20, m21, m22, m23,
 
 
 def GLKMatrix4Identity():
-  return GLKMatrix4Make(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1)
+  return GLKMatrix4Make(
+    1, 0, 0, 0,
+    0, 1, 0, 0,
+    0, 0, 1, 0,
+    0, 0, 0, 1
+  )
 
 
-def GLKMatrix4MakeAndTranspose(m00, m01, m02, m03, m10, m11, m12, m13, m20,
-                               m21, m22, m23, m30, m31, m32, m33):
+def GLKMatrix4MakeAndTranspose(m00, m01, m02, m03,
+                               m10, m11, m12, m13,
+                               m20, m21, m22, m23,
+                               m30, m31, m32, m33):
   return GLKMatrix4Traspose(
-    GLKMatrix4Make(m00, m01, m02, m03, m10, m11, m12, m13, m20, m21, m22, m23,
-                   m30, m31, m32, m33))
+    GLKMatrix4Make(
+      m00, m01, m02, m03,
+      m10, m11, m12, m13,
+      m20, m21, m22, m23,
+      m30, m31, m32, m33))
 
 
 def GLKMatrix4MakeWithArray(values):
@@ -197,8 +193,10 @@ def GLKMatrix4MakeXRotation(radians):
   sin = math.sin(radians)
 
   array = [
-    1.0, 0.0, 0.0, 0.0, 0.0, cos, sin, 0.0, 0.0, -sin, cos, 0.0, 0.0, 0.0, 0.0,
-    1.0
+    1.0, 0.0, 0.0, 0.0,
+    0.0, cos, sin, 0.0,
+    0.0, -sin, cos, 0.0,
+    0.0, 0.0, 0.0, 1.0
   ]
   return GLKMatrix4MakeWithArray(array)
 
@@ -208,8 +206,10 @@ def GLKMatrix4MakeYRotation(radians):
   sin = math.sin(radians)
 
   array = [
-    cos, 0.0, -sin, 0.0, 0.0, 1.0, 0.0, 0.0, sin, 0.0, cos, 0.0, 0.0, 0.0, 0.0,
-    1.0
+    cos, 0.0, -sin, 0.0,
+    0.0, 1.0, 0.0, 0.0,
+    sin, 0.0, cos, 0.0,
+    0.0, 0.0, 0.0, 1.0
   ]
   return GLKMatrix4MakeWithArray(array)
 
@@ -219,8 +219,10 @@ def GLKMatrix4MakeZRotation(radians):
   sin = math.sin(radians)
 
   array = [
-    cos, sin, 0.0, 0.0, -sin, cos, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0,
-    1.0
+    cos, sin, 0.0, 0.0,
+    -sin, cos, 0.0, 0.0,
+    0.0, 0.0, 1.0, 0.0,
+    0.0, 0.0, 0.0, 1.0
   ]
   return GLKMatrix4MakeWithArray(array)
 
