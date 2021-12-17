@@ -4,13 +4,14 @@ import ctypes
 #import weakref
 #from objc_util import *
 
-from . import effect
-from .view import *
-from .glkmath import *
-from .fog import *
-from .light import *
-from .texture import *
-from .material import *
+#from . import effect
+from effect import *
+from view import *
+from glkmath import *
+from fog import *
+from light import *
+from texture import *
+from material import *
 
 #ObjCClass("NSBundle").bundleWithPath_("/System/Library/Frameworks/GLKit.framework").load()
 
