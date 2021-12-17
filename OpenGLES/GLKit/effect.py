@@ -1,8 +1,8 @@
 # coding: utf-8
 import ctypes
 from objc_util import *
-from GLES.headers.GLConstants import GLboolean
-from GLES.gles1 import GL_TRUE, GL_FALSE
+from OpenGLES.GLES.headers.GLConstants import GLboolean
+from OpenGLES.GLES.gles1 import GL_TRUE, GL_FALSE
 
 import light
 #from . import light

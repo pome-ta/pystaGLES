@@ -1,7 +1,7 @@
 # coding: utf-8
 import ui
 import ctypes
-#import weakref
+import weakref
 #from objc_util import *
 
 #from . import effect
