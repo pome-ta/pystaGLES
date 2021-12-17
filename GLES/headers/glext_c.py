@@ -1,334 +1,397 @@
 # Generated Files. DO NOT EDIT
-# Generated on: 09/28/15 10:48:07
-# rewrite on: 2021/12/16
+# Generated on: 12/17/21 09:04:39
 import ctypes
-from objc_util import *
+from objc_util import c
 from GLConstants import *
 
 DEBUG = 0
 loaded = [0, 0]
 
 # GLES Constants
-GL_TEXTURE_CROP_RECT_OES = 0x00008b9d
-GL_MATRIX_INDEX_ARRAY_SIZE_OES = 0x00008846
-GL_OES_packed_depth_stencil = 0x00000001
-GL_DEPTH_EXT = 0x00001801
-GL_COLOR_EXT = 0x00001800
-GL_QCOM_tiled_rendering = 0x00000001
-GL_RGB16F_EXT = 0x0000881b
-GL_CLIP_PLANE1_IMG = 0x00003001
-GL_NV_fence = 0x00000001
-GL_CLIP_PLANE3_IMG = 0x00003003
-GL_OES_blend_subtract = 0x00000001
-GL_IMG_texture_compression_pvrtc = 0x00000001
-GL_SRGB_ALPHA_EXT = 0x00008c42
-GL_MAX_CUBE_MAP_TEXTURE_SIZE_OES = 0x0000851c
-GL_REFLECTION_MAP_OES = 0x00008512
-GL_COLOR_BUFFER_BIT7_QCOM = 0x00000080
-GL_TEXTURE_CUBE_MAP_NEGATIVE_Y_OES = 0x00008518
-GL_BLEND_DST_RGB_OES = 0x000080c8
-GL_RENDERBUFFER_WIDTH_OES = 0x00008d42
-GL_FRAMEBUFFER_INCOMPLETE_MULTISAMPLE_APPLE = 0x00008d56
-GL_DEPTH_BUFFER_BIT3_QCOM = 0x00000800
-GL_MODELVIEW_MATRIX_FLOAT_AS_INT_BITS_OES = 0x0000898d
-GL_FRAMEBUFFER_INCOMPLETE_MISSING_ATTACHMENT_OES = 0x00008cd7
-GL_COMPRESSED_RGBA_PVRTC_4BPPV1_IMG = 0x00008c02
-GL_CONTEXT_ROBUST_ACCESS_EXT = 0x000090f3
-GL_QCOM_perfmon_global_mode = 0x00000001
-GL_RGB32F_EXT = 0x00008815
-GL_FRAMEBUFFER_INCOMPLETE_FORMATS_OES = 0x00008cda
-GL_CLIP_PLANE0_IMG = 0x00003000
-GL_REQUIRED_TEXTURE_IMAGE_UNITS_OES = 0x00008d68
-GL_OES_single_precision = 0x00000001
-GL_EXT_multisampled_render_to_texture = 0x00000001
-GL_OES_texture_env_crossbar = 0x00000001
-GL_WRITEONLY_RENDERING_QCOM = 0x00008823
-GL_UNSIGNED_SHORT_4_4_4_4_REV_EXT = 0x00008365
-GL_TEXTURE_BINDING_EXTERNAL_OES = 0x00008d67
-GL_NONE_OES = 0x00000000
-GL_OES_texture_cube_map = 0x00000001
-GL_OES_query_matrix = 0x00000001
-GL_ALPHA32F_EXT = 0x00008816
-GL_SYNC_FENCE_APPLE = 0x00009116
-GL_DEPTH_COMPONENT24_OES = 0x000081a6
-GL_FRAMEBUFFER_UNSUPPORTED_OES = 0x00008cdd
-GL_RGBA32F_EXT = 0x00008814
-GL_READ_FRAMEBUFFER_BINDING_APPLE = 0x00008caa
-GL_LUMINANCE32F_EXT = 0x00008818
-GL_TEXTURE_CUBE_MAP_POSITIVE_Y_OES = 0x00008517
-GL_MAP_UNSYNCHRONIZED_BIT_EXT = 0x00000020
-GL_COMPRESSED_RGB_PVRTC_4BPPV1_IMG = 0x00008c00
-GL_DRAW_FRAMEBUFFER_BINDING_APPLE = 0x00008ca6
-GL_APPLE_texture_max_level = 0x00000001
-GL_TEXTURE_HEIGHT_QCOM = 0x00008bd3
-GL_RENDERBUFFER_OES = 0x00008d41
-GL_FENCE_CONDITION_NV = 0x000084f4
-GL_TEXTURE_CUBE_MAP_OES = 0x00008513
-GL_EXT_multi_draw_arrays = 0x00000001
-GL_COMPRESSED_RGB_S3TC_DXT1_EXT = 0x000083f0
-GL_OES_fbo_render_mipmap = 0x00000001
-GL_RECIP_ADD_SIGNED_ALPHA_IMG = 0x00008c05
-GL_STENCIL_BUFFER_BIT5_QCOM = 0x00200000
-GL_UNKNOWN_CONTEXT_RESET_EXT = 0x00008255
-GL_OES_stencil_wrap = 0x00000001
-GL_TEXTURE_BINDING_CUBE_MAP_OES = 0x00008514
-GL_READ_FRAMEBUFFER_APPLE = 0x00008ca8
-GL_SYNC_FLUSH_COMMANDS_BIT_APPLE = 0x00000001
-GL_TEXTURE_INTERNAL_FORMAT_QCOM = 0x00008bd5
-GL_STENCIL_BUFFER_BIT2_QCOM = 0x00040000
-GL_RENDERBUFFER_HEIGHT_OES = 0x00008d43
-GL_TEXTURE_ALPHA_MODULATE_IMG = 0x00008c06
-GL_NORMAL_MAP_OES = 0x00008511
-GL_LUMINANCE8_ALPHA8_EXT = 0x00008045
-GL_MAX_EXT = 0x00008008
-GL_MAX_VERTEX_UNITS_OES = 0x000086a4
-GL_DEPTH_BUFFER_BIT7_QCOM = 0x00008000
-GL_TEXTURE_LOD_BIAS_EXT = 0x00008501
-GL_TEXTURE_CUBE_MAP_POSITIVE_Z_OES = 0x00008519
-GL_TEXTURE_FORMAT_QCOM = 0x00008bd6
-GL_MODULATE_COLOR_IMG = 0x00008c04
-GL_RENDERBUFFER_BINDING_OES = 0x00008ca7
-GL_EXT_texture_compression_dxt1 = 0x00000001
-GL_OES_extended_matrix_palette = 0x00000001
-GL_STENCIL_BUFFER_BIT1_QCOM = 0x00020000
-GL_RENDERBUFFER_STENCIL_SIZE_OES = 0x00008d55
-GL_SYNC_OBJECT_APPLE = 0x00008a53
-GL_SRGB8_ALPHA8_EXT = 0x00008c43
-GL_BLEND_SRC_ALPHA_OES = 0x000080cb
-GL_MULTISAMPLE_BUFFER_BIT2_QCOM = 0x04000000
-GL_MAX_SERVER_WAIT_TIMEOUT_APPLE = 0x00009111
-GL_OES_blend_equation_separate = 0x00000001
-GL_MULTISAMPLE_BUFFER_BIT3_QCOM = 0x08000000
-GL_RENDERBUFFER_DEPTH_SIZE_OES = 0x00008d54
-GL_MATRIX_INDEX_ARRAY_STRIDE_OES = 0x00008848
-GL_WEIGHT_ARRAY_OES = 0x000086ad
-GL_BUFFER_ACCESS_OES = 0x000088bb
-GL_OES_matrix_get = 0x00000001
-GL_LUMINANCE8_EXT = 0x00008040
-GL_OES_EGL_image_external = 0x00000001
-GL_RGB10_EXT = 0x00008052
-GL_EXT_map_buffer_range = 0x00000001
-GL_CONDITION_SATISFIED_APPLE = 0x0000911c
-GL_OES_stencil4 = 0x00000001
-GL_BLEND_EQUATION_ALPHA_OES = 0x0000883d
-GL_FUNC_ADD_OES = 0x00008006
-GL_DEPTH_COMPONENT16_OES = 0x000081a5
-GL_WEIGHT_ARRAY_POINTER_OES = 0x000086ac
-GL_EXT_blend_minmax = 0x00000001
-GL_MAX_CLIP_PLANES_IMG = 0x00000d32
-GL_STENCIL_BUFFER_BIT0_QCOM = 0x00010000
-GL_BLEND_DST_ALPHA_OES = 0x000080ca
-GL_STENCIL_INDEX1_OES = 0x00008d46
-GL_TEXTURE_DEPTH_QCOM = 0x00008bd4
-GL_RENDERBUFFER_BLUE_SIZE_OES = 0x00008d52
-GL_OES_byte_coordinates = 0x00000001
-GL_MAX_SAMPLES_APPLE = 0x00008d57
-GL_COLOR_BUFFER_BIT4_QCOM = 0x00000010
-GL_RENDERBUFFER_GREEN_SIZE_OES = 0x00008d51
-GL_WRITE_ONLY_OES = 0x000088b9
-GL_IMG_read_format = 0x00000001
-GL_OES_blend_func_separate = 0x00000001
-GL_MULTISAMPLE_BUFFER_BIT7_QCOM = 0x80000000
-GL_BGRA_EXT = 0x000080e1
-GL_OES_depth24 = 0x00000001
-GL_MULTISAMPLE_BUFFER_BIT6_QCOM = 0x40000000
-GL_FENCE_STATUS_NV = 0x000084f3
-GL_TEXTURE_OBJECT_VALID_QCOM = 0x00008bdb
-GL_COMPRESSED_RGB_PVRTC_2BPPV1_IMG = 0x00008c01
-GL_LUMINANCE_ALPHA16F_EXT = 0x0000881f
-GL_OES_stencil1 = 0x00000001
-GL_AMD_compressed_ATC_texture = 0x00000001
-GL_OES_matrix_palette = 0x00000001
-GL_FRAMEBUFFER_ATTACHMENT_TEXTURE_LEVEL_OES = 0x00008cd2
-GL_FACTOR_ALPHA_MODULATE_IMG = 0x00008c07
-GL_MIRRORED_REPEAT_OES = 0x00008370
-GL_RENDERBUFFER_RED_SIZE_OES = 0x00008d50
-GL_QCOM_writeonly_rendering = 0x00000001
-GL_TEXTURE_GEN_MODE_OES = 0x00002500
-GL_COLOR_BUFFER_BIT3_QCOM = 0x00000008
-GL_WEIGHT_ARRAY_BUFFER_BINDING_OES = 0x0000889e
-GL_COMPRESSED_RGBA_PVRTC_2BPPV1_IMG = 0x00008c03
-GL_UNSIGNALED_APPLE = 0x00009118
-GL_PROJECTION_MATRIX_FLOAT_AS_INT_BITS_OES = 0x0000898e
-GL_STENCIL_ATTACHMENT_OES = 0x00008d20
-GL_OBJECT_TYPE_APPLE = 0x00009112
-GL_TEXTURE_CUBE_MAP_NEGATIVE_Z_OES = 0x0000851a
-GL_RENDERBUFFER_SAMPLES_EXT = 0x00008cab
-GL_APPLE_framebuffer_multisample = 0x00000001
-GL_RENDERBUFFER_ALPHA_SIZE_OES = 0x00008d53
-GL_SYNC_GPU_COMMANDS_COMPLETE_APPLE = 0x00009117
-GL_SIGNALED_APPLE = 0x00009119
-GL_RGBA8_OES = 0x00008058
-GL_APPLE_sync = 0x00000001
-GL_EXT_robustness = 0x00000001
-GL_ALL_COMPLETED_NV = 0x000084f2
-GL_SYNC_STATUS_APPLE = 0x00009114
-GL_BLEND_EQUATION_RGB_OES = 0x00008009
-GL_MULTISAMPLE_BUFFER_BIT0_QCOM = 0x01000000
-GL_RESET_NOTIFICATION_STRATEGY_EXT = 0x00008256
-GL_UNSIGNED_INT_24_8_OES = 0x000084fa
-GL_CLIP_PLANE5_IMG = 0x00003005
-GL_INCR_WRAP_OES = 0x00008507
-GL_MAX_SAMPLES_IMG = 0x00009135
-GL_OES_framebuffer_object = 0x00000001
-GL_MAP_READ_BIT_EXT = 0x00000001
-GL_DEPTH_BUFFER_BIT6_QCOM = 0x00004000
-GL_COLOR_BUFFER_BIT6_QCOM = 0x00000040
-GL_RGB10_A2_EXT = 0x00008059
-GL_MAP_FLUSH_EXPLICIT_BIT_EXT = 0x00000010
-GL_COLOR_BUFFER_BIT0_QCOM = 0x00000001
-GL_WEIGHT_ARRAY_TYPE_OES = 0x000086a9
-GL_EXT_read_format_bgra = 0x00000001
-GL_FRAMEBUFFER_INCOMPLETE_ATTACHMENT_OES = 0x00008cd6
-GL_DEPTH_BUFFER_BIT0_QCOM = 0x00000100
-GL_FRAMEBUFFER_ATTACHMENT_TEXTURE_CUBE_MAP_FACE_OES = 0x00008cd3
-GL_FRAMEBUFFER_COMPLETE_OES = 0x00008cd5
-GL_FRAMEBUFFER_INCOMPLETE_MULTISAMPLE_EXT = 0x00008d56
-GL_LOSE_CONTEXT_ON_RESET_EXT = 0x00008252
-GL_QCOM_extended_get2 = 0x00000001
-GL_WEIGHT_ARRAY_STRIDE_OES = 0x000086aa
-GL_TEXTURE_IMMUTABLE_FORMAT_EXT = 0x0000912f
-GL_STATE_RESTORE = 0x00008bdc
-GL_DEPTH_BUFFER_BIT4_QCOM = 0x00001000
-GL_DEPTH_ATTACHMENT_OES = 0x00008d00
-GL_TEXTURE_GEN_STR_OES = 0x00008d60
-GL_FRAMEBUFFER_BINDING_OES = 0x00008ca6
-GL_WEIGHT_ARRAY_SIZE_OES = 0x000086ab
-GL_MATRIX_INDEX_ARRAY_TYPE_OES = 0x00008847
-GL_3DC_XY_AMD = 0x000087fa
-GL_MIN_EXT = 0x00008007
-GL_OES_depth32 = 0x00000001
-GL_ALPHA8_EXT = 0x0000803c
-GL_STENCIL_INDEX4_OES = 0x00008d47
-GL_CLIP_PLANE2_IMG = 0x00003002
-GL_FRAMEBUFFER_OES = 0x00008d40
-GL_APPLE_texture_2D_limited_npot = 0x00000001
-GL_INNOCENT_CONTEXT_RESET_EXT = 0x00008254
+__gles1_glext_h_ = 0x00000001
+GL_KHR_debug = 0x00000001
 GL_OES_EGL_image = 0x00000001
+GL_OES_EGL_image_external = 0x00000001
+GL_TEXTURE_EXTERNAL_OES = 0x00008d65
+GL_TEXTURE_BINDING_EXTERNAL_OES = 0x00008d67
+GL_REQUIRED_TEXTURE_IMAGE_UNITS_OES = 0x00008d68
+GL_OES_blend_equation_separate = 0x00000001
+GL_BLEND_EQUATION_RGB_OES = 0x00008009
+GL_BLEND_EQUATION_ALPHA_OES = 0x0000883d
+GL_OES_blend_func_separate = 0x00000001
+GL_BLEND_DST_RGB_OES = 0x000080c8
+GL_BLEND_SRC_RGB_OES = 0x000080c9
+GL_BLEND_DST_ALPHA_OES = 0x000080ca
+GL_BLEND_SRC_ALPHA_OES = 0x000080cb
+GL_OES_blend_subtract = 0x00000001
 GL_BLEND_EQUATION_OES = 0x00008009
-GL_STENCIL_BUFFER_BIT3_QCOM = 0x00080000
-GL_TEXTURE_TARGET_QCOM = 0x00008bda
-GL_VERTEX_ARRAY_BINDING_OES = 0x000085b5
-GL_MAX_PALETTE_MATRICES_OES = 0x00008842
-GL_DEPTH_BUFFER_BIT1_QCOM = 0x00000200
-GL_FRAMEBUFFER_ATTACHMENT_COLOR_ENCODING_EXT = 0x00008210
-GL_RENDERBUFFER_SAMPLES_APPLE = 0x00008cab
-GL_TIMEOUT_IGNORED_APPLE = 0xffffffffffffffff
-GL_DECR_WRAP_OES = 0x00008508
-GL_EXT_texture_lod_bias = 0x00000001
-GL_FRAMEBUFFER_INCOMPLETE_DIMENSIONS_OES = 0x00008cd9
-GL_TEXTURE_FILTER_CONTROL_EXT = 0x00008500
-GL_EXT_sRGB = 0x00000001
-GL_EXT_texture_filter_anisotropic = 0x00000001
-GL_OES_texture_mirrored_repeat = 0x00000001
-GL_TEXTURE_MATRIX_FLOAT_AS_INT_BITS_OES = 0x0000898f
-GL_RGB565_OES = 0x00008d62
-GL_RGB5_A1_OES = 0x00008057
-GL_OES_rgb8_rgba8 = 0x00000001
-GL_RENDERBUFFER_INTERNAL_FORMAT_OES = 0x00008d44
-GL_IMG_multisampled_render_to_texture = 0x00000001
-GL_MAP_INVALIDATE_BUFFER_BIT_EXT = 0x00000008
-GL_COLOR_BUFFER_BIT5_QCOM = 0x00000020
-GL_MATRIX_INDEX_ARRAY_OES = 0x00008844
-GL_ADD_BLEND_IMG = 0x00008c09
+GL_FUNC_ADD_OES = 0x00008006
+GL_FUNC_SUBTRACT_OES = 0x0000800a
+GL_FUNC_REVERSE_SUBTRACT_OES = 0x0000800b
+GL_OES_byte_coordinates = 0x00000001
+GL_OES_compressed_ETC1_RGB8_sub_texture = 0x00000001
+GL_OES_compressed_ETC1_RGB8_texture = 0x00000001
 GL_ETC1_RGB8_OES = 0x00008d64
-GL_WAIT_FAILED_APPLE = 0x0000911d
-GL_MATRIX_INDEX_ARRAY_BUFFER_BINDING_OES = 0x00008b9e
-GL_DEPTH_BUFFER_BIT5_QCOM = 0x00002000
-GL_NO_RESET_NOTIFICATION_EXT = 0x00008261
-GL_MAX_TEXTURE_LOD_BIAS_EXT = 0x000084fd
-GL_FRAMEBUFFER_ATTACHMENT_TEXTURE_SAMPLES_EXT = 0x00008d6c
-GL_SYNC_FLAGS_APPLE = 0x00009115
-GL_DEPTH_BUFFER_BIT2_QCOM = 0x00000400
-GL_EXT_texture_storage = 0x00000001
-GL_OES_required_internalformat = 0x00000001
-GL_IMG_user_clip_plane = 0x00000001
+GL_OES_depth24 = 0x00000001
+GL_DEPTH_COMPONENT24_OES = 0x000081a6
+GL_OES_depth32 = 0x00000001
+GL_DEPTH_COMPONENT32_OES = 0x000081a7
+GL_OES_draw_texture = 0x00000001
+GL_TEXTURE_CROP_RECT_OES = 0x00008b9d
+GL_OES_element_index_uint = 0x00000001
+GL_UNSIGNED_INT = 0x00001405
+GL_OES_extended_matrix_palette = 0x00000001
+GL_OES_fbo_render_mipmap = 0x00000001
+GL_OES_fixed_point = 0x00000001
+GL_FIXED_OES = 0x0000140c
+GL_OES_framebuffer_object = 0x00000001
+GL_NONE_OES = 0x00000000
+GL_FRAMEBUFFER_OES = 0x00008d40
+GL_RENDERBUFFER_OES = 0x00008d41
+GL_RGBA4_OES = 0x00008056
+GL_RGB5_A1_OES = 0x00008057
+GL_RGB565_OES = 0x00008d62
+GL_DEPTH_COMPONENT16_OES = 0x000081a5
+GL_RENDERBUFFER_WIDTH_OES = 0x00008d42
+GL_RENDERBUFFER_HEIGHT_OES = 0x00008d43
+GL_RENDERBUFFER_INTERNAL_FORMAT_OES = 0x00008d44
+GL_RENDERBUFFER_RED_SIZE_OES = 0x00008d50
+GL_RENDERBUFFER_GREEN_SIZE_OES = 0x00008d51
+GL_RENDERBUFFER_BLUE_SIZE_OES = 0x00008d52
+GL_RENDERBUFFER_ALPHA_SIZE_OES = 0x00008d53
+GL_RENDERBUFFER_DEPTH_SIZE_OES = 0x00008d54
+GL_RENDERBUFFER_STENCIL_SIZE_OES = 0x00008d55
+GL_FRAMEBUFFER_ATTACHMENT_OBJECT_TYPE_OES = 0x00008cd0
+GL_FRAMEBUFFER_ATTACHMENT_OBJECT_NAME_OES = 0x00008cd1
+GL_FRAMEBUFFER_ATTACHMENT_TEXTURE_LEVEL_OES = 0x00008cd2
+GL_FRAMEBUFFER_ATTACHMENT_TEXTURE_CUBE_MAP_FACE_OES = 0x00008cd3
+GL_COLOR_ATTACHMENT0_OES = 0x00008ce0
+GL_DEPTH_ATTACHMENT_OES = 0x00008d00
+GL_STENCIL_ATTACHMENT_OES = 0x00008d20
+GL_FRAMEBUFFER_COMPLETE_OES = 0x00008cd5
+GL_FRAMEBUFFER_INCOMPLETE_ATTACHMENT_OES = 0x00008cd6
+GL_FRAMEBUFFER_INCOMPLETE_MISSING_ATTACHMENT_OES = 0x00008cd7
+GL_FRAMEBUFFER_INCOMPLETE_DIMENSIONS_OES = 0x00008cd9
+GL_FRAMEBUFFER_INCOMPLETE_FORMATS_OES = 0x00008cda
+GL_FRAMEBUFFER_UNSUPPORTED_OES = 0x00008cdd
+GL_FRAMEBUFFER_BINDING_OES = 0x00008ca6
+GL_RENDERBUFFER_BINDING_OES = 0x00008ca7
+GL_MAX_RENDERBUFFER_SIZE_OES = 0x000084e8
+GL_INVALID_FRAMEBUFFER_OPERATION_OES = 0x00000506
+GL_OES_mapbuffer = 0x00000001
+GL_WRITE_ONLY_OES = 0x000088b9
+GL_BUFFER_ACCESS_OES = 0x000088bb
+GL_BUFFER_MAPPED_OES = 0x000088bc
+GL_BUFFER_MAP_POINTER_OES = 0x000088bd
+GL_OES_matrix_get = 0x00000001
+GL_MODELVIEW_MATRIX_FLOAT_AS_INT_BITS_OES = 0x0000898d
+GL_PROJECTION_MATRIX_FLOAT_AS_INT_BITS_OES = 0x0000898e
+GL_TEXTURE_MATRIX_FLOAT_AS_INT_BITS_OES = 0x0000898f
+GL_OES_matrix_palette = 0x00000001
+GL_MAX_VERTEX_UNITS_OES = 0x000086a4
+GL_MAX_PALETTE_MATRICES_OES = 0x00008842
 GL_MATRIX_PALETTE_OES = 0x00008840
-GL_COLOR_BUFFER_BIT1_QCOM = 0x00000002
-GL_DOT3_RGBA_IMG = 0x000086af
+GL_MATRIX_INDEX_ARRAY_OES = 0x00008844
+GL_WEIGHT_ARRAY_OES = 0x000086ad
+GL_CURRENT_PALETTE_MATRIX_OES = 0x00008843
+GL_MATRIX_INDEX_ARRAY_SIZE_OES = 0x00008846
+GL_MATRIX_INDEX_ARRAY_TYPE_OES = 0x00008847
+GL_MATRIX_INDEX_ARRAY_STRIDE_OES = 0x00008848
+GL_MATRIX_INDEX_ARRAY_POINTER_OES = 0x00008849
+GL_MATRIX_INDEX_ARRAY_BUFFER_BINDING_OES = 0x00008b9e
+GL_WEIGHT_ARRAY_SIZE_OES = 0x000086ab
+GL_WEIGHT_ARRAY_TYPE_OES = 0x000086a9
+GL_WEIGHT_ARRAY_STRIDE_OES = 0x000086aa
+GL_WEIGHT_ARRAY_POINTER_OES = 0x000086ac
+GL_WEIGHT_ARRAY_BUFFER_BINDING_OES = 0x0000889e
+GL_OES_packed_depth_stencil = 0x00000001
+GL_DEPTH_STENCIL_OES = 0x000084f9
+GL_UNSIGNED_INT_24_8_OES = 0x000084fa
+GL_DEPTH24_STENCIL8_OES = 0x000088f0
+GL_OES_query_matrix = 0x00000001
+GL_OES_required_internalformat = 0x00000001
+GL_ALPHA8_OES = 0x0000803c
+GL_LUMINANCE4_ALPHA4_OES = 0x00008043
+GL_LUMINANCE8_ALPHA8_OES = 0x00008045
+GL_LUMINANCE8_OES = 0x00008040
+GL_RGB8_OES = 0x00008051
+GL_RGBA8_OES = 0x00008058
+GL_RGB10_EXT = 0x00008052
+GL_RGB10_A2_EXT = 0x00008059
+GL_OES_rgb8_rgba8 = 0x00000001
+GL_OES_single_precision = 0x00000001
+GL_OES_stencil1 = 0x00000001
+GL_STENCIL_INDEX1_OES = 0x00008d46
+GL_OES_stencil4 = 0x00000001
+GL_STENCIL_INDEX4_OES = 0x00008d47
+GL_OES_stencil8 = 0x00000001
+GL_STENCIL_INDEX8_OES = 0x00008d48
+GL_OES_stencil_wrap = 0x00000001
+GL_INCR_WRAP_OES = 0x00008507
+GL_DECR_WRAP_OES = 0x00008508
+GL_OES_surfaceless_context = 0x00000001
+GL_FRAMEBUFFER_UNDEFINED_OES = 0x00008219
+GL_OES_texture_cube_map = 0x00000001
+GL_NORMAL_MAP_OES = 0x00008511
+GL_REFLECTION_MAP_OES = 0x00008512
+GL_TEXTURE_CUBE_MAP_OES = 0x00008513
+GL_TEXTURE_BINDING_CUBE_MAP_OES = 0x00008514
+GL_TEXTURE_CUBE_MAP_POSITIVE_X_OES = 0x00008515
+GL_TEXTURE_CUBE_MAP_NEGATIVE_X_OES = 0x00008516
+GL_TEXTURE_CUBE_MAP_POSITIVE_Y_OES = 0x00008517
+GL_TEXTURE_CUBE_MAP_NEGATIVE_Y_OES = 0x00008518
+GL_TEXTURE_CUBE_MAP_POSITIVE_Z_OES = 0x00008519
+GL_TEXTURE_CUBE_MAP_NEGATIVE_Z_OES = 0x0000851a
+GL_MAX_CUBE_MAP_TEXTURE_SIZE_OES = 0x0000851c
+GL_TEXTURE_GEN_MODE_OES = 0x00002500
+GL_TEXTURE_GEN_STR_OES = 0x00008d60
+GL_OES_texture_env_crossbar = 0x00000001
+GL_OES_texture_mirrored_repeat = 0x00000001
+GL_MIRRORED_REPEAT_OES = 0x00008370
+GL_OES_texture_npot = 0x00000001
+GL_OES_vertex_array_object = 0x00000001
+GL_VERTEX_ARRAY_BINDING_OES = 0x000085b5
 GL_AMD_compressed_3DC_texture = 0x00000001
+GL_3DC_X_AMD = 0x000087f9
+GL_3DC_XY_AMD = 0x000087fa
+GL_AMD_compressed_ATC_texture = 0x00000001
+GL_ATC_RGB_AMD = 0x00008c92
+GL_ATC_RGBA_EXPLICIT_ALPHA_AMD = 0x00008c93
+GL_ATC_RGBA_INTERPOLATED_ALPHA_AMD = 0x000087ee
+GL_APPLE_copy_texture_levels = 0x00000001
+GL_APPLE_framebuffer_multisample = 0x00000001
+GL_RENDERBUFFER_SAMPLES_APPLE = 0x00008cab
+GL_FRAMEBUFFER_INCOMPLETE_MULTISAMPLE_APPLE = 0x00008d56
+GL_MAX_SAMPLES_APPLE = 0x00008d57
+GL_READ_FRAMEBUFFER_APPLE = 0x00008ca8
+GL_DRAW_FRAMEBUFFER_APPLE = 0x00008ca9
+GL_DRAW_FRAMEBUFFER_BINDING_APPLE = 0x00008ca6
+GL_READ_FRAMEBUFFER_BINDING_APPLE = 0x00008caa
+GL_APPLE_sync = 0x00000001
+GL_SYNC_OBJECT_APPLE = 0x00008a53
+GL_MAX_SERVER_WAIT_TIMEOUT_APPLE = 0x00009111
+GL_OBJECT_TYPE_APPLE = 0x00009112
+GL_SYNC_CONDITION_APPLE = 0x00009113
+GL_SYNC_STATUS_APPLE = 0x00009114
+GL_SYNC_FLAGS_APPLE = 0x00009115
+GL_SYNC_FENCE_APPLE = 0x00009116
+GL_SYNC_GPU_COMMANDS_COMPLETE_APPLE = 0x00009117
+GL_UNSIGNALED_APPLE = 0x00009118
+GL_SIGNALED_APPLE = 0x00009119
+GL_ALREADY_SIGNALED_APPLE = 0x0000911a
+GL_TIMEOUT_EXPIRED_APPLE = 0x0000911b
+GL_CONDITION_SATISFIED_APPLE = 0x0000911c
+GL_WAIT_FAILED_APPLE = 0x0000911d
+GL_SYNC_FLUSH_COMMANDS_BIT_APPLE = 0x00000001
+GL_TIMEOUT_IGNORED_APPLE = 0xffffffffffffffff
+GL_APPLE_texture_2D_limited_npot = 0x00000001
+GL_APPLE_texture_format_BGRA8888 = 0x00000001
+GL_BGRA_EXT = 0x000080e1
+GL_BGRA8_EXT = 0x000093a1
+GL_APPLE_texture_max_level = 0x00000001
+GL_TEXTURE_MAX_LEVEL_APPLE = 0x0000813d
+GL_ARM_rgba8 = 0x00000001
+GL_EXT_blend_minmax = 0x00000001
+GL_MIN_EXT = 0x00008007
+GL_MAX_EXT = 0x00008008
+GL_EXT_debug_marker = 0x00000001
+GL_EXT_discard_framebuffer = 0x00000001
+GL_COLOR_EXT = 0x00001800
+GL_DEPTH_EXT = 0x00001801
+GL_STENCIL_EXT = 0x00001802
+GL_EXT_map_buffer_range = 0x00000001
+GL_MAP_READ_BIT_EXT = 0x00000001
+GL_MAP_WRITE_BIT_EXT = 0x00000002
+GL_MAP_INVALIDATE_RANGE_BIT_EXT = 0x00000004
+GL_MAP_INVALIDATE_BUFFER_BIT_EXT = 0x00000008
+GL_MAP_FLUSH_EXPLICIT_BIT_EXT = 0x00000010
+GL_MAP_UNSYNCHRONIZED_BIT_EXT = 0x00000020
+GL_EXT_multi_draw_arrays = 0x00000001
+GL_EXT_multisampled_render_to_texture = 0x00000001
+GL_FRAMEBUFFER_ATTACHMENT_TEXTURE_SAMPLES_EXT = 0x00008d6c
+GL_RENDERBUFFER_SAMPLES_EXT = 0x00008cab
+GL_FRAMEBUFFER_INCOMPLETE_MULTISAMPLE_EXT = 0x00008d56
+GL_MAX_SAMPLES_EXT = 0x00008d57
+GL_EXT_read_format_bgra = 0x00000001
+GL_UNSIGNED_SHORT_4_4_4_4_REV_EXT = 0x00008365
+GL_UNSIGNED_SHORT_1_5_5_5_REV_EXT = 0x00008366
+GL_EXT_robustness = 0x00000001
+GL_GUILTY_CONTEXT_RESET_EXT = 0x00008253
+GL_INNOCENT_CONTEXT_RESET_EXT = 0x00008254
+GL_UNKNOWN_CONTEXT_RESET_EXT = 0x00008255
+GL_CONTEXT_ROBUST_ACCESS_EXT = 0x000090f3
+GL_RESET_NOTIFICATION_STRATEGY_EXT = 0x00008256
+GL_LOSE_CONTEXT_ON_RESET_EXT = 0x00008252
+GL_NO_RESET_NOTIFICATION_EXT = 0x00008261
+GL_EXT_sRGB = 0x00000001
+GL_SRGB_EXT = 0x00008c40
+GL_SRGB_ALPHA_EXT = 0x00008c42
+GL_SRGB8_ALPHA8_EXT = 0x00008c43
+GL_FRAMEBUFFER_ATTACHMENT_COLOR_ENCODING_EXT = 0x00008210
+GL_EXT_texture_compression_dxt1 = 0x00000001
+GL_COMPRESSED_RGB_S3TC_DXT1_EXT = 0x000083f0
+GL_COMPRESSED_RGBA_S3TC_DXT1_EXT = 0x000083f1
+GL_EXT_texture_filter_anisotropic = 0x00000001
+GL_TEXTURE_MAX_ANISOTROPY_EXT = 0x000084fe
+GL_MAX_TEXTURE_MAX_ANISOTROPY_EXT = 0x000084ff
+GL_EXT_texture_format_BGRA8888 = 0x00000001
+GL_EXT_texture_lod_bias = 0x00000001
+GL_MAX_TEXTURE_LOD_BIAS_EXT = 0x000084fd
+GL_TEXTURE_FILTER_CONTROL_EXT = 0x00008500
+GL_TEXTURE_LOD_BIAS_EXT = 0x00008501
+GL_EXT_texture_storage = 0x00000001
+GL_TEXTURE_IMMUTABLE_FORMAT_EXT = 0x0000912f
+GL_ALPHA8_EXT = 0x0000803c
+GL_LUMINANCE8_EXT = 0x00008040
+GL_LUMINANCE8_ALPHA8_EXT = 0x00008045
+GL_RGBA32F_EXT = 0x00008814
+GL_RGB32F_EXT = 0x00008815
+GL_ALPHA32F_EXT = 0x00008816
+GL_LUMINANCE32F_EXT = 0x00008818
+GL_LUMINANCE_ALPHA32F_EXT = 0x00008819
+GL_RGBA16F_EXT = 0x0000881a
+GL_RGB16F_EXT = 0x0000881b
+GL_ALPHA16F_EXT = 0x0000881c
+GL_LUMINANCE16F_EXT = 0x0000881e
+GL_LUMINANCE_ALPHA16F_EXT = 0x0000881f
+GL_R8_EXT = 0x00008229
+GL_RG8_EXT = 0x0000822b
+GL_R32F_EXT = 0x0000822e
+GL_RG32F_EXT = 0x00008230
+GL_R16F_EXT = 0x0000822d
+GL_RG16F_EXT = 0x0000822f
+GL_IMG_multisampled_render_to_texture = 0x00000001
+GL_RENDERBUFFER_SAMPLES_IMG = 0x00009133
+GL_FRAMEBUFFER_INCOMPLETE_MULTISAMPLE_IMG = 0x00009134
+GL_MAX_SAMPLES_IMG = 0x00009135
+GL_TEXTURE_SAMPLES_IMG = 0x00009136
+GL_IMG_read_format = 0x00000001
 GL_BGRA_IMG = 0x000080e1
 GL_UNSIGNED_SHORT_4_4_4_4_REV_IMG = 0x00008365
-GL_RGB8_OES = 0x00008051
-GL_OES_element_index_uint = 0x00000001
-GL_RENDERBUFFER_SAMPLES_IMG = 0x00009133
-GL_STENCIL_INDEX8_OES = 0x00008d48
-GL_OES_draw_texture = 0x00000001
-GL_MAX_SAMPLES_EXT = 0x00008d57
-GL_PERFMON_GLOBAL_MODE_QCOM = 0x00008fa0
-GL_OES_mapbuffer = 0x00000001
-GL_FRAMEBUFFER_INCOMPLETE_MULTISAMPLE_IMG = 0x00009134
-GL_UNSIGNED_INT = 0x00001405
-GL_COMPRESSED_RGBA_S3TC_DXT1_EXT = 0x000083f1
-GL_FRAMEBUFFER_ATTACHMENT_OBJECT_NAME_OES = 0x00008cd1
-GL_MATRIX_INDEX_ARRAY_POINTER_OES = 0x00008849
-GL_OES_compressed_ETC1_RGB8_texture = 0x00000001
-GL_FRAGMENT_ALPHA_MODULATE_IMG = 0x00008c08
-GL_ALREADY_SIGNALED_APPLE = 0x0000911a
-GL_MULTISAMPLE_BUFFER_BIT1_QCOM = 0x02000000
-GL_BUFFER_MAPPED_OES = 0x000088bc
-GL_MAX_TEXTURE_MAX_ANISOTROPY_EXT = 0x000084ff
-GL_TEXTURE_IMAGE_VALID_QCOM = 0x00008bd8
-GL_ATC_RGBA_INTERPOLATED_ALPHA_AMD = 0x000087ee
-GL_TEXTURE_WIDTH_QCOM = 0x00008bd2
-GL_LUMINANCE_ALPHA32F_EXT = 0x00008819
-GL_INVALID_FRAMEBUFFER_OPERATION_OES = 0x00000506
-GL_OES_fixed_point = 0x00000001
-GL_RGBA4_OES = 0x00008056
-GL_CURRENT_PALETTE_MATRIX_OES = 0x00008843
-GL_EXT_texture_format_BGRA8888 = 0x00000001
-GL_DRAW_FRAMEBUFFER_APPLE = 0x00008ca9
-GL_BUFFER_MAP_POINTER_OES = 0x000088bd
-GL_COLOR_BUFFER_BIT2_QCOM = 0x00000004
-GL_3DC_X_AMD = 0x000087f9
-GL_MAP_INVALIDATE_RANGE_BIT_EXT = 0x00000004
-GL_QCOM_extended_get = 0x00000001
-GL_MAP_WRITE_BIT_EXT = 0x00000002
-GL_TEXTURE_NUM_LEVELS_QCOM = 0x00008bd9
-GL_FIXED_OES = 0x0000140c
-GL_UNSIGNED_SHORT_1_5_5_5_REV_EXT = 0x00008366
-GL_DEPTH_COMPONENT32_OES = 0x000081a7
-GL_STENCIL_BUFFER_BIT7_QCOM = 0x00800000
-GL_STENCIL_BUFFER_BIT4_QCOM = 0x00100000
-GL_DEPTH24_STENCIL8_OES = 0x000088f0
-GL_APPLE_copy_texture_levels = 0x00000001
-GL_TEXTURE_CUBE_MAP_NEGATIVE_X_OES = 0x00008516
-GL_TEXTURE_MAX_ANISOTROPY_EXT = 0x000084fe
-GL_GUILTY_CONTEXT_RESET_EXT = 0x00008253
-GL_ARM_rgba8 = 0x00000001
-GL_BLEND_SRC_RGB_OES = 0x000080c9
-GL_MULTISAMPLE_BUFFER_BIT4_QCOM = 0x10000000
-GL_FUNC_SUBTRACT_OES = 0x0000800a
-GL_MULTISAMPLE_BUFFER_BIT5_QCOM = 0x20000000
-GL_LUMINANCE16F_EXT = 0x0000881e
-GL_FRAMEBUFFER_ATTACHMENT_OBJECT_TYPE_OES = 0x00008cd0
-GL_TIMEOUT_EXPIRED_APPLE = 0x0000911b
-GL_STENCIL_BUFFER_BIT6_QCOM = 0x00400000
-GL_BGRA8_EXT = 0x000093a1
-GL_ATC_RGB_AMD = 0x00008c92
-GL_TEXTURE_SAMPLES_IMG = 0x00009136
-GL_CLIP_PLANE4_IMG = 0x00003004
-GL_TEXTURE_CUBE_MAP_POSITIVE_X_OES = 0x00008515
+GL_IMG_texture_compression_pvrtc = 0x00000001
+GL_COMPRESSED_RGB_PVRTC_4BPPV1_IMG = 0x00008c00
+GL_COMPRESSED_RGB_PVRTC_2BPPV1_IMG = 0x00008c01
+GL_COMPRESSED_RGBA_PVRTC_4BPPV1_IMG = 0x00008c02
+GL_COMPRESSED_RGBA_PVRTC_2BPPV1_IMG = 0x00008c03
 GL_IMG_texture_env_enhanced_fixed_function = 0x00000001
-GL_TEXTURE_MAX_LEVEL_APPLE = 0x0000813d
-GL_TEXTURE_TYPE_QCOM = 0x00008bd7
-GL_TEXTURE_EXTERNAL_OES = 0x00008d65
-GL_STENCIL_EXT = 0x00001802
-GL_APPLE_texture_format_BGRA8888 = 0x00000001
+GL_MODULATE_COLOR_IMG = 0x00008c04
+GL_RECIP_ADD_SIGNED_ALPHA_IMG = 0x00008c05
+GL_TEXTURE_ALPHA_MODULATE_IMG = 0x00008c06
+GL_FACTOR_ALPHA_MODULATE_IMG = 0x00008c07
+GL_FRAGMENT_ALPHA_MODULATE_IMG = 0x00008c08
+GL_ADD_BLEND_IMG = 0x00008c09
+GL_DOT3_RGBA_IMG = 0x000086af
+GL_IMG_user_clip_plane = 0x00000001
+GL_CLIP_PLANE0_IMG = 0x00003000
+GL_CLIP_PLANE1_IMG = 0x00003001
+GL_CLIP_PLANE2_IMG = 0x00003002
+GL_CLIP_PLANE3_IMG = 0x00003003
+GL_CLIP_PLANE4_IMG = 0x00003004
+GL_CLIP_PLANE5_IMG = 0x00003005
+GL_MAX_CLIP_PLANES_IMG = 0x00000d32
+GL_NV_fence = 0x00000001
+GL_ALL_COMPLETED_NV = 0x000084f2
+GL_FENCE_STATUS_NV = 0x000084f3
+GL_FENCE_CONDITION_NV = 0x000084f4
 GL_QCOM_driver_control = 0x00000001
-GL_EXT_discard_framebuffer = 0x00000001
-GL_ALPHA16F_EXT = 0x0000881c
-GL_SRGB_EXT = 0x00008c40
-GL_FUNC_REVERSE_SUBTRACT_OES = 0x0000800b
-GL_COLOR_ATTACHMENT0_OES = 0x00008ce0
-GL_SYNC_CONDITION_APPLE = 0x00009113
-GL_OES_stencil8 = 0x00000001
-GL_MAX_RENDERBUFFER_SIZE_OES = 0x000084e8
-GL_DEPTH_STENCIL_OES = 0x000084f9
-GL_OES_vertex_array_object = 0x00000001
-GL_ATC_RGBA_EXPLICIT_ALPHA_AMD = 0x00008c93
+GL_QCOM_extended_get = 0x00000001
+GL_TEXTURE_WIDTH_QCOM = 0x00008bd2
+GL_TEXTURE_HEIGHT_QCOM = 0x00008bd3
+GL_TEXTURE_DEPTH_QCOM = 0x00008bd4
+GL_TEXTURE_INTERNAL_FORMAT_QCOM = 0x00008bd5
+GL_TEXTURE_FORMAT_QCOM = 0x00008bd6
+GL_TEXTURE_TYPE_QCOM = 0x00008bd7
+GL_TEXTURE_IMAGE_VALID_QCOM = 0x00008bd8
+GL_TEXTURE_NUM_LEVELS_QCOM = 0x00008bd9
+GL_TEXTURE_TARGET_QCOM = 0x00008bda
+GL_TEXTURE_OBJECT_VALID_QCOM = 0x00008bdb
+GL_STATE_RESTORE = 0x00008bdc
+GL_QCOM_extended_get2 = 0x00000001
+GL_QCOM_perfmon_global_mode = 0x00000001
+GL_PERFMON_GLOBAL_MODE_QCOM = 0x00008fa0
+GL_QCOM_tiled_rendering = 0x00000001
+GL_COLOR_BUFFER_BIT0_QCOM = 0x00000001
+GL_COLOR_BUFFER_BIT1_QCOM = 0x00000002
+GL_COLOR_BUFFER_BIT2_QCOM = 0x00000004
+GL_COLOR_BUFFER_BIT3_QCOM = 0x00000008
+GL_COLOR_BUFFER_BIT4_QCOM = 0x00000010
+GL_COLOR_BUFFER_BIT5_QCOM = 0x00000020
+GL_COLOR_BUFFER_BIT6_QCOM = 0x00000040
+GL_COLOR_BUFFER_BIT7_QCOM = 0x00000080
+GL_DEPTH_BUFFER_BIT0_QCOM = 0x00000100
+GL_DEPTH_BUFFER_BIT1_QCOM = 0x00000200
+GL_DEPTH_BUFFER_BIT2_QCOM = 0x00000400
+GL_DEPTH_BUFFER_BIT3_QCOM = 0x00000800
+GL_DEPTH_BUFFER_BIT4_QCOM = 0x00001000
+GL_DEPTH_BUFFER_BIT5_QCOM = 0x00002000
+GL_DEPTH_BUFFER_BIT6_QCOM = 0x00004000
+GL_DEPTH_BUFFER_BIT7_QCOM = 0x00008000
+GL_STENCIL_BUFFER_BIT0_QCOM = 0x00010000
+GL_STENCIL_BUFFER_BIT1_QCOM = 0x00020000
+GL_STENCIL_BUFFER_BIT2_QCOM = 0x00040000
+GL_STENCIL_BUFFER_BIT3_QCOM = 0x00080000
+GL_STENCIL_BUFFER_BIT4_QCOM = 0x00100000
+GL_STENCIL_BUFFER_BIT5_QCOM = 0x00200000
+GL_STENCIL_BUFFER_BIT6_QCOM = 0x00400000
+GL_STENCIL_BUFFER_BIT7_QCOM = 0x00800000
+GL_MULTISAMPLE_BUFFER_BIT0_QCOM = 0x01000000
+GL_MULTISAMPLE_BUFFER_BIT1_QCOM = 0x02000000
+GL_MULTISAMPLE_BUFFER_BIT2_QCOM = 0x04000000
+GL_MULTISAMPLE_BUFFER_BIT3_QCOM = 0x08000000
+GL_MULTISAMPLE_BUFFER_BIT4_QCOM = 0x10000000
+GL_MULTISAMPLE_BUFFER_BIT5_QCOM = 0x20000000
+GL_MULTISAMPLE_BUFFER_BIT6_QCOM = 0x40000000
+GL_MULTISAMPLE_BUFFER_BIT7_QCOM = 0x80000000
+GL_QCOM_writeonly_rendering = 0x00000001
+GL_WRITEONLY_RENDERING_QCOM = 0x00008823
 
 # GL Functions
+try:
+
+  def glEGLImageTargetTexture2DOES(target,
+                                   image,
+                                   target_t=GLenum,
+                                   image_t=GLeglImageOES):
+    restype = None
+    argtypes = [target_t, image_t]
+    cfunc = c.glEGLImageTargetTexture2DOES
+    cfunc.restype = restype
+    cfunc.argtypes = argtypes
+    return cfunc(target, image)
+
+  # Check if the function actually exists
+  f = c.glEGLImageTargetTexture2DOES
+  del f
+  loaded[0] += 1
+except AttributeError as e:
+  loaded[1] += 1
+  if DEBUG > 0:
+    print('could not load the function')
+    print(e)
+
+try:
+
+  def glEGLImageTargetRenderbufferStorageOES(target,
+                                             image,
+                                             target_t=GLenum,
+                                             image_t=GLeglImageOES):
+    restype = None
+    argtypes = [target_t, image_t]
+    cfunc = c.glEGLImageTargetRenderbufferStorageOES
+    cfunc.restype = restype
+    cfunc.argtypes = argtypes
+    return cfunc(target, image)
+
+  # Check if the function actually exists
+  f = c.glEGLImageTargetRenderbufferStorageOES
+  del f
+  loaded[0] += 1
+except AttributeError as e:
+  loaded[1] += 1
+  if DEBUG > 0:
+    print('could not load the function')
+    print(e)
+
 try:
 
   def glBlendEquationSeparateOES(modeRGB,
@@ -341,7 +404,6 @@ try:
     cfunc.restype = restype
     cfunc.argtypes = argtypes
     return cfunc(modeRGB, modeAlpha)
-
 
   # Check if the function actually exists
   f = c.glBlendEquationSeparateOES
@@ -370,7 +432,6 @@ try:
     cfunc.argtypes = argtypes
     return cfunc(srcRGB, dstRGB, srcAlpha, dstAlpha)
 
-
   # Check if the function actually exists
   f = c.glBlendFuncSeparateOES
   del f
@@ -390,7 +451,6 @@ try:
     cfunc.restype = restype
     cfunc.argtypes = argtypes
     return cfunc(mode)
-
 
   # Check if the function actually exists
   f = c.glBlendEquationOES
@@ -421,7 +481,6 @@ try:
     cfunc.argtypes = argtypes
     return cfunc(x, y, z, width, height)
 
-
   # Check if the function actually exists
   f = c.glDrawTexsOES
   del f
@@ -450,7 +509,6 @@ try:
     cfunc.restype = restype
     cfunc.argtypes = argtypes
     return cfunc(x, y, z, width, height)
-
 
   # Check if the function actually exists
   f = c.glDrawTexiOES
@@ -481,7 +539,6 @@ try:
     cfunc.argtypes = argtypes
     return cfunc(x, y, z, width, height)
 
-
   # Check if the function actually exists
   f = c.glDrawTexxOES
   del f
@@ -501,7 +558,6 @@ try:
     cfunc.restype = restype
     cfunc.argtypes = argtypes
     return cfunc(param0)
-
 
   # Check if the function actually exists
   f = c.glDrawTexsvOES
@@ -523,7 +579,6 @@ try:
     cfunc.argtypes = argtypes
     return cfunc(param0)
 
-
   # Check if the function actually exists
   f = c.glDrawTexivOES
   del f
@@ -543,7 +598,6 @@ try:
     cfunc.restype = restype
     cfunc.argtypes = argtypes
     return cfunc(param0)
-
 
   # Check if the function actually exists
   f = c.glDrawTexxvOES
@@ -574,7 +628,6 @@ try:
     cfunc.argtypes = argtypes
     return cfunc(x, y, z, width, height)
 
-
   # Check if the function actually exists
   f = c.glDrawTexfOES
   del f
@@ -595,7 +648,6 @@ try:
     cfunc.argtypes = argtypes
     return cfunc(param0)
 
-
   # Check if the function actually exists
   f = c.glDrawTexfvOES
   del f
@@ -608,62 +660,13 @@ except AttributeError as e:
 
 try:
 
-  def glEGLImageTargetTexture2DOES(target,
-                                   image,
-                                   target_t=GLenum,
-                                   image_t=GLeglImageOES):
-    restype = None
-    argtypes = [target_t, image_t]
-    cfunc = c.glEGLImageTargetTexture2DOES
-    cfunc.restype = restype
-    cfunc.argtypes = argtypes
-    return cfunc(target, image)
-
-
-  # Check if the function actually exists
-  f = c.glEGLImageTargetTexture2DOES
-  del f
-  loaded[0] += 1
-except AttributeError as e:
-  loaded[1] += 1
-  if DEBUG > 0:
-    print('could not load the function')
-    print(e)
-
-try:
-
-  def glEGLImageTargetRenderbufferStorageOES(target,
-                                             image,
-                                             target_t=GLenum,
-                                             image_t=GLeglImageOES):
-    restype = None
-    argtypes = [target_t, image_t]
-    cfunc = c.glEGLImageTargetRenderbufferStorageOES
-    cfunc.restype = restype
-    cfunc.argtypes = argtypes
-    return cfunc(target, image)
-
-
-  # Check if the function actually exists
-  f = c.glEGLImageTargetRenderbufferStorageOES
-  del f
-  loaded[0] += 1
-except AttributeError as e:
-  loaded[1] += 1
-  if DEBUG > 0:
-    print('could not load the function')
-    print(e)
-
-try:
-
-  def glAlphaFuncxOES(func, ref, func_t=GLenum, ref_t=GLclampx):
+  def glAlphaFuncxOES(func, ref, func_t=GLenum, ref_t=GLfixed):
     restype = None
     argtypes = [func_t, ref_t]
     cfunc = c.glAlphaFuncxOES
     cfunc.restype = restype
     cfunc.argtypes = argtypes
     return cfunc(func, ref)
-
 
   # Check if the function actually exists
   f = c.glAlphaFuncxOES
@@ -681,17 +684,16 @@ try:
                        green,
                        blue,
                        alpha,
-                       red_t=GLclampx,
-                       green_t=GLclampx,
-                       blue_t=GLclampx,
-                       alpha_t=GLclampx):
+                       red_t=GLfixed,
+                       green_t=GLfixed,
+                       blue_t=GLfixed,
+                       alpha_t=GLfixed):
     restype = None
     argtypes = [red_t, green_t, blue_t, alpha_t]
     cfunc = c.glClearColorxOES
     cfunc.restype = restype
     cfunc.argtypes = argtypes
     return cfunc(red, green, blue, alpha)
-
 
   # Check if the function actually exists
   f = c.glClearColorxOES
@@ -705,14 +707,13 @@ except AttributeError as e:
 
 try:
 
-  def glClearDepthxOES(depth, depth_t=GLclampx):
+  def glClearDepthxOES(depth, depth_t=GLfixed):
     restype = None
     argtypes = [depth_t]
     cfunc = c.glClearDepthxOES
     cfunc.restype = restype
     cfunc.argtypes = argtypes
     return cfunc(depth)
-
 
   # Check if the function actually exists
   f = c.glClearDepthxOES
@@ -733,7 +734,6 @@ try:
     cfunc.restype = restype
     cfunc.argtypes = argtypes
     return cfunc(plane, param0)
-
 
   # Check if the function actually exists
   f = c.glClipPlanexOES
@@ -762,7 +762,6 @@ try:
     cfunc.argtypes = argtypes
     return cfunc(red, green, blue, alpha)
 
-
   # Check if the function actually exists
   f = c.glColor4xOES
   del f
@@ -775,14 +774,13 @@ except AttributeError as e:
 
 try:
 
-  def glDepthRangexOES(zNear, zFar, zNear_t=GLclampx, zFar_t=GLclampx):
+  def glDepthRangexOES(n, f, n_t=GLfixed, f_t=GLfixed):
     restype = None
-    argtypes = [zNear_t, zFar_t]
+    argtypes = [n_t, f_t]
     cfunc = c.glDepthRangexOES
     cfunc.restype = restype
     cfunc.argtypes = argtypes
-    return cfunc(zNear, zFar)
-
+    return cfunc(n, f)
 
   # Check if the function actually exists
   f = c.glDepthRangexOES
@@ -804,7 +802,6 @@ try:
     cfunc.argtypes = argtypes
     return cfunc(pname, param)
 
-
   # Check if the function actually exists
   f = c.glFogxOES
   del f
@@ -825,7 +822,6 @@ try:
     cfunc.argtypes = argtypes
     return cfunc(pname, param0)
 
-
   # Check if the function actually exists
   f = c.glFogxvOES
   del f
@@ -838,25 +834,24 @@ except AttributeError as e:
 
 try:
 
-  def glFrustumxOES(left,
-                    right,
-                    bottom,
-                    top,
-                    zNear,
-                    zFar,
-                    left_t=GLfixed,
-                    right_t=GLfixed,
-                    bottom_t=GLfixed,
-                    top_t=GLfixed,
-                    zNear_t=GLfixed,
-                    zFar_t=GLfixed):
+  def glFrustumxOES(l,
+                    r,
+                    b,
+                    t,
+                    n,
+                    f,
+                    l_t=GLfixed,
+                    r_t=GLfixed,
+                    b_t=GLfixed,
+                    t_t=GLfixed,
+                    n_t=GLfixed,
+                    f_t=GLfixed):
     restype = None
-    argtypes = [left_t, right_t, bottom_t, top_t, zNear_t, zFar_t]
+    argtypes = [l_t, r_t, b_t, t_t, n_t, f_t]
     cfunc = c.glFrustumxOES
     cfunc.restype = restype
     cfunc.argtypes = argtypes
-    return cfunc(left, right, bottom, top, zNear, zFar)
-
+    return cfunc(l, r, b, t, n, f)
 
   # Check if the function actually exists
   f = c.glFrustumxOES
@@ -870,14 +865,13 @@ except AttributeError as e:
 
 try:
 
-  def glGetClipPlanexOES(pname, eqn, pname_t=GLenum, eqn_t=(GLfixed * 4)):
+  def glGetClipPlanexOES(plane, param0, plane_t=GLenum, param0_t=GLfixed):
     restype = None
-    argtypes = [pname_t, eqn_t]
+    argtypes = [plane_t, param0_t]
     cfunc = c.glGetClipPlanexOES
     cfunc.restype = restype
     cfunc.argtypes = argtypes
-    return cfunc(pname, eqn)
-
+    return cfunc(plane, param0)
 
   # Check if the function actually exists
   f = c.glGetClipPlanexOES
@@ -899,7 +893,6 @@ try:
     cfunc.argtypes = argtypes
     return cfunc(pname, param0)
 
-
   # Check if the function actually exists
   f = c.glGetFixedvOES
   del f
@@ -912,71 +905,18 @@ except AttributeError as e:
 
 try:
 
-  def glGetLightxvOES(light,
-                      pname,
-                      param0,
-                      light_t=GLenum,
-                      pname_t=GLenum,
-                      param0_t=GLfixed):
-    restype = None
-    argtypes = [light_t, pname_t, param0_t]
-    cfunc = c.glGetLightxvOES
-    cfunc.restype = restype
-    cfunc.argtypes = argtypes
-    return cfunc(light, pname, param0)
-
-
-  # Check if the function actually exists
-  f = c.glGetLightxvOES
-  del f
-  loaded[0] += 1
-except AttributeError as e:
-  loaded[1] += 1
-  if DEBUG > 0:
-    print('could not load the function')
-    print(e)
-
-try:
-
-  def glGetMaterialxvOES(face,
-                         pname,
-                         param0,
-                         face_t=GLenum,
-                         pname_t=GLenum,
-                         param0_t=GLfixed):
-    restype = None
-    argtypes = [face_t, pname_t, param0_t]
-    cfunc = c.glGetMaterialxvOES
-    cfunc.restype = restype
-    cfunc.argtypes = argtypes
-    return cfunc(face, pname, param0)
-
-
-  # Check if the function actually exists
-  f = c.glGetMaterialxvOES
-  del f
-  loaded[0] += 1
-except AttributeError as e:
-  loaded[1] += 1
-  if DEBUG > 0:
-    print('could not load the function')
-    print(e)
-
-try:
-
-  def glGetTexEnvxvOES(env,
+  def glGetTexEnvxvOES(target,
                        pname,
                        param0,
-                       env_t=GLenum,
+                       target_t=GLenum,
                        pname_t=GLenum,
                        param0_t=GLfixed):
     restype = None
-    argtypes = [env_t, pname_t, param0_t]
+    argtypes = [target_t, pname_t, param0_t]
     cfunc = c.glGetTexEnvxvOES
     cfunc.restype = restype
     cfunc.argtypes = argtypes
-    return cfunc(env, pname, param0)
-
+    return cfunc(target, pname, param0)
 
   # Check if the function actually exists
   f = c.glGetTexEnvxvOES
@@ -1003,7 +943,6 @@ try:
     cfunc.argtypes = argtypes
     return cfunc(target, pname, param0)
 
-
   # Check if the function actually exists
   f = c.glGetTexParameterxvOES
   del f
@@ -1024,7 +963,6 @@ try:
     cfunc.argtypes = argtypes
     return cfunc(pname, param)
 
-
   # Check if the function actually exists
   f = c.glLightModelxOES
   del f
@@ -1044,7 +982,6 @@ try:
     cfunc.restype = restype
     cfunc.argtypes = argtypes
     return cfunc(pname, param0)
-
 
   # Check if the function actually exists
   f = c.glLightModelxvOES
@@ -1071,7 +1008,6 @@ try:
     cfunc.argtypes = argtypes
     return cfunc(light, pname, param)
 
-
   # Check if the function actually exists
   f = c.glLightxOES
   del f
@@ -1097,7 +1033,6 @@ try:
     cfunc.argtypes = argtypes
     return cfunc(light, pname, param0)
 
-
   # Check if the function actually exists
   f = c.glLightxvOES
   del f
@@ -1118,7 +1053,6 @@ try:
     cfunc.argtypes = argtypes
     return cfunc(width)
 
-
   # Check if the function actually exists
   f = c.glLineWidthxOES
   del f
@@ -1138,7 +1072,6 @@ try:
     cfunc.restype = restype
     cfunc.argtypes = argtypes
     return cfunc(param0)
-
 
   # Check if the function actually exists
   f = c.glLoadMatrixxOES
@@ -1165,7 +1098,6 @@ try:
     cfunc.argtypes = argtypes
     return cfunc(face, pname, param)
 
-
   # Check if the function actually exists
   f = c.glMaterialxOES
   del f
@@ -1191,7 +1123,6 @@ try:
     cfunc.argtypes = argtypes
     return cfunc(face, pname, param0)
 
-
   # Check if the function actually exists
   f = c.glMaterialxvOES
   del f
@@ -1212,7 +1143,6 @@ try:
     cfunc.argtypes = argtypes
     return cfunc(param0)
 
-
   # Check if the function actually exists
   f = c.glMultMatrixxOES
   del f
@@ -1225,23 +1155,22 @@ except AttributeError as e:
 
 try:
 
-  def glMultiTexCoord4xOES(target,
+  def glMultiTexCoord4xOES(texture,
                            s,
                            t,
                            r,
                            q,
-                           target_t=GLenum,
+                           texture_t=GLenum,
                            s_t=GLfixed,
                            t_t=GLfixed,
                            r_t=GLfixed,
                            q_t=GLfixed):
     restype = None
-    argtypes = [target_t, s_t, t_t, r_t, q_t]
+    argtypes = [texture_t, s_t, t_t, r_t, q_t]
     cfunc = c.glMultiTexCoord4xOES
     cfunc.restype = restype
     cfunc.argtypes = argtypes
-    return cfunc(target, s, t, r, q)
-
+    return cfunc(texture, s, t, r, q)
 
   # Check if the function actually exists
   f = c.glMultiTexCoord4xOES
@@ -1263,7 +1192,6 @@ try:
     cfunc.argtypes = argtypes
     return cfunc(nx, ny, nz)
 
-
   # Check if the function actually exists
   f = c.glNormal3xOES
   del f
@@ -1276,49 +1204,27 @@ except AttributeError as e:
 
 try:
 
-  def glOrthoxOES(left,
-                  right,
-                  bottom,
-                  top,
-                  zNear,
-                  zFar,
-                  left_t=GLfixed,
-                  right_t=GLfixed,
-                  bottom_t=GLfixed,
-                  top_t=GLfixed,
-                  zNear_t=GLfixed,
-                  zFar_t=GLfixed):
+  def glOrthoxOES(l,
+                  r,
+                  b,
+                  t,
+                  n,
+                  f,
+                  l_t=GLfixed,
+                  r_t=GLfixed,
+                  b_t=GLfixed,
+                  t_t=GLfixed,
+                  n_t=GLfixed,
+                  f_t=GLfixed):
     restype = None
-    argtypes = [left_t, right_t, bottom_t, top_t, zNear_t, zFar_t]
+    argtypes = [l_t, r_t, b_t, t_t, n_t, f_t]
     cfunc = c.glOrthoxOES
     cfunc.restype = restype
     cfunc.argtypes = argtypes
-    return cfunc(left, right, bottom, top, zNear, zFar)
-
+    return cfunc(l, r, b, t, n, f)
 
   # Check if the function actually exists
   f = c.glOrthoxOES
-  del f
-  loaded[0] += 1
-except AttributeError as e:
-  loaded[1] += 1
-  if DEBUG > 0:
-    print('could not load the function')
-    print(e)
-
-try:
-
-  def glPointParameterxOES(pname, param, pname_t=GLenum, param_t=GLfixed):
-    restype = None
-    argtypes = [pname_t, param_t]
-    cfunc = c.glPointParameterxOES
-    cfunc.restype = restype
-    cfunc.argtypes = argtypes
-    return cfunc(pname, param)
-
-
-  # Check if the function actually exists
-  f = c.glPointParameterxOES
   del f
   loaded[0] += 1
 except AttributeError as e:
@@ -1336,7 +1242,6 @@ try:
     cfunc.restype = restype
     cfunc.argtypes = argtypes
     return cfunc(pname, param0)
-
 
   # Check if the function actually exists
   f = c.glPointParameterxvOES
@@ -1358,7 +1263,6 @@ try:
     cfunc.argtypes = argtypes
     return cfunc(size)
 
-
   # Check if the function actually exists
   f = c.glPointSizexOES
   del f
@@ -1378,7 +1282,6 @@ try:
     cfunc.restype = restype
     cfunc.argtypes = argtypes
     return cfunc(factor, units)
-
 
   # Check if the function actually exists
   f = c.glPolygonOffsetxOES
@@ -1407,31 +1310,8 @@ try:
     cfunc.argtypes = argtypes
     return cfunc(angle, x, y, z)
 
-
   # Check if the function actually exists
   f = c.glRotatexOES
-  del f
-  loaded[0] += 1
-except AttributeError as e:
-  loaded[1] += 1
-  if DEBUG > 0:
-    print('could not load the function')
-    print(e)
-
-try:
-
-  def glSampleCoveragexOES(value, invert, value_t=GLclampx,
-                           invert_t=GLboolean):
-    restype = None
-    argtypes = [value_t, invert_t]
-    cfunc = c.glSampleCoveragexOES
-    cfunc.restype = restype
-    cfunc.argtypes = argtypes
-    return cfunc(value, invert)
-
-
-  # Check if the function actually exists
-  f = c.glSampleCoveragexOES
   del f
   loaded[0] += 1
 except AttributeError as e:
@@ -1449,7 +1329,6 @@ try:
     cfunc.restype = restype
     cfunc.argtypes = argtypes
     return cfunc(x, y, z)
-
 
   # Check if the function actually exists
   f = c.glScalexOES
@@ -1476,7 +1355,6 @@ try:
     cfunc.argtypes = argtypes
     return cfunc(target, pname, param)
 
-
   # Check if the function actually exists
   f = c.glTexEnvxOES
   del f
@@ -1501,7 +1379,6 @@ try:
     cfunc.restype = restype
     cfunc.argtypes = argtypes
     return cfunc(target, pname, param0)
-
 
   # Check if the function actually exists
   f = c.glTexEnvxvOES
@@ -1528,7 +1405,6 @@ try:
     cfunc.argtypes = argtypes
     return cfunc(target, pname, param)
 
-
   # Check if the function actually exists
   f = c.glTexParameterxOES
   del f
@@ -1554,7 +1430,6 @@ try:
     cfunc.argtypes = argtypes
     return cfunc(target, pname, param0)
 
-
   # Check if the function actually exists
   f = c.glTexParameterxvOES
   del f
@@ -1575,9 +1450,174 @@ try:
     cfunc.argtypes = argtypes
     return cfunc(x, y, z)
 
-
   # Check if the function actually exists
   f = c.glTranslatexOES
+  del f
+  loaded[0] += 1
+except AttributeError as e:
+  loaded[1] += 1
+  if DEBUG > 0:
+    print('could not load the function')
+    print(e)
+
+try:
+
+  def glGetLightxvOES(light,
+                      pname,
+                      param0,
+                      light_t=GLenum,
+                      pname_t=GLenum,
+                      param0_t=GLfixed):
+    restype = None
+    argtypes = [light_t, pname_t, param0_t]
+    cfunc = c.glGetLightxvOES
+    cfunc.restype = restype
+    cfunc.argtypes = argtypes
+    return cfunc(light, pname, param0)
+
+  # Check if the function actually exists
+  f = c.glGetLightxvOES
+  del f
+  loaded[0] += 1
+except AttributeError as e:
+  loaded[1] += 1
+  if DEBUG > 0:
+    print('could not load the function')
+    print(e)
+
+try:
+
+  def glGetMaterialxvOES(face,
+                         pname,
+                         param0,
+                         face_t=GLenum,
+                         pname_t=GLenum,
+                         param0_t=GLfixed):
+    restype = None
+    argtypes = [face_t, pname_t, param0_t]
+    cfunc = c.glGetMaterialxvOES
+    cfunc.restype = restype
+    cfunc.argtypes = argtypes
+    return cfunc(face, pname, param0)
+
+  # Check if the function actually exists
+  f = c.glGetMaterialxvOES
+  del f
+  loaded[0] += 1
+except AttributeError as e:
+  loaded[1] += 1
+  if DEBUG > 0:
+    print('could not load the function')
+    print(e)
+
+try:
+
+  def glPointParameterxOES(pname, param, pname_t=GLenum, param_t=GLfixed):
+    restype = None
+    argtypes = [pname_t, param_t]
+    cfunc = c.glPointParameterxOES
+    cfunc.restype = restype
+    cfunc.argtypes = argtypes
+    return cfunc(pname, param)
+
+  # Check if the function actually exists
+  f = c.glPointParameterxOES
+  del f
+  loaded[0] += 1
+except AttributeError as e:
+  loaded[1] += 1
+  if DEBUG > 0:
+    print('could not load the function')
+    print(e)
+
+try:
+
+  def glSampleCoveragexOES(value, invert, value_t=GLclampx,
+                           invert_t=GLboolean):
+    restype = None
+    argtypes = [value_t, invert_t]
+    cfunc = c.glSampleCoveragexOES
+    cfunc.restype = restype
+    cfunc.argtypes = argtypes
+    return cfunc(value, invert)
+
+  # Check if the function actually exists
+  f = c.glSampleCoveragexOES
+  del f
+  loaded[0] += 1
+except AttributeError as e:
+  loaded[1] += 1
+  if DEBUG > 0:
+    print('could not load the function')
+    print(e)
+
+try:
+
+  def glGetTexGenxvOES(coord,
+                       pname,
+                       param0,
+                       coord_t=GLenum,
+                       pname_t=GLenum,
+                       param0_t=GLfixed):
+    restype = None
+    argtypes = [coord_t, pname_t, param0_t]
+    cfunc = c.glGetTexGenxvOES
+    cfunc.restype = restype
+    cfunc.argtypes = argtypes
+    return cfunc(coord, pname, param0)
+
+  # Check if the function actually exists
+  f = c.glGetTexGenxvOES
+  del f
+  loaded[0] += 1
+except AttributeError as e:
+  loaded[1] += 1
+  if DEBUG > 0:
+    print('could not load the function')
+    print(e)
+
+try:
+
+  def glTexGenxOES(coord,
+                   pname,
+                   param,
+                   coord_t=GLenum,
+                   pname_t=GLenum,
+                   param_t=GLfixed):
+    restype = None
+    argtypes = [coord_t, pname_t, param_t]
+    cfunc = c.glTexGenxOES
+    cfunc.restype = restype
+    cfunc.argtypes = argtypes
+    return cfunc(coord, pname, param)
+
+  # Check if the function actually exists
+  f = c.glTexGenxOES
+  del f
+  loaded[0] += 1
+except AttributeError as e:
+  loaded[1] += 1
+  if DEBUG > 0:
+    print('could not load the function')
+    print(e)
+
+try:
+
+  def glTexGenxvOES(coord,
+                    pname,
+                    param0,
+                    coord_t=GLenum,
+                    pname_t=GLenum,
+                    param0_t=GLfixed):
+    restype = None
+    argtypes = [coord_t, pname_t, param0_t]
+    cfunc = c.glTexGenxvOES
+    cfunc.restype = restype
+    cfunc.argtypes = argtypes
+    return cfunc(coord, pname, param0)
+
+  # Check if the function actually exists
+  f = c.glTexGenxvOES
   del f
   loaded[0] += 1
 except AttributeError as e:
@@ -1595,7 +1635,6 @@ try:
     cfunc.restype = restype
     cfunc.argtypes = argtypes
     return cfunc(renderbuffer)
-
 
   # Check if the function actually exists
   f = c.glIsRenderbufferOES
@@ -1620,7 +1659,6 @@ try:
     cfunc.argtypes = argtypes
     return cfunc(target, renderbuffer)
 
-
   # Check if the function actually exists
   f = c.glBindRenderbufferOES
   del f
@@ -1633,17 +1671,13 @@ except AttributeError as e:
 
 try:
 
-  def glDeleteRenderbuffersOES(n,
-                               renderbuffers,
-                               n_t=GLsizei,
-                               renderbuffers_t=ctypes.POINTER(GLuint)):
+  def glDeleteRenderbuffersOES(n, param0, n_t=GLsizei, param0_t=GLuint):
     restype = None
-    argtypes = [n_t, renderbuffers_t]
+    argtypes = [n_t, param0_t]
     cfunc = c.glDeleteRenderbuffersOES
     cfunc.restype = restype
     cfunc.argtypes = argtypes
-    return cfunc(n, renderbuffers)
-
+    return cfunc(n, param0)
 
   # Check if the function actually exists
   f = c.glDeleteRenderbuffersOES
@@ -1657,17 +1691,13 @@ except AttributeError as e:
 
 try:
 
-  def glGenRenderbuffersOES(n,
-                            renderbuffers,
-                            n_t=GLsizei,
-                            renderbuffers_t=ctypes.POINTER(GLuint)):
+  def glGenRenderbuffersOES(n, param0, n_t=GLsizei, param0_t=GLuint):
     restype = None
-    argtypes = [n_t, renderbuffers_t]
+    argtypes = [n_t, param0_t]
     cfunc = c.glGenRenderbuffersOES
     cfunc.restype = restype
     cfunc.argtypes = argtypes
-    return cfunc(n, renderbuffers)
-
+    return cfunc(n, param0)
 
   # Check if the function actually exists
   f = c.glGenRenderbuffersOES
@@ -1696,7 +1726,6 @@ try:
     cfunc.argtypes = argtypes
     return cfunc(target, internalformat, width, height)
 
-
   # Check if the function actually exists
   f = c.glRenderbufferStorageOES
   del f
@@ -1711,17 +1740,16 @@ try:
 
   def glGetRenderbufferParameterivOES(target,
                                       pname,
-                                      params,
+                                      param0,
                                       target_t=GLenum,
                                       pname_t=GLenum,
-                                      params_t=ctypes.POINTER(GLint)):
+                                      param0_t=GLint):
     restype = None
-    argtypes = [target_t, pname_t, params_t]
+    argtypes = [target_t, pname_t, param0_t]
     cfunc = c.glGetRenderbufferParameterivOES
     cfunc.restype = restype
     cfunc.argtypes = argtypes
-    return cfunc(target, pname, params)
-
+    return cfunc(target, pname, param0)
 
   # Check if the function actually exists
   f = c.glGetRenderbufferParameterivOES
@@ -1742,7 +1770,6 @@ try:
     cfunc.restype = restype
     cfunc.argtypes = argtypes
     return cfunc(framebuffer)
-
 
   # Check if the function actually exists
   f = c.glIsFramebufferOES
@@ -1767,7 +1794,6 @@ try:
     cfunc.argtypes = argtypes
     return cfunc(target, framebuffer)
 
-
   # Check if the function actually exists
   f = c.glBindFramebufferOES
   del f
@@ -1780,17 +1806,13 @@ except AttributeError as e:
 
 try:
 
-  def glDeleteFramebuffersOES(n,
-                              framebuffers,
-                              n_t=GLsizei,
-                              framebuffers_t=ctypes.POINTER(GLuint)):
+  def glDeleteFramebuffersOES(n, param0, n_t=GLsizei, param0_t=GLuint):
     restype = None
-    argtypes = [n_t, framebuffers_t]
+    argtypes = [n_t, param0_t]
     cfunc = c.glDeleteFramebuffersOES
     cfunc.restype = restype
     cfunc.argtypes = argtypes
-    return cfunc(n, framebuffers)
-
+    return cfunc(n, param0)
 
   # Check if the function actually exists
   f = c.glDeleteFramebuffersOES
@@ -1804,17 +1826,13 @@ except AttributeError as e:
 
 try:
 
-  def glGenFramebuffersOES(n,
-                           framebuffers,
-                           n_t=GLsizei,
-                           framebuffers_t=ctypes.POINTER(GLuint)):
+  def glGenFramebuffersOES(n, param0, n_t=GLsizei, param0_t=GLuint):
     restype = None
-    argtypes = [n_t, framebuffers_t]
+    argtypes = [n_t, param0_t]
     cfunc = c.glGenFramebuffersOES
     cfunc.restype = restype
     cfunc.argtypes = argtypes
-    return cfunc(n, framebuffers)
-
+    return cfunc(n, param0)
 
   # Check if the function actually exists
   f = c.glGenFramebuffersOES
@@ -1835,7 +1853,6 @@ try:
     cfunc.restype = restype
     cfunc.argtypes = argtypes
     return cfunc(target)
-
 
   # Check if the function actually exists
   f = c.glCheckFramebufferStatusOES
@@ -1863,7 +1880,6 @@ try:
     cfunc.restype = restype
     cfunc.argtypes = argtypes
     return cfunc(target, attachment, renderbuffertarget, renderbuffer)
-
 
   # Check if the function actually exists
   f = c.glFramebufferRenderbufferOES
@@ -1894,7 +1910,6 @@ try:
     cfunc.argtypes = argtypes
     return cfunc(target, attachment, textarget, texture, level)
 
-
   # Check if the function actually exists
   f = c.glFramebufferTexture2DOES
   del f
@@ -1910,18 +1925,17 @@ try:
   def glGetFramebufferAttachmentParameterivOES(target,
                                                attachment,
                                                pname,
-                                               params,
+                                               param0,
                                                target_t=GLenum,
                                                attachment_t=GLenum,
                                                pname_t=GLenum,
-                                               params_t=ctypes.POINTER(GLint)):
+                                               param0_t=GLint):
     restype = None
-    argtypes = [target_t, attachment_t, pname_t, params_t]
+    argtypes = [target_t, attachment_t, pname_t, param0_t]
     cfunc = c.glGetFramebufferAttachmentParameterivOES
     cfunc.restype = restype
     cfunc.argtypes = argtypes
-    return cfunc(target, attachment, pname, params)
-
+    return cfunc(target, attachment, pname, param0)
 
   # Check if the function actually exists
   f = c.glGetFramebufferAttachmentParameterivOES
@@ -1943,7 +1957,6 @@ try:
     cfunc.argtypes = argtypes
     return cfunc(target)
 
-
   # Check if the function actually exists
   f = c.glGenerateMipmapOES
   del f
@@ -1964,7 +1977,6 @@ try:
     cfunc.argtypes = argtypes
     return cfunc(target)
 
-
   # Check if the function actually exists
   f = c.glUnmapBufferOES
   del f
@@ -1979,17 +1991,16 @@ try:
 
   def glGetBufferPointervOES(target,
                              pname,
-                             params,
+                             voidparams,
                              target_t=GLenum,
                              pname_t=GLenum,
-                             params_t=GLvoid):
+                             voidparams_t=ctypes.c_void_p):
     restype = None
-    argtypes = [target_t, pname_t, params_t]
+    argtypes = [target_t, pname_t, voidparams_t]
     cfunc = c.glGetBufferPointervOES
     cfunc.restype = restype
     cfunc.argtypes = argtypes
-    return cfunc(target, pname, params)
-
+    return cfunc(target, pname, voidparams)
 
   # Check if the function actually exists
   f = c.glGetBufferPointervOES
@@ -2012,7 +2023,6 @@ try:
     cfunc.argtypes = argtypes
     return cfunc(matrixpaletteindex)
 
-
   # Check if the function actually exists
   f = c.glCurrentPaletteMatrixOES
   del f
@@ -2033,7 +2043,6 @@ try:
     cfunc.argtypes = argtypes
     return cfunc(void)
 
-
   # Check if the function actually exists
   f = c.glLoadPaletteFromModelViewMatrixOES
   del f
@@ -2049,18 +2058,17 @@ try:
   def glMatrixIndexPointerOES(size,
                               type,
                               stride,
-                              param0,
+                              voidpointer,
                               size_t=GLint,
                               type_t=GLenum,
                               stride_t=GLsizei,
-                              param0_t=GLvoid):
+                              voidpointer_t=ctypes.c_void_p):
     restype = None
-    argtypes = [size_t, type_t, stride_t, param0_t]
+    argtypes = [size_t, type_t, stride_t, voidpointer_t]
     cfunc = c.glMatrixIndexPointerOES
     cfunc.restype = restype
     cfunc.argtypes = argtypes
-    return cfunc(size, type, stride, param0)
-
+    return cfunc(size, type, stride, voidpointer)
 
   # Check if the function actually exists
   f = c.glMatrixIndexPointerOES
@@ -2077,18 +2085,17 @@ try:
   def glWeightPointerOES(size,
                          type,
                          stride,
-                         param0,
+                         voidpointer,
                          size_t=GLint,
                          type_t=GLenum,
                          stride_t=GLsizei,
-                         param0_t=GLvoid):
+                         voidpointer_t=ctypes.c_void_p):
     restype = None
-    argtypes = [size_t, type_t, stride_t, param0_t]
+    argtypes = [size_t, type_t, stride_t, voidpointer_t]
     cfunc = c.glWeightPointerOES
     cfunc.restype = restype
     cfunc.argtypes = argtypes
-    return cfunc(size, type, stride, param0)
-
+    return cfunc(size, type, stride, voidpointer)
 
   # Check if the function actually exists
   f = c.glWeightPointerOES
@@ -2102,147 +2109,16 @@ except AttributeError as e:
 
 try:
 
-  def glQueryMatrixxOES(mantissa,
-                        exponent,
-                        mantissa_t=(GLfixed * 16),
-                        exponent_t=(GLint * 16)):
+  def glQueryMatrixxOES(param0, param1, param0_t=GLfixed, param1_t=GLint):
     restype = GLbitfield
-    argtypes = [mantissa_t, exponent_t]
+    argtypes = [param0_t, param1_t]
     cfunc = c.glQueryMatrixxOES
     cfunc.restype = restype
     cfunc.argtypes = argtypes
-    return cfunc(mantissa, exponent)
-
+    return cfunc(param0, param1)
 
   # Check if the function actually exists
   f = c.glQueryMatrixxOES
-  del f
-  loaded[0] += 1
-except AttributeError as e:
-  loaded[1] += 1
-  if DEBUG > 0:
-    print('could not load the function')
-    print(e)
-
-try:
-
-  def glDepthRangefOES(zNear, zFar, zNear_t=GLclampf, zFar_t=GLclampf):
-    restype = None
-    argtypes = [zNear_t, zFar_t]
-    cfunc = c.glDepthRangefOES
-    cfunc.restype = restype
-    cfunc.argtypes = argtypes
-    return cfunc(zNear, zFar)
-
-
-  # Check if the function actually exists
-  f = c.glDepthRangefOES
-  del f
-  loaded[0] += 1
-except AttributeError as e:
-  loaded[1] += 1
-  if DEBUG > 0:
-    print('could not load the function')
-    print(e)
-
-try:
-
-  def glFrustumfOES(left,
-                    right,
-                    bottom,
-                    top,
-                    zNear,
-                    zFar,
-                    left_t=GLfloat,
-                    right_t=GLfloat,
-                    bottom_t=GLfloat,
-                    top_t=GLfloat,
-                    zNear_t=GLfloat,
-                    zFar_t=GLfloat):
-    restype = None
-    argtypes = [left_t, right_t, bottom_t, top_t, zNear_t, zFar_t]
-    cfunc = c.glFrustumfOES
-    cfunc.restype = restype
-    cfunc.argtypes = argtypes
-    return cfunc(left, right, bottom, top, zNear, zFar)
-
-
-  # Check if the function actually exists
-  f = c.glFrustumfOES
-  del f
-  loaded[0] += 1
-except AttributeError as e:
-  loaded[1] += 1
-  if DEBUG > 0:
-    print('could not load the function')
-    print(e)
-
-try:
-
-  def glOrthofOES(left,
-                  right,
-                  bottom,
-                  top,
-                  zNear,
-                  zFar,
-                  left_t=GLfloat,
-                  right_t=GLfloat,
-                  bottom_t=GLfloat,
-                  top_t=GLfloat,
-                  zNear_t=GLfloat,
-                  zFar_t=GLfloat):
-    restype = None
-    argtypes = [left_t, right_t, bottom_t, top_t, zNear_t, zFar_t]
-    cfunc = c.glOrthofOES
-    cfunc.restype = restype
-    cfunc.argtypes = argtypes
-    return cfunc(left, right, bottom, top, zNear, zFar)
-
-
-  # Check if the function actually exists
-  f = c.glOrthofOES
-  del f
-  loaded[0] += 1
-except AttributeError as e:
-  loaded[1] += 1
-  if DEBUG > 0:
-    print('could not load the function')
-    print(e)
-
-try:
-
-  def glClipPlanefOES(plane, param0, plane_t=GLenum, param0_t=GLfloat):
-    restype = None
-    argtypes = [plane_t, param0_t]
-    cfunc = c.glClipPlanefOES
-    cfunc.restype = restype
-    cfunc.argtypes = argtypes
-    return cfunc(plane, param0)
-
-
-  # Check if the function actually exists
-  f = c.glClipPlanefOES
-  del f
-  loaded[0] += 1
-except AttributeError as e:
-  loaded[1] += 1
-  if DEBUG > 0:
-    print('could not load the function')
-    print(e)
-
-try:
-
-  def glGetClipPlanefOES(pname, eqn, pname_t=GLenum, eqn_t=(GLfloat * 4)):
-    restype = None
-    argtypes = [pname_t, eqn_t]
-    cfunc = c.glGetClipPlanefOES
-    cfunc.restype = restype
-    cfunc.argtypes = argtypes
-    return cfunc(pname, eqn)
-
-
-  # Check if the function actually exists
-  f = c.glGetClipPlanefOES
   del f
   loaded[0] += 1
 except AttributeError as e:
@@ -2261,9 +2137,130 @@ try:
     cfunc.argtypes = argtypes
     return cfunc(depth)
 
-
   # Check if the function actually exists
   f = c.glClearDepthfOES
+  del f
+  loaded[0] += 1
+except AttributeError as e:
+  loaded[1] += 1
+  if DEBUG > 0:
+    print('could not load the function')
+    print(e)
+
+try:
+
+  def glClipPlanefOES(plane, param0, plane_t=GLenum, param0_t=GLfloat):
+    restype = None
+    argtypes = [plane_t, param0_t]
+    cfunc = c.glClipPlanefOES
+    cfunc.restype = restype
+    cfunc.argtypes = argtypes
+    return cfunc(plane, param0)
+
+  # Check if the function actually exists
+  f = c.glClipPlanefOES
+  del f
+  loaded[0] += 1
+except AttributeError as e:
+  loaded[1] += 1
+  if DEBUG > 0:
+    print('could not load the function')
+    print(e)
+
+try:
+
+  def glDepthRangefOES(n, f, n_t=GLclampf, f_t=GLclampf):
+    restype = None
+    argtypes = [n_t, f_t]
+    cfunc = c.glDepthRangefOES
+    cfunc.restype = restype
+    cfunc.argtypes = argtypes
+    return cfunc(n, f)
+
+  # Check if the function actually exists
+  f = c.glDepthRangefOES
+  del f
+  loaded[0] += 1
+except AttributeError as e:
+  loaded[1] += 1
+  if DEBUG > 0:
+    print('could not load the function')
+    print(e)
+
+try:
+
+  def glFrustumfOES(l,
+                    r,
+                    b,
+                    t,
+                    n,
+                    f,
+                    l_t=GLfloat,
+                    r_t=GLfloat,
+                    b_t=GLfloat,
+                    t_t=GLfloat,
+                    n_t=GLfloat,
+                    f_t=GLfloat):
+    restype = None
+    argtypes = [l_t, r_t, b_t, t_t, n_t, f_t]
+    cfunc = c.glFrustumfOES
+    cfunc.restype = restype
+    cfunc.argtypes = argtypes
+    return cfunc(l, r, b, t, n, f)
+
+  # Check if the function actually exists
+  f = c.glFrustumfOES
+  del f
+  loaded[0] += 1
+except AttributeError as e:
+  loaded[1] += 1
+  if DEBUG > 0:
+    print('could not load the function')
+    print(e)
+
+try:
+
+  def glGetClipPlanefOES(plane, param0, plane_t=GLenum, param0_t=GLfloat):
+    restype = None
+    argtypes = [plane_t, param0_t]
+    cfunc = c.glGetClipPlanefOES
+    cfunc.restype = restype
+    cfunc.argtypes = argtypes
+    return cfunc(plane, param0)
+
+  # Check if the function actually exists
+  f = c.glGetClipPlanefOES
+  del f
+  loaded[0] += 1
+except AttributeError as e:
+  loaded[1] += 1
+  if DEBUG > 0:
+    print('could not load the function')
+    print(e)
+
+try:
+
+  def glOrthofOES(l,
+                  r,
+                  b,
+                  t,
+                  n,
+                  f,
+                  l_t=GLfloat,
+                  r_t=GLfloat,
+                  b_t=GLfloat,
+                  t_t=GLfloat,
+                  n_t=GLfloat,
+                  f_t=GLfloat):
+    restype = None
+    argtypes = [l_t, r_t, b_t, t_t, n_t, f_t]
+    cfunc = c.glOrthofOES
+    cfunc.restype = restype
+    cfunc.argtypes = argtypes
+    return cfunc(l, r, b, t, n, f)
+
+  # Check if the function actually exists
+  f = c.glOrthofOES
   del f
   loaded[0] += 1
 except AttributeError as e:
@@ -2286,7 +2283,6 @@ try:
     cfunc.restype = restype
     cfunc.argtypes = argtypes
     return cfunc(coord, pname, param)
-
 
   # Check if the function actually exists
   f = c.glTexGenfOES
@@ -2313,7 +2309,6 @@ try:
     cfunc.argtypes = argtypes
     return cfunc(coord, pname, param0)
 
-
   # Check if the function actually exists
   f = c.glTexGenfvOES
   del f
@@ -2338,7 +2333,6 @@ try:
     cfunc.restype = restype
     cfunc.argtypes = argtypes
     return cfunc(coord, pname, param)
-
 
   # Check if the function actually exists
   f = c.glTexGeniOES
@@ -2365,61 +2359,8 @@ try:
     cfunc.argtypes = argtypes
     return cfunc(coord, pname, param0)
 
-
   # Check if the function actually exists
   f = c.glTexGenivOES
-  del f
-  loaded[0] += 1
-except AttributeError as e:
-  loaded[1] += 1
-  if DEBUG > 0:
-    print('could not load the function')
-    print(e)
-
-try:
-
-  def glTexGenxOES(coord,
-                   pname,
-                   param,
-                   coord_t=GLenum,
-                   pname_t=GLenum,
-                   param_t=GLfixed):
-    restype = None
-    argtypes = [coord_t, pname_t, param_t]
-    cfunc = c.glTexGenxOES
-    cfunc.restype = restype
-    cfunc.argtypes = argtypes
-    return cfunc(coord, pname, param)
-
-
-  # Check if the function actually exists
-  f = c.glTexGenxOES
-  del f
-  loaded[0] += 1
-except AttributeError as e:
-  loaded[1] += 1
-  if DEBUG > 0:
-    print('could not load the function')
-    print(e)
-
-try:
-
-  def glTexGenxvOES(coord,
-                    pname,
-                    param0,
-                    coord_t=GLenum,
-                    pname_t=GLenum,
-                    param0_t=GLfixed):
-    restype = None
-    argtypes = [coord_t, pname_t, param0_t]
-    cfunc = c.glTexGenxvOES
-    cfunc.restype = restype
-    cfunc.argtypes = argtypes
-    return cfunc(coord, pname, param0)
-
-
-  # Check if the function actually exists
-  f = c.glTexGenxvOES
   del f
   loaded[0] += 1
 except AttributeError as e:
@@ -2442,7 +2383,6 @@ try:
     cfunc.restype = restype
     cfunc.argtypes = argtypes
     return cfunc(coord, pname, param0)
-
 
   # Check if the function actually exists
   f = c.glGetTexGenfvOES
@@ -2469,35 +2409,8 @@ try:
     cfunc.argtypes = argtypes
     return cfunc(coord, pname, param0)
 
-
   # Check if the function actually exists
   f = c.glGetTexGenivOES
-  del f
-  loaded[0] += 1
-except AttributeError as e:
-  loaded[1] += 1
-  if DEBUG > 0:
-    print('could not load the function')
-    print(e)
-
-try:
-
-  def glGetTexGenxvOES(coord,
-                       pname,
-                       param0,
-                       coord_t=GLenum,
-                       pname_t=GLenum,
-                       param0_t=GLfixed):
-    restype = None
-    argtypes = [coord_t, pname_t, param0_t]
-    cfunc = c.glGetTexGenxvOES
-    cfunc.restype = restype
-    cfunc.argtypes = argtypes
-    return cfunc(coord, pname, param0)
-
-
-  # Check if the function actually exists
-  f = c.glGetTexGenxvOES
   del f
   loaded[0] += 1
 except AttributeError as e:
@@ -2515,7 +2428,6 @@ try:
     cfunc.restype = restype
     cfunc.argtypes = argtypes
     return cfunc(array)
-
 
   # Check if the function actually exists
   f = c.glBindVertexArrayOES
@@ -2537,7 +2449,6 @@ try:
     cfunc.argtypes = argtypes
     return cfunc(n, param0)
 
-
   # Check if the function actually exists
   f = c.glDeleteVertexArraysOES
   del f
@@ -2558,7 +2469,6 @@ try:
     cfunc.argtypes = argtypes
     return cfunc(n, param0)
 
-
   # Check if the function actually exists
   f = c.glGenVertexArraysOES
   del f
@@ -2578,7 +2488,6 @@ try:
     cfunc.restype = restype
     cfunc.argtypes = argtypes
     return cfunc(array)
-
 
   # Check if the function actually exists
   f = c.glIsVertexArrayOES
@@ -2611,7 +2520,6 @@ try:
     return cfunc(destinationTexture, sourceTexture, sourceBaseLevel,
                  sourceLevelCount)
 
-
   # Check if the function actually exists
   f = c.glCopyTextureLevelsAPPLE
   del f
@@ -2624,23 +2532,22 @@ except AttributeError as e:
 
 try:
 
-  def glRenderbufferStorageMultisampleAPPLE(param0,
-                                            param1,
-                                            param2,
-                                            param3,
-                                            param4,
-                                            param0_t=GLenum,
-                                            param1_t=GLsizei,
-                                            param2_t=GLenum,
-                                            param3_t=GLsizei,
-                                            param4_t=GLsizei):
+  def glRenderbufferStorageMultisampleAPPLE(target,
+                                            samples,
+                                            internalformat,
+                                            width,
+                                            height,
+                                            target_t=GLenum,
+                                            samples_t=GLsizei,
+                                            internalformat_t=GLenum,
+                                            width_t=GLsizei,
+                                            height_t=GLsizei):
     restype = None
-    argtypes = [param0_t, param1_t, param2_t, param3_t, param4_t]
+    argtypes = [target_t, samples_t, internalformat_t, width_t, height_t]
     cfunc = c.glRenderbufferStorageMultisampleAPPLE
     cfunc.restype = restype
     cfunc.argtypes = argtypes
-    return cfunc(param0, param1, param2, param3, param4)
-
+    return cfunc(target, samples, internalformat, width, height)
 
   # Check if the function actually exists
   f = c.glRenderbufferStorageMultisampleAPPLE
@@ -2662,7 +2569,6 @@ try:
     cfunc.argtypes = argtypes
     return cfunc(void)
 
-
   # Check if the function actually exists
   f = c.glResolveMultisampleFramebufferAPPLE
   del f
@@ -2683,9 +2589,69 @@ try:
     cfunc.argtypes = argtypes
     return cfunc(pname, param0)
 
-
   # Check if the function actually exists
   f = c.glGetInteger64vAPPLE
+  del f
+  loaded[0] += 1
+except AttributeError as e:
+  loaded[1] += 1
+  if DEBUG > 0:
+    print('could not load the function')
+    print(e)
+
+try:
+
+  def glInsertEventMarkerEXT(length, param0, length_t=GLsizei,
+                             param0_t=GLchar):
+    restype = None
+    argtypes = [length_t, param0_t]
+    cfunc = c.glInsertEventMarkerEXT
+    cfunc.restype = restype
+    cfunc.argtypes = argtypes
+    return cfunc(length, param0)
+
+  # Check if the function actually exists
+  f = c.glInsertEventMarkerEXT
+  del f
+  loaded[0] += 1
+except AttributeError as e:
+  loaded[1] += 1
+  if DEBUG > 0:
+    print('could not load the function')
+    print(e)
+
+try:
+
+  def glPushGroupMarkerEXT(length, param0, length_t=GLsizei, param0_t=GLchar):
+    restype = None
+    argtypes = [length_t, param0_t]
+    cfunc = c.glPushGroupMarkerEXT
+    cfunc.restype = restype
+    cfunc.argtypes = argtypes
+    return cfunc(length, param0)
+
+  # Check if the function actually exists
+  f = c.glPushGroupMarkerEXT
+  del f
+  loaded[0] += 1
+except AttributeError as e:
+  loaded[1] += 1
+  if DEBUG > 0:
+    print('could not load the function')
+    print(e)
+
+try:
+
+  def glPopGroupMarkerEXT(void, void_t=ctypes.c_void_p):
+    restype = None
+    argtypes = [void_t]
+    cfunc = c.glPopGroupMarkerEXT
+    cfunc.restype = restype
+    cfunc.argtypes = argtypes
+    return cfunc(void)
+
+  # Check if the function actually exists
+  f = c.glPopGroupMarkerEXT
   del f
   loaded[0] += 1
 except AttributeError as e:
@@ -2708,7 +2674,6 @@ try:
     cfunc.restype = restype
     cfunc.argtypes = argtypes
     return cfunc(target, numAttachments, param0)
-
 
   # Check if the function actually exists
   f = c.glDiscardFramebufferEXT
@@ -2735,7 +2700,6 @@ try:
     cfunc.argtypes = argtypes
     return cfunc(target, offset, length)
 
-
   # Check if the function actually exists
   f = c.glFlushMappedBufferRangeEXT
   del f
@@ -2748,83 +2712,20 @@ except AttributeError as e:
 
 try:
 
-  def glRenderbufferStorageMultisampleEXT(param0,
-                                          param1,
-                                          param2,
-                                          param3,
-                                          param4,
-                                          param0_t=GLenum,
-                                          param1_t=GLsizei,
-                                          param2_t=GLenum,
-                                          param3_t=GLsizei,
-                                          param4_t=GLsizei):
-    restype = None
-    argtypes = [param0_t, param1_t, param2_t, param3_t, param4_t]
-    cfunc = c.glRenderbufferStorageMultisampleEXT
-    cfunc.restype = restype
-    cfunc.argtypes = argtypes
-    return cfunc(param0, param1, param2, param3, param4)
-
-
-  # Check if the function actually exists
-  f = c.glRenderbufferStorageMultisampleEXT
-  del f
-  loaded[0] += 1
-except AttributeError as e:
-  loaded[1] += 1
-  if DEBUG > 0:
-    print('could not load the function')
-    print(e)
-
-try:
-
-  def glFramebufferTexture2DMultisampleEXT(param0,
-                                           param1,
-                                           param2,
-                                           param3,
-                                           param4,
-                                           param5,
-                                           param0_t=GLenum,
-                                           param1_t=GLenum,
-                                           param2_t=GLenum,
-                                           param3_t=GLuint,
-                                           param4_t=GLint,
-                                           param5_t=GLsizei):
-    restype = None
-    argtypes = [param0_t, param1_t, param2_t, param3_t, param4_t, param5_t]
-    cfunc = c.glFramebufferTexture2DMultisampleEXT
-    cfunc.restype = restype
-    cfunc.argtypes = argtypes
-    return cfunc(param0, param1, param2, param3, param4, param5)
-
-
-  # Check if the function actually exists
-  f = c.glFramebufferTexture2DMultisampleEXT
-  del f
-  loaded[0] += 1
-except AttributeError as e:
-  loaded[1] += 1
-  if DEBUG > 0:
-    print('could not load the function')
-    print(e)
-
-try:
-
-  def glMultiDrawArraysEXT(param0,
+  def glMultiDrawArraysEXT(mode,
+                           param0,
                            param1,
-                           param2,
-                           param3,
-                           param0_t=GLenum,
-                           param1_t=GLint,
-                           param2_t=GLsizei,
-                           param3_t=GLsizei):
+                           primcount,
+                           mode_t=GLenum,
+                           param0_t=GLint,
+                           param1_t=GLsizei,
+                           primcount_t=GLsizei):
     restype = None
-    argtypes = [param0_t, param1_t, param2_t, param3_t]
+    argtypes = [mode_t, param0_t, param1_t, primcount_t]
     cfunc = c.glMultiDrawArraysEXT
     cfunc.restype = restype
     cfunc.argtypes = argtypes
-    return cfunc(param0, param1, param2, param3)
-
+    return cfunc(mode, param0, param1, primcount)
 
   # Check if the function actually exists
   f = c.glMultiDrawArraysEXT
@@ -2838,26 +2739,87 @@ except AttributeError as e:
 
 try:
 
-  def glMultiDrawElementsEXT(param0,
-                             param1,
-                             param2,
-                             param3,
-                             param4,
-                             param0_t=GLenum,
-                             param1_t=GLsizei,
-                             param2_t=GLenum,
-                             param3_t=ctypes.POINTER(GLvoid),
-                             param4_t=GLsizei):
+  def glMultiDrawElementsEXT(mode,
+                             param0,
+                             type,
+                             voidconstindices,
+                             primcount,
+                             mode_t=GLenum,
+                             param0_t=GLsizei,
+                             type_t=GLenum,
+                             voidconstindices_t=ctypes.c_void_p,
+                             primcount_t=GLsizei):
     restype = None
-    argtypes = [param0_t, param1_t, param2_t, param3_t, param4_t]
+    argtypes = [mode_t, param0_t, type_t, voidconstindices_t, primcount_t]
     cfunc = c.glMultiDrawElementsEXT
     cfunc.restype = restype
     cfunc.argtypes = argtypes
-    return cfunc(param0, param1, param2, param3, param4)
-
+    return cfunc(mode, param0, type, voidconstindices, primcount)
 
   # Check if the function actually exists
   f = c.glMultiDrawElementsEXT
+  del f
+  loaded[0] += 1
+except AttributeError as e:
+  loaded[1] += 1
+  if DEBUG > 0:
+    print('could not load the function')
+    print(e)
+
+try:
+
+  def glRenderbufferStorageMultisampleEXT(target,
+                                          samples,
+                                          internalformat,
+                                          width,
+                                          height,
+                                          target_t=GLenum,
+                                          samples_t=GLsizei,
+                                          internalformat_t=GLenum,
+                                          width_t=GLsizei,
+                                          height_t=GLsizei):
+    restype = None
+    argtypes = [target_t, samples_t, internalformat_t, width_t, height_t]
+    cfunc = c.glRenderbufferStorageMultisampleEXT
+    cfunc.restype = restype
+    cfunc.argtypes = argtypes
+    return cfunc(target, samples, internalformat, width, height)
+
+  # Check if the function actually exists
+  f = c.glRenderbufferStorageMultisampleEXT
+  del f
+  loaded[0] += 1
+except AttributeError as e:
+  loaded[1] += 1
+  if DEBUG > 0:
+    print('could not load the function')
+    print(e)
+
+try:
+
+  def glFramebufferTexture2DMultisampleEXT(target,
+                                           attachment,
+                                           textarget,
+                                           texture,
+                                           level,
+                                           samples,
+                                           target_t=GLenum,
+                                           attachment_t=GLenum,
+                                           textarget_t=GLenum,
+                                           texture_t=GLuint,
+                                           level_t=GLint,
+                                           samples_t=GLsizei):
+    restype = None
+    argtypes = [
+      target_t, attachment_t, textarget_t, texture_t, level_t, samples_t
+    ]
+    cfunc = c.glFramebufferTexture2DMultisampleEXT
+    cfunc.restype = restype
+    cfunc.argtypes = argtypes
+    return cfunc(target, attachment, textarget, texture, level, samples)
+
+  # Check if the function actually exists
+  f = c.glFramebufferTexture2DMultisampleEXT
   del f
   loaded[0] += 1
 except AttributeError as e:
@@ -2875,7 +2837,6 @@ try:
     cfunc.restype = restype
     cfunc.argtypes = argtypes
     return cfunc(void)
-
 
   # Check if the function actually exists
   f = c.glGetGraphicsResetStatusEXT
@@ -2914,7 +2875,6 @@ try:
     cfunc.argtypes = argtypes
     return cfunc(x, y, width, height, format, type, bufSize, voiddata)
 
-
   # Check if the function actually exists
   f = c.glReadnPixelsEXT
   del f
@@ -2930,18 +2890,17 @@ try:
   def glGetnUniformfvEXT(program,
                          location,
                          bufSize,
-                         floatparams,
+                         param0,
                          program_t=GLuint,
                          location_t=GLint,
                          bufSize_t=GLsizei,
-                         floatparams_t=float):
+                         param0_t=GLfloat):
     restype = None
-    argtypes = [program_t, location_t, bufSize_t, floatparams_t]
+    argtypes = [program_t, location_t, bufSize_t, param0_t]
     cfunc = c.glGetnUniformfvEXT
     cfunc.restype = restype
     cfunc.argtypes = argtypes
-    return cfunc(program, location, bufSize, floatparams)
-
+    return cfunc(program, location, bufSize, param0)
 
   # Check if the function actually exists
   f = c.glGetnUniformfvEXT
@@ -2970,7 +2929,6 @@ try:
     cfunc.argtypes = argtypes
     return cfunc(program, location, bufSize, param0)
 
-
   # Check if the function actually exists
   f = c.glGetnUniformivEXT
   del f
@@ -2997,7 +2955,6 @@ try:
     cfunc.restype = restype
     cfunc.argtypes = argtypes
     return cfunc(target, levels, internalformat, width)
-
 
   # Check if the function actually exists
   f = c.glTexStorage1DEXT
@@ -3027,7 +2984,6 @@ try:
     cfunc.restype = restype
     cfunc.argtypes = argtypes
     return cfunc(target, levels, internalformat, width, height)
-
 
   # Check if the function actually exists
   f = c.glTexStorage2DEXT
@@ -3062,7 +3018,6 @@ try:
     cfunc.argtypes = argtypes
     return cfunc(target, levels, internalformat, width, height, depth)
 
-
   # Check if the function actually exists
   f = c.glTexStorage3DEXT
   del f
@@ -3091,7 +3046,6 @@ try:
     cfunc.restype = restype
     cfunc.argtypes = argtypes
     return cfunc(texture, target, levels, internalformat, width)
-
 
   # Check if the function actually exists
   f = c.glTextureStorage1DEXT
@@ -3125,7 +3079,6 @@ try:
     cfunc.restype = restype
     cfunc.argtypes = argtypes
     return cfunc(texture, target, levels, internalformat, width, height)
-
 
   # Check if the function actually exists
   f = c.glTextureStorage2DEXT
@@ -3163,7 +3116,6 @@ try:
     cfunc.argtypes = argtypes
     return cfunc(texture, target, levels, internalformat, width, height, depth)
 
-
   # Check if the function actually exists
   f = c.glTextureStorage3DEXT
   del f
@@ -3176,65 +3128,22 @@ except AttributeError as e:
 
 try:
 
-  def glClipPlanefIMG(param0, param1, param0_t=GLenum, param1_t=GLfloat):
+  def glRenderbufferStorageMultisampleIMG(target,
+                                          samples,
+                                          internalformat,
+                                          width,
+                                          height,
+                                          target_t=GLenum,
+                                          samples_t=GLsizei,
+                                          internalformat_t=GLenum,
+                                          width_t=GLsizei,
+                                          height_t=GLsizei):
     restype = None
-    argtypes = [param0_t, param1_t]
-    cfunc = c.glClipPlanefIMG
-    cfunc.restype = restype
-    cfunc.argtypes = argtypes
-    return cfunc(param0, param1)
-
-
-  # Check if the function actually exists
-  f = c.glClipPlanefIMG
-  del f
-  loaded[0] += 1
-except AttributeError as e:
-  loaded[1] += 1
-  if DEBUG > 0:
-    print('could not load the function')
-    print(e)
-
-try:
-
-  def glClipPlanexIMG(param0, param1, param0_t=GLenum, param1_t=GLfixed):
-    restype = None
-    argtypes = [param0_t, param1_t]
-    cfunc = c.glClipPlanexIMG
-    cfunc.restype = restype
-    cfunc.argtypes = argtypes
-    return cfunc(param0, param1)
-
-
-  # Check if the function actually exists
-  f = c.glClipPlanexIMG
-  del f
-  loaded[0] += 1
-except AttributeError as e:
-  loaded[1] += 1
-  if DEBUG > 0:
-    print('could not load the function')
-    print(e)
-
-try:
-
-  def glRenderbufferStorageMultisampleIMG(param0,
-                                          param1,
-                                          param2,
-                                          param3,
-                                          param4,
-                                          param0_t=GLenum,
-                                          param1_t=GLsizei,
-                                          param2_t=GLenum,
-                                          param3_t=GLsizei,
-                                          param4_t=GLsizei):
-    restype = None
-    argtypes = [param0_t, param1_t, param2_t, param3_t, param4_t]
+    argtypes = [target_t, samples_t, internalformat_t, width_t, height_t]
     cfunc = c.glRenderbufferStorageMultisampleIMG
     cfunc.restype = restype
     cfunc.argtypes = argtypes
-    return cfunc(param0, param1, param2, param3, param4)
-
+    return cfunc(target, samples, internalformat, width, height)
 
   # Check if the function actually exists
   f = c.glRenderbufferStorageMultisampleIMG
@@ -3248,25 +3157,26 @@ except AttributeError as e:
 
 try:
 
-  def glFramebufferTexture2DMultisampleIMG(param0,
-                                           param1,
-                                           param2,
-                                           param3,
-                                           param4,
-                                           param5,
-                                           param0_t=GLenum,
-                                           param1_t=GLenum,
-                                           param2_t=GLenum,
-                                           param3_t=GLuint,
-                                           param4_t=GLint,
-                                           param5_t=GLsizei):
+  def glFramebufferTexture2DMultisampleIMG(target,
+                                           attachment,
+                                           textarget,
+                                           texture,
+                                           level,
+                                           samples,
+                                           target_t=GLenum,
+                                           attachment_t=GLenum,
+                                           textarget_t=GLenum,
+                                           texture_t=GLuint,
+                                           level_t=GLint,
+                                           samples_t=GLsizei):
     restype = None
-    argtypes = [param0_t, param1_t, param2_t, param3_t, param4_t, param5_t]
+    argtypes = [
+      target_t, attachment_t, textarget_t, texture_t, level_t, samples_t
+    ]
     cfunc = c.glFramebufferTexture2DMultisampleIMG
     cfunc.restype = restype
     cfunc.argtypes = argtypes
-    return cfunc(param0, param1, param2, param3, param4, param5)
-
+    return cfunc(target, attachment, textarget, texture, level, samples)
 
   # Check if the function actually exists
   f = c.glFramebufferTexture2DMultisampleIMG
@@ -3280,14 +3190,53 @@ except AttributeError as e:
 
 try:
 
-  def glDeleteFencesNV(param0, param1, param0_t=GLsizei, param1_t=GLuint):
+  def glClipPlanefIMG(p, param0, p_t=GLenum, param0_t=GLfloat):
     restype = None
-    argtypes = [param0_t, param1_t]
+    argtypes = [p_t, param0_t]
+    cfunc = c.glClipPlanefIMG
+    cfunc.restype = restype
+    cfunc.argtypes = argtypes
+    return cfunc(p, param0)
+
+  # Check if the function actually exists
+  f = c.glClipPlanefIMG
+  del f
+  loaded[0] += 1
+except AttributeError as e:
+  loaded[1] += 1
+  if DEBUG > 0:
+    print('could not load the function')
+    print(e)
+
+try:
+
+  def glClipPlanexIMG(p, param0, p_t=GLenum, param0_t=GLfixed):
+    restype = None
+    argtypes = [p_t, param0_t]
+    cfunc = c.glClipPlanexIMG
+    cfunc.restype = restype
+    cfunc.argtypes = argtypes
+    return cfunc(p, param0)
+
+  # Check if the function actually exists
+  f = c.glClipPlanexIMG
+  del f
+  loaded[0] += 1
+except AttributeError as e:
+  loaded[1] += 1
+  if DEBUG > 0:
+    print('could not load the function')
+    print(e)
+
+try:
+
+  def glDeleteFencesNV(n, param0, n_t=GLsizei, param0_t=GLuint):
+    restype = None
+    argtypes = [n_t, param0_t]
     cfunc = c.glDeleteFencesNV
     cfunc.restype = restype
     cfunc.argtypes = argtypes
-    return cfunc(param0, param1)
-
+    return cfunc(n, param0)
 
   # Check if the function actually exists
   f = c.glDeleteFencesNV
@@ -3301,14 +3250,13 @@ except AttributeError as e:
 
 try:
 
-  def glGenFencesNV(param0, param1, param0_t=GLsizei, param1_t=GLuint):
+  def glGenFencesNV(n, param0, n_t=GLsizei, param0_t=GLuint):
     restype = None
-    argtypes = [param0_t, param1_t]
+    argtypes = [n_t, param0_t]
     cfunc = c.glGenFencesNV
     cfunc.restype = restype
     cfunc.argtypes = argtypes
-    return cfunc(param0, param1)
-
+    return cfunc(n, param0)
 
   # Check if the function actually exists
   f = c.glGenFencesNV
@@ -3322,14 +3270,13 @@ except AttributeError as e:
 
 try:
 
-  def glIsFenceNV(param0, param0_t=GLuint):
+  def glIsFenceNV(fence, fence_t=GLuint):
     restype = GLboolean
-    argtypes = [param0_t]
+    argtypes = [fence_t]
     cfunc = c.glIsFenceNV
     cfunc.restype = restype
     cfunc.argtypes = argtypes
-    return cfunc(param0)
-
+    return cfunc(fence)
 
   # Check if the function actually exists
   f = c.glIsFenceNV
@@ -3343,14 +3290,13 @@ except AttributeError as e:
 
 try:
 
-  def glTestFenceNV(param0, param0_t=GLuint):
+  def glTestFenceNV(fence, fence_t=GLuint):
     restype = GLboolean
-    argtypes = [param0_t]
+    argtypes = [fence_t]
     cfunc = c.glTestFenceNV
     cfunc.restype = restype
     cfunc.argtypes = argtypes
-    return cfunc(param0)
-
+    return cfunc(fence)
 
   # Check if the function actually exists
   f = c.glTestFenceNV
@@ -3364,19 +3310,18 @@ except AttributeError as e:
 
 try:
 
-  def glGetFenceivNV(param0,
-                     param1,
-                     param2,
-                     param0_t=GLuint,
-                     param1_t=GLenum,
-                     param2_t=GLint):
+  def glGetFenceivNV(fence,
+                     pname,
+                     param0,
+                     fence_t=GLuint,
+                     pname_t=GLenum,
+                     param0_t=GLint):
     restype = None
-    argtypes = [param0_t, param1_t, param2_t]
+    argtypes = [fence_t, pname_t, param0_t]
     cfunc = c.glGetFenceivNV
     cfunc.restype = restype
     cfunc.argtypes = argtypes
-    return cfunc(param0, param1, param2)
-
+    return cfunc(fence, pname, param0)
 
   # Check if the function actually exists
   f = c.glGetFenceivNV
@@ -3390,14 +3335,13 @@ except AttributeError as e:
 
 try:
 
-  def glFinishFenceNV(param0, param0_t=GLuint):
+  def glFinishFenceNV(fence, fence_t=GLuint):
     restype = None
-    argtypes = [param0_t]
+    argtypes = [fence_t]
     cfunc = c.glFinishFenceNV
     cfunc.restype = restype
     cfunc.argtypes = argtypes
-    return cfunc(param0)
-
+    return cfunc(fence)
 
   # Check if the function actually exists
   f = c.glFinishFenceNV
@@ -3411,14 +3355,13 @@ except AttributeError as e:
 
 try:
 
-  def glSetFenceNV(param0, param1, param0_t=GLuint, param1_t=GLenum):
+  def glSetFenceNV(fence, condition, fence_t=GLuint, condition_t=GLenum):
     restype = None
-    argtypes = [param0_t, param1_t]
+    argtypes = [fence_t, condition_t]
     cfunc = c.glSetFenceNV
     cfunc.restype = restype
     cfunc.argtypes = argtypes
-    return cfunc(param0, param1)
-
+    return cfunc(fence, condition)
 
   # Check if the function actually exists
   f = c.glSetFenceNV
@@ -3444,7 +3387,6 @@ try:
     cfunc.restype = restype
     cfunc.argtypes = argtypes
     return cfunc(param0, size, param1)
-
 
   # Check if the function actually exists
   f = c.glGetDriverControlsQCOM
@@ -3473,7 +3415,6 @@ try:
     cfunc.argtypes = argtypes
     return cfunc(driverControl, bufSize, param0, param1)
 
-
   # Check if the function actually exists
   f = c.glGetDriverControlStringQCOM
   del f
@@ -3494,7 +3435,6 @@ try:
     cfunc.argtypes = argtypes
     return cfunc(driverControl)
 
-
   # Check if the function actually exists
   f = c.glEnableDriverControlQCOM
   del f
@@ -3514,7 +3454,6 @@ try:
     cfunc.restype = restype
     cfunc.argtypes = argtypes
     return cfunc(driverControl)
-
 
   # Check if the function actually exists
   f = c.glDisableDriverControlQCOM
@@ -3541,7 +3480,6 @@ try:
     cfunc.argtypes = argtypes
     return cfunc(param0, maxTextures, param1)
 
-
   # Check if the function actually exists
   f = c.glExtGetTexturesQCOM
   del f
@@ -3566,7 +3504,6 @@ try:
     cfunc.restype = restype
     cfunc.argtypes = argtypes
     return cfunc(param0, maxBuffers, param1)
-
 
   # Check if the function actually exists
   f = c.glExtGetBuffersQCOM
@@ -3593,7 +3530,6 @@ try:
     cfunc.argtypes = argtypes
     return cfunc(param0, maxRenderbuffers, param1)
 
-
   # Check if the function actually exists
   f = c.glExtGetRenderbuffersQCOM
   del f
@@ -3618,7 +3554,6 @@ try:
     cfunc.restype = restype
     cfunc.argtypes = argtypes
     return cfunc(param0, maxFramebuffers, param1)
-
 
   # Check if the function actually exists
   f = c.glExtGetFramebuffersQCOM
@@ -3649,7 +3584,6 @@ try:
     cfunc.argtypes = argtypes
     return cfunc(texture, face, level, pname, param0)
 
-
   # Check if the function actually exists
   f = c.glExtGetTexLevelParameterivQCOM
   del f
@@ -3675,7 +3609,6 @@ try:
     cfunc.argtypes = argtypes
     return cfunc(target, pname, param)
 
-
   # Check if the function actually exists
   f = c.glExtTexObjectStateOverrideiQCOM
   del f
@@ -3698,7 +3631,7 @@ try:
                               depth,
                               format,
                               type,
-                              param0,
+                              voidtexels,
                               target_t=GLenum,
                               level_t=GLint,
                               xoffset_t=GLint,
@@ -3709,18 +3642,17 @@ try:
                               depth_t=GLsizei,
                               format_t=GLenum,
                               type_t=GLenum,
-                              param0_t=GLvoid):
+                              voidtexels_t=ctypes.c_void_p):
     restype = None
     argtypes = [
       target_t, level_t, xoffset_t, yoffset_t, zoffset_t, width_t, height_t,
-      depth_t, format_t, type_t, param0_t
+      depth_t, format_t, type_t, voidtexels_t
     ]
     cfunc = c.glExtGetTexSubImageQCOM
     cfunc.restype = restype
     cfunc.argtypes = argtypes
     return cfunc(target, level, xoffset, yoffset, zoffset, width, height,
-                 depth, format, type, param0)
-
+                 depth, format, type, voidtexels)
 
   # Check if the function actually exists
   f = c.glExtGetTexSubImageQCOM
@@ -3735,16 +3667,15 @@ except AttributeError as e:
 try:
 
   def glExtGetBufferPointervQCOM(target,
-                                 param0,
+                                 voidparams,
                                  target_t=GLenum,
-                                 param0_t=GLvoid):
+                                 voidparams_t=ctypes.c_void_p):
     restype = None
-    argtypes = [target_t, param0_t]
+    argtypes = [target_t, voidparams_t]
     cfunc = c.glExtGetBufferPointervQCOM
     cfunc.restype = restype
     cfunc.argtypes = argtypes
-    return cfunc(target, param0)
-
+    return cfunc(target, voidparams)
 
   # Check if the function actually exists
   f = c.glExtGetBufferPointervQCOM
@@ -3771,7 +3702,6 @@ try:
     cfunc.argtypes = argtypes
     return cfunc(param0, maxShaders, param1)
 
-
   # Check if the function actually exists
   f = c.glExtGetShadersQCOM
   del f
@@ -3797,7 +3727,6 @@ try:
     cfunc.argtypes = argtypes
     return cfunc(param0, maxPrograms, param1)
 
-
   # Check if the function actually exists
   f = c.glExtGetProgramsQCOM
   del f
@@ -3817,7 +3746,6 @@ try:
     cfunc.restype = restype
     cfunc.argtypes = argtypes
     return cfunc(program)
-
 
   # Check if the function actually exists
   f = c.glExtIsProgramBinaryQCOM
@@ -3845,7 +3773,6 @@ try:
     cfunc.restype = restype
     cfunc.argtypes = argtypes
     return cfunc(program, shadertype, param0, param1)
-
 
   # Check if the function actually exists
   f = c.glExtGetProgramBinarySourceQCOM
@@ -3876,7 +3803,6 @@ try:
     cfunc.argtypes = argtypes
     return cfunc(x, y, width, height, preserveMask)
 
-
   # Check if the function actually exists
   f = c.glStartTilingQCOM
   del f
@@ -3897,7 +3823,6 @@ try:
     cfunc.argtypes = argtypes
     return cfunc(preserveMask)
 
-
   # Check if the function actually exists
   f = c.glEndTilingQCOM
   del f
@@ -3908,205 +3833,215 @@ except AttributeError as e:
     print('could not load the function')
     print(e)
 
-print('Loaded %i functions and failed to load %i functions of %i functions in the header glext.h' % (
-loaded[0], loaded[1], sum(loaded)))
+print(
+  'Loaded %i functions and failed to load %i functions of %i functions in the header glext.h'
+  % (loaded[0], loaded[1], sum(loaded)))
 
 __all__ = [
+  'glEGLImageTargetTexture2DOES', 'glEGLImageTargetRenderbufferStorageOES',
   'glBlendEquationSeparateOES', 'glBlendFuncSeparateOES', 'glBlendEquationOES',
   'glDrawTexsOES', 'glDrawTexiOES', 'glDrawTexxOES', 'glDrawTexsvOES',
   'glDrawTexivOES', 'glDrawTexxvOES', 'glDrawTexfOES', 'glDrawTexfvOES',
-  'glEGLImageTargetTexture2DOES', 'glEGLImageTargetRenderbufferStorageOES',
   'glAlphaFuncxOES', 'glClearColorxOES', 'glClearDepthxOES', 'glClipPlanexOES',
   'glColor4xOES', 'glDepthRangexOES', 'glFogxOES', 'glFogxvOES',
-  'glFrustumxOES', 'glGetClipPlanexOES', 'glGetFixedvOES', 'glGetLightxvOES',
-  'glGetMaterialxvOES', 'glGetTexEnvxvOES', 'glGetTexParameterxvOES',
-  'glLightModelxOES', 'glLightModelxvOES', 'glLightxOES', 'glLightxvOES',
-  'glLineWidthxOES', 'glLoadMatrixxOES', 'glMaterialxOES', 'glMaterialxvOES',
-  'glMultMatrixxOES', 'glMultiTexCoord4xOES', 'glNormal3xOES', 'glOrthoxOES',
-  'glPointParameterxOES', 'glPointParameterxvOES', 'glPointSizexOES',
-  'glPolygonOffsetxOES', 'glRotatexOES', 'glSampleCoveragexOES', 'glScalexOES',
-  'glTexEnvxOES', 'glTexEnvxvOES', 'glTexParameterxOES', 'glTexParameterxvOES',
-  'glTranslatexOES', 'glIsRenderbufferOES', 'glBindRenderbufferOES',
-  'glDeleteRenderbuffersOES', 'glGenRenderbuffersOES',
-  'glRenderbufferStorageOES', 'glGetRenderbufferParameterivOES',
-  'glIsFramebufferOES', 'glBindFramebufferOES', 'glDeleteFramebuffersOES',
-  'glGenFramebuffersOES', 'glCheckFramebufferStatusOES',
-  'glFramebufferRenderbufferOES', 'glFramebufferTexture2DOES',
-  'glGetFramebufferAttachmentParameterivOES', 'glGenerateMipmapOES',
-  'glUnmapBufferOES', 'glGetBufferPointervOES', 'glCurrentPaletteMatrixOES',
-  'glLoadPaletteFromModelViewMatrixOES', 'glMatrixIndexPointerOES',
-  'glWeightPointerOES', 'glQueryMatrixxOES', 'glDepthRangefOES',
-  'glFrustumfOES', 'glOrthofOES', 'glClipPlanefOES', 'glGetClipPlanefOES',
-  'glClearDepthfOES', 'glTexGenfOES', 'glTexGenfvOES', 'glTexGeniOES',
-  'glTexGenivOES', 'glTexGenxOES', 'glTexGenxvOES', 'glGetTexGenfvOES',
-  'glGetTexGenivOES', 'glGetTexGenxvOES', 'glBindVertexArrayOES',
-  'glDeleteVertexArraysOES', 'glGenVertexArraysOES', 'glIsVertexArrayOES',
-  'glCopyTextureLevelsAPPLE', 'glRenderbufferStorageMultisampleAPPLE',
+  'glFrustumxOES', 'glGetClipPlanexOES', 'glGetFixedvOES', 'glGetTexEnvxvOES',
+  'glGetTexParameterxvOES', 'glLightModelxOES', 'glLightModelxvOES',
+  'glLightxOES', 'glLightxvOES', 'glLineWidthxOES', 'glLoadMatrixxOES',
+  'glMaterialxOES', 'glMaterialxvOES', 'glMultMatrixxOES',
+  'glMultiTexCoord4xOES', 'glNormal3xOES', 'glOrthoxOES',
+  'glPointParameterxvOES', 'glPointSizexOES', 'glPolygonOffsetxOES',
+  'glRotatexOES', 'glScalexOES', 'glTexEnvxOES', 'glTexEnvxvOES',
+  'glTexParameterxOES', 'glTexParameterxvOES', 'glTranslatexOES',
+  'glGetLightxvOES', 'glGetMaterialxvOES', 'glPointParameterxOES',
+  'glSampleCoveragexOES', 'glGetTexGenxvOES', 'glTexGenxOES', 'glTexGenxvOES',
+  'glIsRenderbufferOES', 'glBindRenderbufferOES', 'glDeleteRenderbuffersOES',
+  'glGenRenderbuffersOES', 'glRenderbufferStorageOES',
+  'glGetRenderbufferParameterivOES', 'glIsFramebufferOES',
+  'glBindFramebufferOES', 'glDeleteFramebuffersOES', 'glGenFramebuffersOES',
+  'glCheckFramebufferStatusOES', 'glFramebufferRenderbufferOES',
+  'glFramebufferTexture2DOES', 'glGetFramebufferAttachmentParameterivOES',
+  'glGenerateMipmapOES', 'glUnmapBufferOES', 'glGetBufferPointervOES',
+  'glCurrentPaletteMatrixOES', 'glLoadPaletteFromModelViewMatrixOES',
+  'glMatrixIndexPointerOES', 'glWeightPointerOES', 'glQueryMatrixxOES',
+  'glClearDepthfOES', 'glClipPlanefOES', 'glDepthRangefOES', 'glFrustumfOES',
+  'glGetClipPlanefOES', 'glOrthofOES', 'glTexGenfOES', 'glTexGenfvOES',
+  'glTexGeniOES', 'glTexGenivOES', 'glGetTexGenfvOES', 'glGetTexGenivOES',
+  'glBindVertexArrayOES', 'glDeleteVertexArraysOES', 'glGenVertexArraysOES',
+  'glIsVertexArrayOES', 'glCopyTextureLevelsAPPLE',
+  'glRenderbufferStorageMultisampleAPPLE',
   'glResolveMultisampleFramebufferAPPLE', 'glGetInteger64vAPPLE',
+  'glInsertEventMarkerEXT', 'glPushGroupMarkerEXT', 'glPopGroupMarkerEXT',
   'glDiscardFramebufferEXT', 'glFlushMappedBufferRangeEXT',
+  'glMultiDrawArraysEXT', 'glMultiDrawElementsEXT',
   'glRenderbufferStorageMultisampleEXT',
-  'glFramebufferTexture2DMultisampleEXT', 'glMultiDrawArraysEXT',
-  'glMultiDrawElementsEXT', 'glGetGraphicsResetStatusEXT', 'glReadnPixelsEXT',
-  'glGetnUniformfvEXT', 'glGetnUniformivEXT', 'glTexStorage1DEXT',
-  'glTexStorage2DEXT', 'glTexStorage3DEXT', 'glTextureStorage1DEXT',
-  'glTextureStorage2DEXT', 'glTextureStorage3DEXT', 'glClipPlanefIMG',
-  'glClipPlanexIMG', 'glRenderbufferStorageMultisampleIMG',
-  'glFramebufferTexture2DMultisampleIMG', 'glDeleteFencesNV', 'glGenFencesNV',
-  'glIsFenceNV', 'glTestFenceNV', 'glGetFenceivNV', 'glFinishFenceNV',
-  'glSetFenceNV', 'glGetDriverControlsQCOM', 'glGetDriverControlStringQCOM',
+  'glFramebufferTexture2DMultisampleEXT', 'glGetGraphicsResetStatusEXT',
+  'glReadnPixelsEXT', 'glGetnUniformfvEXT', 'glGetnUniformivEXT',
+  'glTexStorage1DEXT', 'glTexStorage2DEXT', 'glTexStorage3DEXT',
+  'glTextureStorage1DEXT', 'glTextureStorage2DEXT', 'glTextureStorage3DEXT',
+  'glRenderbufferStorageMultisampleIMG',
+  'glFramebufferTexture2DMultisampleIMG', 'glClipPlanefIMG', 'glClipPlanexIMG',
+  'glDeleteFencesNV', 'glGenFencesNV', 'glIsFenceNV', 'glTestFenceNV',
+  'glGetFenceivNV', 'glFinishFenceNV', 'glSetFenceNV',
+  'glGetDriverControlsQCOM', 'glGetDriverControlStringQCOM',
   'glEnableDriverControlQCOM', 'glDisableDriverControlQCOM',
   'glExtGetTexturesQCOM', 'glExtGetBuffersQCOM', 'glExtGetRenderbuffersQCOM',
   'glExtGetFramebuffersQCOM', 'glExtGetTexLevelParameterivQCOM',
   'glExtTexObjectStateOverrideiQCOM', 'glExtGetTexSubImageQCOM',
   'glExtGetBufferPointervQCOM', 'glExtGetShadersQCOM', 'glExtGetProgramsQCOM',
   'glExtIsProgramBinaryQCOM', 'glExtGetProgramBinarySourceQCOM',
-  'glStartTilingQCOM', 'glEndTilingQCOM', 'GL_TEXTURE_CROP_RECT_OES',
-  'GL_MATRIX_INDEX_ARRAY_SIZE_OES', 'GL_OES_packed_depth_stencil',
-  'GL_DEPTH_EXT', 'GL_COLOR_EXT', 'GL_QCOM_tiled_rendering', 'GL_RGB16F_EXT',
-  'GL_CLIP_PLANE1_IMG', 'GL_NV_fence', 'GL_CLIP_PLANE3_IMG',
-  'GL_OES_blend_subtract', 'GL_IMG_texture_compression_pvrtc',
-  'GL_SRGB_ALPHA_EXT', 'GL_MAX_CUBE_MAP_TEXTURE_SIZE_OES',
-  'GL_REFLECTION_MAP_OES', 'GL_COLOR_BUFFER_BIT7_QCOM',
-  'GL_TEXTURE_CUBE_MAP_NEGATIVE_Y_OES', 'GL_BLEND_DST_RGB_OES',
-  'GL_RENDERBUFFER_WIDTH_OES', 'GL_FRAMEBUFFER_INCOMPLETE_MULTISAMPLE_APPLE',
-  'GL_DEPTH_BUFFER_BIT3_QCOM', 'GL_MODELVIEW_MATRIX_FLOAT_AS_INT_BITS_OES',
-  'GL_FRAMEBUFFER_INCOMPLETE_MISSING_ATTACHMENT_OES',
-  'GL_COMPRESSED_RGBA_PVRTC_4BPPV1_IMG', 'GL_CONTEXT_ROBUST_ACCESS_EXT',
-  'GL_QCOM_perfmon_global_mode', 'GL_RGB32F_EXT',
-  'GL_FRAMEBUFFER_INCOMPLETE_FORMATS_OES', 'GL_CLIP_PLANE0_IMG',
-  'GL_REQUIRED_TEXTURE_IMAGE_UNITS_OES', 'GL_OES_single_precision',
-  'GL_EXT_multisampled_render_to_texture', 'GL_OES_texture_env_crossbar',
-  'GL_WRITEONLY_RENDERING_QCOM', 'GL_UNSIGNED_SHORT_4_4_4_4_REV_EXT',
-  'GL_TEXTURE_BINDING_EXTERNAL_OES', 'GL_NONE_OES', 'GL_OES_texture_cube_map',
-  'GL_OES_query_matrix', 'GL_ALPHA32F_EXT', 'GL_SYNC_FENCE_APPLE',
-  'GL_DEPTH_COMPONENT24_OES', 'GL_FRAMEBUFFER_UNSUPPORTED_OES',
-  'GL_RGBA32F_EXT', 'GL_READ_FRAMEBUFFER_BINDING_APPLE', 'GL_LUMINANCE32F_EXT',
-  'GL_TEXTURE_CUBE_MAP_POSITIVE_Y_OES', 'GL_MAP_UNSYNCHRONIZED_BIT_EXT',
-  'GL_COMPRESSED_RGB_PVRTC_4BPPV1_IMG', 'GL_DRAW_FRAMEBUFFER_BINDING_APPLE',
-  'GL_APPLE_texture_max_level', 'GL_TEXTURE_HEIGHT_QCOM',
-  'GL_RENDERBUFFER_OES', 'GL_FENCE_CONDITION_NV', 'GL_TEXTURE_CUBE_MAP_OES',
-  'GL_EXT_multi_draw_arrays', 'GL_COMPRESSED_RGB_S3TC_DXT1_EXT',
-  'GL_OES_fbo_render_mipmap', 'GL_RECIP_ADD_SIGNED_ALPHA_IMG',
-  'GL_STENCIL_BUFFER_BIT5_QCOM', 'GL_UNKNOWN_CONTEXT_RESET_EXT',
-  'GL_OES_stencil_wrap', 'GL_TEXTURE_BINDING_CUBE_MAP_OES',
-  'GL_READ_FRAMEBUFFER_APPLE', 'GL_SYNC_FLUSH_COMMANDS_BIT_APPLE',
-  'GL_TEXTURE_INTERNAL_FORMAT_QCOM', 'GL_STENCIL_BUFFER_BIT2_QCOM',
-  'GL_RENDERBUFFER_HEIGHT_OES', 'GL_TEXTURE_ALPHA_MODULATE_IMG',
-  'GL_NORMAL_MAP_OES', 'GL_LUMINANCE8_ALPHA8_EXT', 'GL_MAX_EXT',
-  'GL_MAX_VERTEX_UNITS_OES', 'GL_DEPTH_BUFFER_BIT7_QCOM',
-  'GL_TEXTURE_LOD_BIAS_EXT', 'GL_TEXTURE_CUBE_MAP_POSITIVE_Z_OES',
-  'GL_TEXTURE_FORMAT_QCOM', 'GL_MODULATE_COLOR_IMG',
-  'GL_RENDERBUFFER_BINDING_OES', 'GL_EXT_texture_compression_dxt1',
-  'GL_OES_extended_matrix_palette', 'GL_STENCIL_BUFFER_BIT1_QCOM',
-  'GL_RENDERBUFFER_STENCIL_SIZE_OES', 'GL_SYNC_OBJECT_APPLE',
-  'GL_SRGB8_ALPHA8_EXT', 'GL_BLEND_SRC_ALPHA_OES',
-  'GL_MULTISAMPLE_BUFFER_BIT2_QCOM', 'GL_MAX_SERVER_WAIT_TIMEOUT_APPLE',
-  'GL_OES_blend_equation_separate', 'GL_MULTISAMPLE_BUFFER_BIT3_QCOM',
-  'GL_RENDERBUFFER_DEPTH_SIZE_OES', 'GL_MATRIX_INDEX_ARRAY_STRIDE_OES',
-  'GL_WEIGHT_ARRAY_OES', 'GL_BUFFER_ACCESS_OES', 'GL_OES_matrix_get',
-  'GL_LUMINANCE8_EXT', 'GL_OES_EGL_image_external', 'GL_RGB10_EXT',
-  'GL_EXT_map_buffer_range', 'GL_CONDITION_SATISFIED_APPLE', 'GL_OES_stencil4',
-  'GL_BLEND_EQUATION_ALPHA_OES', 'GL_FUNC_ADD_OES', 'GL_DEPTH_COMPONENT16_OES',
-  'GL_WEIGHT_ARRAY_POINTER_OES', 'GL_EXT_blend_minmax',
-  'GL_MAX_CLIP_PLANES_IMG', 'GL_STENCIL_BUFFER_BIT0_QCOM',
-  'GL_BLEND_DST_ALPHA_OES', 'GL_STENCIL_INDEX1_OES', 'GL_TEXTURE_DEPTH_QCOM',
-  'GL_RENDERBUFFER_BLUE_SIZE_OES', 'GL_OES_byte_coordinates',
-  'GL_MAX_SAMPLES_APPLE', 'GL_COLOR_BUFFER_BIT4_QCOM',
-  'GL_RENDERBUFFER_GREEN_SIZE_OES', 'GL_WRITE_ONLY_OES', 'GL_IMG_read_format',
-  'GL_OES_blend_func_separate', 'GL_MULTISAMPLE_BUFFER_BIT7_QCOM',
-  'GL_BGRA_EXT', 'GL_OES_depth24', 'GL_MULTISAMPLE_BUFFER_BIT6_QCOM',
-  'GL_FENCE_STATUS_NV', 'GL_TEXTURE_OBJECT_VALID_QCOM',
-  'GL_COMPRESSED_RGB_PVRTC_2BPPV1_IMG', 'GL_LUMINANCE_ALPHA16F_EXT',
-  'GL_OES_stencil1', 'GL_AMD_compressed_ATC_texture', 'GL_OES_matrix_palette',
-  'GL_FRAMEBUFFER_ATTACHMENT_TEXTURE_LEVEL_OES',
-  'GL_FACTOR_ALPHA_MODULATE_IMG', 'GL_MIRRORED_REPEAT_OES',
-  'GL_RENDERBUFFER_RED_SIZE_OES', 'GL_QCOM_writeonly_rendering',
-  'GL_TEXTURE_GEN_MODE_OES', 'GL_COLOR_BUFFER_BIT3_QCOM',
-  'GL_WEIGHT_ARRAY_BUFFER_BINDING_OES', 'GL_COMPRESSED_RGBA_PVRTC_2BPPV1_IMG',
-  'GL_UNSIGNALED_APPLE', 'GL_PROJECTION_MATRIX_FLOAT_AS_INT_BITS_OES',
-  'GL_STENCIL_ATTACHMENT_OES', 'GL_OBJECT_TYPE_APPLE',
-  'GL_TEXTURE_CUBE_MAP_NEGATIVE_Z_OES', 'GL_RENDERBUFFER_SAMPLES_EXT',
-  'GL_APPLE_framebuffer_multisample', 'GL_RENDERBUFFER_ALPHA_SIZE_OES',
-  'GL_SYNC_GPU_COMMANDS_COMPLETE_APPLE', 'GL_SIGNALED_APPLE', 'GL_RGBA8_OES',
-  'GL_APPLE_sync', 'GL_EXT_robustness', 'GL_ALL_COMPLETED_NV',
-  'GL_SYNC_STATUS_APPLE', 'GL_BLEND_EQUATION_RGB_OES',
-  'GL_MULTISAMPLE_BUFFER_BIT0_QCOM', 'GL_RESET_NOTIFICATION_STRATEGY_EXT',
-  'GL_UNSIGNED_INT_24_8_OES', 'GL_CLIP_PLANE5_IMG', 'GL_INCR_WRAP_OES',
-  'GL_MAX_SAMPLES_IMG', 'GL_OES_framebuffer_object', 'GL_MAP_READ_BIT_EXT',
-  'GL_DEPTH_BUFFER_BIT6_QCOM', 'GL_COLOR_BUFFER_BIT6_QCOM', 'GL_RGB10_A2_EXT',
-  'GL_MAP_FLUSH_EXPLICIT_BIT_EXT', 'GL_COLOR_BUFFER_BIT0_QCOM',
-  'GL_WEIGHT_ARRAY_TYPE_OES', 'GL_EXT_read_format_bgra',
-  'GL_FRAMEBUFFER_INCOMPLETE_ATTACHMENT_OES', 'GL_DEPTH_BUFFER_BIT0_QCOM',
-  'GL_FRAMEBUFFER_ATTACHMENT_TEXTURE_CUBE_MAP_FACE_OES',
-  'GL_FRAMEBUFFER_COMPLETE_OES', 'GL_FRAMEBUFFER_INCOMPLETE_MULTISAMPLE_EXT',
-  'GL_LOSE_CONTEXT_ON_RESET_EXT', 'GL_QCOM_extended_get2',
-  'GL_WEIGHT_ARRAY_STRIDE_OES', 'GL_TEXTURE_IMMUTABLE_FORMAT_EXT',
-  'GL_STATE_RESTORE', 'GL_DEPTH_BUFFER_BIT4_QCOM', 'GL_DEPTH_ATTACHMENT_OES',
-  'GL_TEXTURE_GEN_STR_OES', 'GL_FRAMEBUFFER_BINDING_OES',
-  'GL_WEIGHT_ARRAY_SIZE_OES', 'GL_MATRIX_INDEX_ARRAY_TYPE_OES',
-  'GL_3DC_XY_AMD', 'GL_MIN_EXT', 'GL_OES_depth32', 'GL_ALPHA8_EXT',
-  'GL_STENCIL_INDEX4_OES', 'GL_CLIP_PLANE2_IMG', 'GL_FRAMEBUFFER_OES',
-  'GL_APPLE_texture_2D_limited_npot', 'GL_INNOCENT_CONTEXT_RESET_EXT',
-  'GL_OES_EGL_image', 'GL_BLEND_EQUATION_OES', 'GL_STENCIL_BUFFER_BIT3_QCOM',
-  'GL_TEXTURE_TARGET_QCOM', 'GL_VERTEX_ARRAY_BINDING_OES',
-  'GL_MAX_PALETTE_MATRICES_OES', 'GL_DEPTH_BUFFER_BIT1_QCOM',
-  'GL_FRAMEBUFFER_ATTACHMENT_COLOR_ENCODING_EXT',
-  'GL_RENDERBUFFER_SAMPLES_APPLE', 'GL_TIMEOUT_IGNORED_APPLE',
-  'GL_DECR_WRAP_OES', 'GL_EXT_texture_lod_bias',
-  'GL_FRAMEBUFFER_INCOMPLETE_DIMENSIONS_OES', 'GL_TEXTURE_FILTER_CONTROL_EXT',
-  'GL_EXT_sRGB', 'GL_EXT_texture_filter_anisotropic',
-  'GL_OES_texture_mirrored_repeat', 'GL_TEXTURE_MATRIX_FLOAT_AS_INT_BITS_OES',
-  'GL_RGB565_OES', 'GL_RGB5_A1_OES', 'GL_OES_rgb8_rgba8',
-  'GL_RENDERBUFFER_INTERNAL_FORMAT_OES',
-  'GL_IMG_multisampled_render_to_texture', 'GL_MAP_INVALIDATE_BUFFER_BIT_EXT',
-  'GL_COLOR_BUFFER_BIT5_QCOM', 'GL_MATRIX_INDEX_ARRAY_OES', 'GL_ADD_BLEND_IMG',
-  'GL_ETC1_RGB8_OES', 'GL_WAIT_FAILED_APPLE',
-  'GL_MATRIX_INDEX_ARRAY_BUFFER_BINDING_OES', 'GL_DEPTH_BUFFER_BIT5_QCOM',
-  'GL_NO_RESET_NOTIFICATION_EXT', 'GL_MAX_TEXTURE_LOD_BIAS_EXT',
-  'GL_FRAMEBUFFER_ATTACHMENT_TEXTURE_SAMPLES_EXT', 'GL_SYNC_FLAGS_APPLE',
-  'GL_DEPTH_BUFFER_BIT2_QCOM', 'GL_EXT_texture_storage',
-  'GL_OES_required_internalformat', 'GL_IMG_user_clip_plane',
-  'GL_MATRIX_PALETTE_OES', 'GL_COLOR_BUFFER_BIT1_QCOM', 'GL_DOT3_RGBA_IMG',
-  'GL_AMD_compressed_3DC_texture', 'GL_BGRA_IMG',
-  'GL_UNSIGNED_SHORT_4_4_4_4_REV_IMG', 'GL_RGB8_OES',
-  'GL_OES_element_index_uint', 'GL_RENDERBUFFER_SAMPLES_IMG',
-  'GL_STENCIL_INDEX8_OES', 'GL_OES_draw_texture', 'GL_MAX_SAMPLES_EXT',
-  'GL_PERFMON_GLOBAL_MODE_QCOM', 'GL_OES_mapbuffer',
-  'GL_FRAMEBUFFER_INCOMPLETE_MULTISAMPLE_IMG', 'GL_UNSIGNED_INT',
-  'GL_COMPRESSED_RGBA_S3TC_DXT1_EXT',
+  'glStartTilingQCOM', 'glEndTilingQCOM', '__gles1_glext_h_', 'GL_KHR_debug',
+  'GL_OES_EGL_image', 'GL_OES_EGL_image_external', 'GL_TEXTURE_EXTERNAL_OES',
+  'GL_TEXTURE_BINDING_EXTERNAL_OES', 'GL_REQUIRED_TEXTURE_IMAGE_UNITS_OES',
+  'GL_OES_blend_equation_separate', 'GL_BLEND_EQUATION_RGB_OES',
+  'GL_BLEND_EQUATION_ALPHA_OES', 'GL_OES_blend_func_separate',
+  'GL_BLEND_DST_RGB_OES', 'GL_BLEND_SRC_RGB_OES', 'GL_BLEND_DST_ALPHA_OES',
+  'GL_BLEND_SRC_ALPHA_OES', 'GL_OES_blend_subtract', 'GL_BLEND_EQUATION_OES',
+  'GL_FUNC_ADD_OES', 'GL_FUNC_SUBTRACT_OES', 'GL_FUNC_REVERSE_SUBTRACT_OES',
+  'GL_OES_byte_coordinates', 'GL_OES_compressed_ETC1_RGB8_sub_texture',
+  'GL_OES_compressed_ETC1_RGB8_texture', 'GL_ETC1_RGB8_OES', 'GL_OES_depth24',
+  'GL_DEPTH_COMPONENT24_OES', 'GL_OES_depth32', 'GL_DEPTH_COMPONENT32_OES',
+  'GL_OES_draw_texture', 'GL_TEXTURE_CROP_RECT_OES',
+  'GL_OES_element_index_uint', 'GL_UNSIGNED_INT',
+  'GL_OES_extended_matrix_palette', 'GL_OES_fbo_render_mipmap',
+  'GL_OES_fixed_point', 'GL_FIXED_OES', 'GL_OES_framebuffer_object',
+  'GL_NONE_OES', 'GL_FRAMEBUFFER_OES', 'GL_RENDERBUFFER_OES', 'GL_RGBA4_OES',
+  'GL_RGB5_A1_OES', 'GL_RGB565_OES', 'GL_DEPTH_COMPONENT16_OES',
+  'GL_RENDERBUFFER_WIDTH_OES', 'GL_RENDERBUFFER_HEIGHT_OES',
+  'GL_RENDERBUFFER_INTERNAL_FORMAT_OES', 'GL_RENDERBUFFER_RED_SIZE_OES',
+  'GL_RENDERBUFFER_GREEN_SIZE_OES', 'GL_RENDERBUFFER_BLUE_SIZE_OES',
+  'GL_RENDERBUFFER_ALPHA_SIZE_OES', 'GL_RENDERBUFFER_DEPTH_SIZE_OES',
+  'GL_RENDERBUFFER_STENCIL_SIZE_OES',
+  'GL_FRAMEBUFFER_ATTACHMENT_OBJECT_TYPE_OES',
   'GL_FRAMEBUFFER_ATTACHMENT_OBJECT_NAME_OES',
-  'GL_MATRIX_INDEX_ARRAY_POINTER_OES', 'GL_OES_compressed_ETC1_RGB8_texture',
-  'GL_FRAGMENT_ALPHA_MODULATE_IMG', 'GL_ALREADY_SIGNALED_APPLE',
-  'GL_MULTISAMPLE_BUFFER_BIT1_QCOM', 'GL_BUFFER_MAPPED_OES',
-  'GL_MAX_TEXTURE_MAX_ANISOTROPY_EXT', 'GL_TEXTURE_IMAGE_VALID_QCOM',
-  'GL_ATC_RGBA_INTERPOLATED_ALPHA_AMD', 'GL_TEXTURE_WIDTH_QCOM',
-  'GL_LUMINANCE_ALPHA32F_EXT', 'GL_INVALID_FRAMEBUFFER_OPERATION_OES',
-  'GL_OES_fixed_point', 'GL_RGBA4_OES', 'GL_CURRENT_PALETTE_MATRIX_OES',
-  'GL_EXT_texture_format_BGRA8888', 'GL_DRAW_FRAMEBUFFER_APPLE',
-  'GL_BUFFER_MAP_POINTER_OES', 'GL_COLOR_BUFFER_BIT2_QCOM', 'GL_3DC_X_AMD',
-  'GL_MAP_INVALIDATE_RANGE_BIT_EXT', 'GL_QCOM_extended_get',
-  'GL_MAP_WRITE_BIT_EXT', 'GL_TEXTURE_NUM_LEVELS_QCOM', 'GL_FIXED_OES',
-  'GL_UNSIGNED_SHORT_1_5_5_5_REV_EXT', 'GL_DEPTH_COMPONENT32_OES',
-  'GL_STENCIL_BUFFER_BIT7_QCOM', 'GL_STENCIL_BUFFER_BIT4_QCOM',
-  'GL_DEPTH24_STENCIL8_OES', 'GL_APPLE_copy_texture_levels',
-  'GL_TEXTURE_CUBE_MAP_NEGATIVE_X_OES', 'GL_TEXTURE_MAX_ANISOTROPY_EXT',
-  'GL_GUILTY_CONTEXT_RESET_EXT', 'GL_ARM_rgba8', 'GL_BLEND_SRC_RGB_OES',
-  'GL_MULTISAMPLE_BUFFER_BIT4_QCOM', 'GL_FUNC_SUBTRACT_OES',
-  'GL_MULTISAMPLE_BUFFER_BIT5_QCOM', 'GL_LUMINANCE16F_EXT',
-  'GL_FRAMEBUFFER_ATTACHMENT_OBJECT_TYPE_OES', 'GL_TIMEOUT_EXPIRED_APPLE',
-  'GL_STENCIL_BUFFER_BIT6_QCOM', 'GL_BGRA8_EXT', 'GL_ATC_RGB_AMD',
-  'GL_TEXTURE_SAMPLES_IMG', 'GL_CLIP_PLANE4_IMG',
-  'GL_TEXTURE_CUBE_MAP_POSITIVE_X_OES',
-  'GL_IMG_texture_env_enhanced_fixed_function', 'GL_TEXTURE_MAX_LEVEL_APPLE',
-  'GL_TEXTURE_TYPE_QCOM', 'GL_TEXTURE_EXTERNAL_OES', 'GL_STENCIL_EXT',
-  'GL_APPLE_texture_format_BGRA8888', 'GL_QCOM_driver_control',
-  'GL_EXT_discard_framebuffer', 'GL_ALPHA16F_EXT', 'GL_SRGB_EXT',
-  'GL_FUNC_REVERSE_SUBTRACT_OES', 'GL_COLOR_ATTACHMENT0_OES',
-  'GL_SYNC_CONDITION_APPLE', 'GL_OES_stencil8', 'GL_MAX_RENDERBUFFER_SIZE_OES',
-  'GL_DEPTH_STENCIL_OES', 'GL_OES_vertex_array_object',
-  'GL_ATC_RGBA_EXPLICIT_ALPHA_AMD', 'GLchar', 'GLenum', 'GLboolean',
-  'GLbitfield', 'GLbyte', 'GLshort', 'GLint', 'GLint64', 'GLsizei', 'GLubyte',
-  'GLushort', 'GLuint', 'GLfloat', 'GLclampf', 'GLfixed', 'GLintptr',
-  'GLsizeiptr', 'GLclampx', 'void', 'GLvoid', 'GLsync', 'GLeglImageOES',
-  'GLDEBUGPROCKHR', 'GLuint64'
+  'GL_FRAMEBUFFER_ATTACHMENT_TEXTURE_LEVEL_OES',
+  'GL_FRAMEBUFFER_ATTACHMENT_TEXTURE_CUBE_MAP_FACE_OES',
+  'GL_COLOR_ATTACHMENT0_OES', 'GL_DEPTH_ATTACHMENT_OES',
+  'GL_STENCIL_ATTACHMENT_OES', 'GL_FRAMEBUFFER_COMPLETE_OES',
+  'GL_FRAMEBUFFER_INCOMPLETE_ATTACHMENT_OES',
+  'GL_FRAMEBUFFER_INCOMPLETE_MISSING_ATTACHMENT_OES',
+  'GL_FRAMEBUFFER_INCOMPLETE_DIMENSIONS_OES',
+  'GL_FRAMEBUFFER_INCOMPLETE_FORMATS_OES', 'GL_FRAMEBUFFER_UNSUPPORTED_OES',
+  'GL_FRAMEBUFFER_BINDING_OES', 'GL_RENDERBUFFER_BINDING_OES',
+  'GL_MAX_RENDERBUFFER_SIZE_OES', 'GL_INVALID_FRAMEBUFFER_OPERATION_OES',
+  'GL_OES_mapbuffer', 'GL_WRITE_ONLY_OES', 'GL_BUFFER_ACCESS_OES',
+  'GL_BUFFER_MAPPED_OES', 'GL_BUFFER_MAP_POINTER_OES', 'GL_OES_matrix_get',
+  'GL_MODELVIEW_MATRIX_FLOAT_AS_INT_BITS_OES',
+  'GL_PROJECTION_MATRIX_FLOAT_AS_INT_BITS_OES',
+  'GL_TEXTURE_MATRIX_FLOAT_AS_INT_BITS_OES', 'GL_OES_matrix_palette',
+  'GL_MAX_VERTEX_UNITS_OES', 'GL_MAX_PALETTE_MATRICES_OES',
+  'GL_MATRIX_PALETTE_OES', 'GL_MATRIX_INDEX_ARRAY_OES', 'GL_WEIGHT_ARRAY_OES',
+  'GL_CURRENT_PALETTE_MATRIX_OES', 'GL_MATRIX_INDEX_ARRAY_SIZE_OES',
+  'GL_MATRIX_INDEX_ARRAY_TYPE_OES', 'GL_MATRIX_INDEX_ARRAY_STRIDE_OES',
+  'GL_MATRIX_INDEX_ARRAY_POINTER_OES',
+  'GL_MATRIX_INDEX_ARRAY_BUFFER_BINDING_OES', 'GL_WEIGHT_ARRAY_SIZE_OES',
+  'GL_WEIGHT_ARRAY_TYPE_OES', 'GL_WEIGHT_ARRAY_STRIDE_OES',
+  'GL_WEIGHT_ARRAY_POINTER_OES', 'GL_WEIGHT_ARRAY_BUFFER_BINDING_OES',
+  'GL_OES_packed_depth_stencil', 'GL_DEPTH_STENCIL_OES',
+  'GL_UNSIGNED_INT_24_8_OES', 'GL_DEPTH24_STENCIL8_OES', 'GL_OES_query_matrix',
+  'GL_OES_required_internalformat', 'GL_ALPHA8_OES',
+  'GL_LUMINANCE4_ALPHA4_OES', 'GL_LUMINANCE8_ALPHA8_OES', 'GL_LUMINANCE8_OES',
+  'GL_RGB8_OES', 'GL_RGBA8_OES', 'GL_RGB10_EXT', 'GL_RGB10_A2_EXT',
+  'GL_OES_rgb8_rgba8', 'GL_OES_single_precision', 'GL_OES_stencil1',
+  'GL_STENCIL_INDEX1_OES', 'GL_OES_stencil4', 'GL_STENCIL_INDEX4_OES',
+  'GL_OES_stencil8', 'GL_STENCIL_INDEX8_OES', 'GL_OES_stencil_wrap',
+  'GL_INCR_WRAP_OES', 'GL_DECR_WRAP_OES', 'GL_OES_surfaceless_context',
+  'GL_FRAMEBUFFER_UNDEFINED_OES', 'GL_OES_texture_cube_map',
+  'GL_NORMAL_MAP_OES', 'GL_REFLECTION_MAP_OES', 'GL_TEXTURE_CUBE_MAP_OES',
+  'GL_TEXTURE_BINDING_CUBE_MAP_OES', 'GL_TEXTURE_CUBE_MAP_POSITIVE_X_OES',
+  'GL_TEXTURE_CUBE_MAP_NEGATIVE_X_OES', 'GL_TEXTURE_CUBE_MAP_POSITIVE_Y_OES',
+  'GL_TEXTURE_CUBE_MAP_NEGATIVE_Y_OES', 'GL_TEXTURE_CUBE_MAP_POSITIVE_Z_OES',
+  'GL_TEXTURE_CUBE_MAP_NEGATIVE_Z_OES', 'GL_MAX_CUBE_MAP_TEXTURE_SIZE_OES',
+  'GL_TEXTURE_GEN_MODE_OES', 'GL_TEXTURE_GEN_STR_OES',
+  'GL_OES_texture_env_crossbar', 'GL_OES_texture_mirrored_repeat',
+  'GL_MIRRORED_REPEAT_OES', 'GL_OES_texture_npot', 'GL_OES_vertex_array_object',
+  'GL_VERTEX_ARRAY_BINDING_OES', 'GL_AMD_compressed_3DC_texture',
+  'GL_3DC_X_AMD', 'GL_3DC_XY_AMD', 'GL_AMD_compressed_ATC_texture',
+  'GL_ATC_RGB_AMD', 'GL_ATC_RGBA_EXPLICIT_ALPHA_AMD',
+  'GL_ATC_RGBA_INTERPOLATED_ALPHA_AMD', 'GL_APPLE_copy_texture_levels',
+  'GL_APPLE_framebuffer_multisample', 'GL_RENDERBUFFER_SAMPLES_APPLE',
+  'GL_FRAMEBUFFER_INCOMPLETE_MULTISAMPLE_APPLE', 'GL_MAX_SAMPLES_APPLE',
+  'GL_READ_FRAMEBUFFER_APPLE', 'GL_DRAW_FRAMEBUFFER_APPLE',
+  'GL_DRAW_FRAMEBUFFER_BINDING_APPLE', 'GL_READ_FRAMEBUFFER_BINDING_APPLE',
+  'GL_APPLE_sync', 'GL_SYNC_OBJECT_APPLE', 'GL_MAX_SERVER_WAIT_TIMEOUT_APPLE',
+  'GL_OBJECT_TYPE_APPLE', 'GL_SYNC_CONDITION_APPLE', 'GL_SYNC_STATUS_APPLE',
+  'GL_SYNC_FLAGS_APPLE', 'GL_SYNC_FENCE_APPLE',
+  'GL_SYNC_GPU_COMMANDS_COMPLETE_APPLE', 'GL_UNSIGNALED_APPLE',
+  'GL_SIGNALED_APPLE', 'GL_ALREADY_SIGNALED_APPLE', 'GL_TIMEOUT_EXPIRED_APPLE',
+  'GL_CONDITION_SATISFIED_APPLE', 'GL_WAIT_FAILED_APPLE',
+  'GL_SYNC_FLUSH_COMMANDS_BIT_APPLE', 'GL_TIMEOUT_IGNORED_APPLE',
+  'GL_APPLE_texture_2D_limited_npot', 'GL_APPLE_texture_format_BGRA8888',
+  'GL_BGRA_EXT', 'GL_BGRA8_EXT', 'GL_APPLE_texture_max_level',
+  'GL_TEXTURE_MAX_LEVEL_APPLE', 'GL_ARM_rgba8', 'GL_EXT_blend_minmax',
+  'GL_MIN_EXT', 'GL_MAX_EXT', 'GL_EXT_debug_marker',
+  'GL_EXT_discard_framebuffer', 'GL_COLOR_EXT', 'GL_DEPTH_EXT',
+  'GL_STENCIL_EXT', 'GL_EXT_map_buffer_range', 'GL_MAP_READ_BIT_EXT',
+  'GL_MAP_WRITE_BIT_EXT', 'GL_MAP_INVALIDATE_RANGE_BIT_EXT',
+  'GL_MAP_INVALIDATE_BUFFER_BIT_EXT', 'GL_MAP_FLUSH_EXPLICIT_BIT_EXT',
+  'GL_MAP_UNSYNCHRONIZED_BIT_EXT', 'GL_EXT_multi_draw_arrays',
+  'GL_EXT_multisampled_render_to_texture',
+  'GL_FRAMEBUFFER_ATTACHMENT_TEXTURE_SAMPLES_EXT',
+  'GL_RENDERBUFFER_SAMPLES_EXT', 'GL_FRAMEBUFFER_INCOMPLETE_MULTISAMPLE_EXT',
+  'GL_MAX_SAMPLES_EXT', 'GL_EXT_read_format_bgra',
+  'GL_UNSIGNED_SHORT_4_4_4_4_REV_EXT', 'GL_UNSIGNED_SHORT_1_5_5_5_REV_EXT',
+  'GL_EXT_robustness', 'GL_GUILTY_CONTEXT_RESET_EXT',
+  'GL_INNOCENT_CONTEXT_RESET_EXT', 'GL_UNKNOWN_CONTEXT_RESET_EXT',
+  'GL_CONTEXT_ROBUST_ACCESS_EXT', 'GL_RESET_NOTIFICATION_STRATEGY_EXT',
+  'GL_LOSE_CONTEXT_ON_RESET_EXT', 'GL_NO_RESET_NOTIFICATION_EXT',
+  'GL_EXT_sRGB', 'GL_SRGB_EXT', 'GL_SRGB_ALPHA_EXT', 'GL_SRGB8_ALPHA8_EXT',
+  'GL_FRAMEBUFFER_ATTACHMENT_COLOR_ENCODING_EXT',
+  'GL_EXT_texture_compression_dxt1', 'GL_COMPRESSED_RGB_S3TC_DXT1_EXT',
+  'GL_COMPRESSED_RGBA_S3TC_DXT1_EXT', 'GL_EXT_texture_filter_anisotropic',
+  'GL_TEXTURE_MAX_ANISOTROPY_EXT', 'GL_MAX_TEXTURE_MAX_ANISOTROPY_EXT',
+  'GL_EXT_texture_format_BGRA8888', 'GL_EXT_texture_lod_bias',
+  'GL_MAX_TEXTURE_LOD_BIAS_EXT', 'GL_TEXTURE_FILTER_CONTROL_EXT',
+  'GL_TEXTURE_LOD_BIAS_EXT', 'GL_EXT_texture_storage',
+  'GL_TEXTURE_IMMUTABLE_FORMAT_EXT', 'GL_ALPHA8_EXT', 'GL_LUMINANCE8_EXT',
+  'GL_LUMINANCE8_ALPHA8_EXT', 'GL_RGBA32F_EXT', 'GL_RGB32F_EXT',
+  'GL_ALPHA32F_EXT', 'GL_LUMINANCE32F_EXT', 'GL_LUMINANCE_ALPHA32F_EXT',
+  'GL_RGBA16F_EXT', 'GL_RGB16F_EXT', 'GL_ALPHA16F_EXT', 'GL_LUMINANCE16F_EXT',
+  'GL_LUMINANCE_ALPHA16F_EXT', 'GL_R8_EXT', 'GL_RG8_EXT', 'GL_R32F_EXT',
+  'GL_RG32F_EXT', 'GL_R16F_EXT', 'GL_RG16F_EXT',
+  'GL_IMG_multisampled_render_to_texture', 'GL_RENDERBUFFER_SAMPLES_IMG',
+  'GL_FRAMEBUFFER_INCOMPLETE_MULTISAMPLE_IMG', 'GL_MAX_SAMPLES_IMG',
+  'GL_TEXTURE_SAMPLES_IMG', 'GL_IMG_read_format', 'GL_BGRA_IMG',
+  'GL_UNSIGNED_SHORT_4_4_4_4_REV_IMG', 'GL_IMG_texture_compression_pvrtc',
+  'GL_COMPRESSED_RGB_PVRTC_4BPPV1_IMG', 'GL_COMPRESSED_RGB_PVRTC_2BPPV1_IMG',
+  'GL_COMPRESSED_RGBA_PVRTC_4BPPV1_IMG', 'GL_COMPRESSED_RGBA_PVRTC_2BPPV1_IMG',
+  'GL_IMG_texture_env_enhanced_fixed_function', 'GL_MODULATE_COLOR_IMG',
+  'GL_RECIP_ADD_SIGNED_ALPHA_IMG', 'GL_TEXTURE_ALPHA_MODULATE_IMG',
+  'GL_FACTOR_ALPHA_MODULATE_IMG', 'GL_FRAGMENT_ALPHA_MODULATE_IMG',
+  'GL_ADD_BLEND_IMG', 'GL_DOT3_RGBA_IMG', 'GL_IMG_user_clip_plane',
+  'GL_CLIP_PLANE0_IMG', 'GL_CLIP_PLANE1_IMG', 'GL_CLIP_PLANE2_IMG',
+  'GL_CLIP_PLANE3_IMG', 'GL_CLIP_PLANE4_IMG', 'GL_CLIP_PLANE5_IMG',
+  'GL_MAX_CLIP_PLANES_IMG', 'GL_NV_fence', 'GL_ALL_COMPLETED_NV',
+  'GL_FENCE_STATUS_NV', 'GL_FENCE_CONDITION_NV', 'GL_QCOM_driver_control',
+  'GL_QCOM_extended_get', 'GL_TEXTURE_WIDTH_QCOM', 'GL_TEXTURE_HEIGHT_QCOM',
+  'GL_TEXTURE_DEPTH_QCOM', 'GL_TEXTURE_INTERNAL_FORMAT_QCOM',
+  'GL_TEXTURE_FORMAT_QCOM', 'GL_TEXTURE_TYPE_QCOM',
+  'GL_TEXTURE_IMAGE_VALID_QCOM', 'GL_TEXTURE_NUM_LEVELS_QCOM',
+  'GL_TEXTURE_TARGET_QCOM', 'GL_TEXTURE_OBJECT_VALID_QCOM', 'GL_STATE_RESTORE',
+  'GL_QCOM_extended_get2', 'GL_QCOM_perfmon_global_mode',
+  'GL_PERFMON_GLOBAL_MODE_QCOM', 'GL_QCOM_tiled_rendering',
+  'GL_COLOR_BUFFER_BIT0_QCOM', 'GL_COLOR_BUFFER_BIT1_QCOM',
+  'GL_COLOR_BUFFER_BIT2_QCOM', 'GL_COLOR_BUFFER_BIT3_QCOM',
+  'GL_COLOR_BUFFER_BIT4_QCOM', 'GL_COLOR_BUFFER_BIT5_QCOM',
+  'GL_COLOR_BUFFER_BIT6_QCOM', 'GL_COLOR_BUFFER_BIT7_QCOM',
+  'GL_DEPTH_BUFFER_BIT0_QCOM', 'GL_DEPTH_BUFFER_BIT1_QCOM',
+  'GL_DEPTH_BUFFER_BIT2_QCOM', 'GL_DEPTH_BUFFER_BIT3_QCOM',
+  'GL_DEPTH_BUFFER_BIT4_QCOM', 'GL_DEPTH_BUFFER_BIT5_QCOM',
+  'GL_DEPTH_BUFFER_BIT6_QCOM', 'GL_DEPTH_BUFFER_BIT7_QCOM',
+  'GL_STENCIL_BUFFER_BIT0_QCOM', 'GL_STENCIL_BUFFER_BIT1_QCOM',
+  'GL_STENCIL_BUFFER_BIT2_QCOM', 'GL_STENCIL_BUFFER_BIT3_QCOM',
+  'GL_STENCIL_BUFFER_BIT4_QCOM', 'GL_STENCIL_BUFFER_BIT5_QCOM',
+  'GL_STENCIL_BUFFER_BIT6_QCOM', 'GL_STENCIL_BUFFER_BIT7_QCOM',
+  'GL_MULTISAMPLE_BUFFER_BIT0_QCOM', 'GL_MULTISAMPLE_BUFFER_BIT1_QCOM',
+  'GL_MULTISAMPLE_BUFFER_BIT2_QCOM', 'GL_MULTISAMPLE_BUFFER_BIT3_QCOM',
+  'GL_MULTISAMPLE_BUFFER_BIT4_QCOM', 'GL_MULTISAMPLE_BUFFER_BIT5_QCOM',
+  'GL_MULTISAMPLE_BUFFER_BIT6_QCOM', 'GL_MULTISAMPLE_BUFFER_BIT7_QCOM',
+  'GL_QCOM_writeonly_rendering', 'GL_WRITEONLY_RENDERING_QCOM', 'GLchar',
+  'GLenum', 'GLboolean', 'GLbitfield', 'GLbyte', 'GLshort', 'GLint', 'GLint64',
+  'GLsizei', 'GLubyte', 'GLushort', 'GLuint', 'GLfloat', 'GLclampf', 'GLfixed',
+  'GLintptr', 'GLsizeiptr', 'GLclampx', 'void', 'GLvoid', 'GLsync',
+  'GLeglImageOES', 'GLDEBUGPROCKHR', 'GLuint64'
 ]
+

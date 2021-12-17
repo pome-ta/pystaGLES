@@ -4,7 +4,6 @@
 # directory must be set to the same directory as all
 # the GLES header files
 
-
 # xxx: いらないかも
 import ast
 import os
@@ -13,13 +12,17 @@ import copy
 import time
 import datetime
 
-headers = ["gl.h", "glext.h", "gl2.h", "gl2ext.h", "gl2platform.h", "gl3.h", "gl31.h", "gl3platform.h"]
+headers = [
+  "gl.h", "glext.h", "gl2.h", "gl2ext.h", "gl2platform.h", "gl3.h", "gl31.h",
+  "gl3platform.h"
+]
 
 VERBOSITY = 2
 
 
 def download_header_files(force_download=False):
-  if not os.path.exists(os.path.join(os.getcwd(), headers[0])) or force_download:
+  if not os.path.exists(
+      os.path.join(os.getcwd(), headers[0])) or force_download:
     if VERBOSITY >= 0:
       print("Downloading headers...")
     #import urllib2
@@ -34,8 +37,9 @@ def download_header_files(force_download=False):
       try:
         if VERBOSITY >= 1:
           print("Downloading: '%s'... Please wait" % (url % header))
-        f = urllib2.urlopen(url % header)
-        with open(os.path.join(os.getcwd(), header), "w") as h:
+        f = urllib.request.urlopen(url % header)
+        with open(os.path.join(os.getcwd(), header), mode='wb') as h:
+
           h.write(f.read())
         if VERBOSITY >= 1:
           print("Done")
@@ -46,7 +50,7 @@ def download_header_files(force_download=False):
 
 
 def build_constants_file():
-  with open('GLConstants.py', "wb") as f:
+  with open('GLConstants.py', "w") as f:
     f.write("import ctypes\n")
     f.write("GLchar = ctypes.c_char\n")
     f.write("GLenum = ctypes.c_uint32\n")
@@ -97,20 +101,20 @@ def build_gl_header_file():
       arg_names = []
       for call, return_type, name, value in re.findall(r'(GL_API|GL_APICALL)'
                                                        '\s+(\w+)\s+GL_APIENTRY'
-                                                       '\s+(\w+)\s+(.*)', text):
+                                                       '\s+(\w+)\s+(.*)',
+                                                       text):
         if not ("sync" in name or "sync" in value or "Sync" in name):
           arg_names.append(name)
           value = value.replace("(", "").replace(");", "")
           values = value.split(", ")
-          v = [x.replace("const ", "")
-                 .split(" ")[0] for x in values]
+          v = [x.replace("const ", "").split(" ")[0] for x in values]
           agn = []
           agn2 = []
           try:
-            agn = [x.replace("const ", "")
-                     .replace(" *", "")
-                     .replace("*", "")
-                     .split(" ")[-1] for x in values]
+            agn = [
+              x.replace("const ", "").replace(" *", "").replace("*", "")
+              .split(" ")[-1] for x in values
+            ]
           except IndexError as e:
             if VERBOSITY >= 2:
               print(e)
@@ -162,20 +166,25 @@ def build_gl_header_file():
     f = c.{funcname}
     del f
     '''
-          func = func.format(
-            *[],
-            **{
-              'funcname': name,
-              'return_type': return_type,
-              'argument_types': ', '.join(['%s_t' % x for x in agn]),
-              'arg_names': ', '.join(agn),
-              'arg_names1': ', '.join(agn2),
-            })
+          func = func.format(* [], **{
+            'funcname':
+            name,
+            'return_type':
+            return_type,
+            'argument_types':
+            ', '.join(['%s_t' % x for x in agn]),
+            'arg_names':
+            ', '.join(agn),
+            'arg_names1':
+            ', '.join(agn2),
+          })
           func = func.replace("'", "")
           functions.append(func)
         else:
           if VERBOSITY >= 1:
-            print("Sync functions are not currently supported. Function name '%s'" % name)
+            print(
+              "Sync functions are not currently supported. Function name '%s'"
+              % name)
     if VERBOSITY >= 1:
       print("%i Functions in %s" % (len(functions), header))
       print("Saving Python File")
@@ -189,7 +198,8 @@ def build_gl_header_file():
       f.write("DEBUG = 0\n")
       f.write("loaded = [0, 0]\n\n")
       f.write("# GLES Constants\n")
-      for k, v in constants.iteritems():
+
+      for k, v in constants.items():
         f.write("%s = %s\n" % (k, v))
       f.write("\n# GL Functions\n")
       for fu in functions:
@@ -199,22 +209,25 @@ def build_gl_header_file():
         f.write("except AttributeError as e:\n")
         f.write("    loaded[1] += 1\n")
         f.write("    if DEBUG > 0:\n")
-        f.write("        print ('could not load the function')\n")
-        f.write("          print(e)\n\n")
-      f.write("print 'Loaded %i functions and failed "
+        f.write("        print('could not load the function')\n")
+        f.write("        print(e)\n\n")
+      f.write("print('Loaded %i functions and failed "
               "to load %i functions of %i functions in "
-              "the header " + header + "' % (loaded[0], loaded[1], sum(loaded))\n")
+              "the header " + header +
+              "' % (loaded[0], loaded[1], sum(loaded)))\n\n")
       all_obj = []
       all_obj.extend(arg_names)
       all_obj.extend(constants.keys())
-      all_obj.extend(['GLchar', 'GLenum', 'GLboolean', 'GLbitfield',
-                      'GLbyte', 'GLshort', 'GLint', 'GLint64', 'GLsizei',
-                      'GLubyte', 'GLushort', 'GLuint', 'GLfloat', 'GLclampf',
-                      'GLfixed', 'GLintptr', 'GLsizeiptr', 'GLclampx', 'void',
-                      'GLvoid', 'GLsync', 'GLeglImageOES', 'GLDEBUGPROCKHR',
-                      'GLuint64'])
+      all_obj.extend([
+        'GLchar', 'GLenum', 'GLboolean', 'GLbitfield', 'GLbyte', 'GLshort',
+        'GLint', 'GLint64', 'GLsizei', 'GLubyte', 'GLushort', 'GLuint',
+        'GLfloat', 'GLclampf', 'GLfixed', 'GLintptr', 'GLsizeiptr', 'GLclampx',
+        'void', 'GLvoid', 'GLsync', 'GLeglImageOES', 'GLDEBUGPROCKHR',
+        'GLuint64'
+      ])
       f.write("__all__ = %s" % str(all_obj))
-    execfile(header.replace(".h", "_c.py"), {}, {})
+    # xxx: `.h` が消せない😇
+    #exec(header.replace(".h", "_c.py"), {}, {})
     if VERBOSITY >= 0:
       print("Finished parsing header %s" % header)
 

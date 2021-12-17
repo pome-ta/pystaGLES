@@ -1,317 +1,317 @@
 # Generated Files. DO NOT EDIT
-# Generated on: 09/28/15 10:48:07
-# rewrite on: 2021/12/16
+# Generated on: 12/17/21 09:04:39
 import ctypes
-from objc_util import *
+from objc_util import c
 from GLConstants import *
 
-DEBUG = 1
+DEBUG = 0
 loaded = [0, 0]
 
 # GLES Constants
-GL_INFO_LOG_LENGTH = 0x00008b84
-GL_FRAMEBUFFER_INCOMPLETE_ATTACHMENT = 0x00008cd6
-GL_DEPTH_BITS = 0x00000d56
-GL_LINE_STRIP = 0x00000003
-GL_TEXTURE24 = 0x000084d8
-GL_FRAMEBUFFER_COMPLETE = 0x00008cd5
-GL_UNSIGNED_SHORT_5_6_5 = 0x00008363
-GL_RGB5_A1 = 0x00008057
-GL_TEXTURE30 = 0x000084de
-GL_TEXTURE31 = 0x000084df
-GL_VERTEX_ATTRIB_ARRAY_SIZE = 0x00008623
-GL_TEXTURE_CUBE_MAP = 0x00008513
-GL_SRC_ALPHA_SATURATE = 0x00000308
-GL_VERTEX_SHADER = 0x00008b31
-GL_TEXTURE5 = 0x000084c5
-GL_CONSTANT_ALPHA = 0x00008003
-GL_DEPTH_CLEAR_VALUE = 0x00000b73
-GL_DITHER = 0x00000bd0
-GL_VERTEX_ATTRIB_ARRAY_ENABLED = 0x00008622
-GL_TEXTURE20 = 0x000084d4
-GL_FLOAT_VEC2 = 0x00008b50
-GL_FLOAT_VEC3 = 0x00008b51
-GL_RENDERBUFFER_INTERNAL_FORMAT = 0x00008d44
-GL_TEXTURE18 = 0x000084d2
-GL_FRAMEBUFFER_ATTACHMENT_OBJECT_TYPE = 0x00008cd0
-GL_STENCIL_REF = 0x00000b97
-GL_VALIDATE_STATUS = 0x00008b83
-GL_FLOAT = 0x00001406
-GL_ACTIVE_ATTRIBUTES = 0x00008b89
-GL_COMPILE_STATUS = 0x00008b81
-GL_POINTS = 0x00000000
-GL_TEXTURE17 = 0x000084d1
-GL_BLEND = 0x00000be2
-GL_MIRRORED_REPEAT = 0x00008370
+__gles2_gl2_h_ = 0x00000001
+GL_GLES_PROTOTYPES = 0x00000001
+GL_ES_VERSION_2_0 = 0x00000001
+GL_DEPTH_BUFFER_BIT = 0x00000100
 GL_STENCIL_BUFFER_BIT = 0x00000400
-GL_RENDERBUFFER_BLUE_SIZE = 0x00008d52
-GL_UNSIGNED_SHORT = 0x00001403
-GL_FASTEST = 0x00001101
-GL_REPEAT = 0x00002901
-GL_MAX_RENDERBUFFER_SIZE = 0x000084e8
-GL_DEPTH_COMPONENT16 = 0x000081a5
-GL_POLYGON_OFFSET_UNITS = 0x00002a00
-GL_SHADER_SOURCE_LENGTH = 0x00008b88
-GL_ONE_MINUS_DST_COLOR = 0x00000307
-GL_ONE_MINUS_SRC_COLOR = 0x00000301
-GL_TEXTURE22 = 0x000084d6
-GL_TEXTURE21 = 0x000084d5
-GL_TEXTURE7 = 0x000084c7
-GL_TEXTURE27 = 0x000084db
-GL_TEXTURE26 = 0x000084da
-GL_TEXTURE25 = 0x000084d9
-GL_TEXTURE = 0x00001702
-GL_BLEND_EQUATION_ALPHA = 0x0000883d
-GL_TEXTURE8 = 0x000084c8
-GL_TEXTURE29 = 0x000084dd
-GL_TEXTURE28 = 0x000084dc
-GL_ELEMENT_ARRAY_BUFFER_BINDING = 0x00008895
-GL_TEXTURE9 = 0x000084c9
-GL_TEXTURE_CUBE_MAP_NEGATIVE_Y = 0x00008518
-GL_TEXTURE_CUBE_MAP_NEGATIVE_X = 0x00008516
-GL_TEXTURE_CUBE_MAP_NEGATIVE_Z = 0x0000851a
-GL_STENCIL_PASS_DEPTH_PASS = 0x00000b96
-GL_INCR_WRAP = 0x00008507
-GL_LINE_LOOP = 0x00000002
-GL_TEXTURE4 = 0x000084c4
 GL_COLOR_BUFFER_BIT = 0x00004000
-GL_TEXTURE6 = 0x000084c6
-GL_DONT_CARE = 0x00001100
-GL_ACTIVE_UNIFORMS = 0x00008b86
-GL_LINEAR_MIPMAP_LINEAR = 0x00002703
-GL_TEXTURE2 = 0x000084c2
-GL_TEXTURE3 = 0x000084c3
-GL_TEXTURE_CUBE_MAP_POSITIVE_Y = 0x00008517
-GL_DECR_WRAP = 0x00008508
-GL_UNSIGNED_INT = 0x00001405
+GL_FALSE = 0x00000000
+GL_TRUE = 0x00000001
+GL_POINTS = 0x00000000
+GL_LINES = 0x00000001
+GL_LINE_LOOP = 0x00000002
+GL_LINE_STRIP = 0x00000003
+GL_TRIANGLES = 0x00000004
+GL_TRIANGLE_STRIP = 0x00000005
+GL_TRIANGLE_FAN = 0x00000006
+GL_ZERO = 0x00000000
+GL_ONE = 0x00000001
+GL_SRC_COLOR = 0x00000300
+GL_ONE_MINUS_SRC_COLOR = 0x00000301
+GL_SRC_ALPHA = 0x00000302
+GL_ONE_MINUS_SRC_ALPHA = 0x00000303
+GL_DST_ALPHA = 0x00000304
+GL_ONE_MINUS_DST_ALPHA = 0x00000305
+GL_DST_COLOR = 0x00000306
+GL_ONE_MINUS_DST_COLOR = 0x00000307
+GL_SRC_ALPHA_SATURATE = 0x00000308
+GL_FUNC_ADD = 0x00008006
 GL_BLEND_EQUATION = 0x00008009
-GL_BYTE = 0x00001400
-GL_MAX_VERTEX_UNIFORM_VECTORS = 0x00008dfb
-GL_RGBA = 0x00001908
-GL_ATTACHED_SHADERS = 0x00008b85
+GL_BLEND_EQUATION_RGB = 0x00008009
+GL_BLEND_EQUATION_ALPHA = 0x0000883d
+GL_FUNC_SUBTRACT = 0x0000800a
+GL_FUNC_REVERSE_SUBTRACT = 0x0000800b
+GL_BLEND_DST_RGB = 0x000080c8
+GL_BLEND_SRC_RGB = 0x000080c9
+GL_BLEND_DST_ALPHA = 0x000080ca
+GL_BLEND_SRC_ALPHA = 0x000080cb
+GL_CONSTANT_COLOR = 0x00008001
+GL_ONE_MINUS_CONSTANT_COLOR = 0x00008002
+GL_CONSTANT_ALPHA = 0x00008003
+GL_ONE_MINUS_CONSTANT_ALPHA = 0x00008004
+GL_BLEND_COLOR = 0x00008005
+GL_ARRAY_BUFFER = 0x00008892
+GL_ELEMENT_ARRAY_BUFFER = 0x00008893
+GL_ARRAY_BUFFER_BINDING = 0x00008894
+GL_ELEMENT_ARRAY_BUFFER_BINDING = 0x00008895
+GL_STREAM_DRAW = 0x000088e0
+GL_STATIC_DRAW = 0x000088e4
+GL_DYNAMIC_DRAW = 0x000088e8
+GL_BUFFER_SIZE = 0x00008764
+GL_BUFFER_USAGE = 0x00008765
+GL_CURRENT_VERTEX_ATTRIB = 0x00008626
+GL_FRONT = 0x00000404
+GL_BACK = 0x00000405
+GL_FRONT_AND_BACK = 0x00000408
+GL_TEXTURE_2D = 0x00000de1
+GL_CULL_FACE = 0x00000b44
+GL_BLEND = 0x00000be2
+GL_DITHER = 0x00000bd0
+GL_STENCIL_TEST = 0x00000b90
+GL_DEPTH_TEST = 0x00000b71
+GL_SCISSOR_TEST = 0x00000c11
+GL_POLYGON_OFFSET_FILL = 0x00008037
+GL_SAMPLE_ALPHA_TO_COVERAGE = 0x0000809e
+GL_SAMPLE_COVERAGE = 0x000080a0
+GL_NO_ERROR = 0x00000000
+GL_INVALID_ENUM = 0x00000500
 GL_INVALID_VALUE = 0x00000501
-GL_RENDERBUFFER_STENCIL_SIZE = 0x00008d55
-GL_GEQUAL = 0x00000206
+GL_INVALID_OPERATION = 0x00000502
+GL_OUT_OF_MEMORY = 0x00000505
+GL_CW = 0x00000900
+GL_CCW = 0x00000901
+GL_LINE_WIDTH = 0x00000b21
+GL_ALIASED_POINT_SIZE_RANGE = 0x0000846d
+GL_ALIASED_LINE_WIDTH_RANGE = 0x0000846e
+GL_CULL_FACE_MODE = 0x00000b45
+GL_FRONT_FACE = 0x00000b46
+GL_DEPTH_RANGE = 0x00000b70
+GL_DEPTH_WRITEMASK = 0x00000b72
+GL_DEPTH_CLEAR_VALUE = 0x00000b73
+GL_DEPTH_FUNC = 0x00000b74
+GL_STENCIL_CLEAR_VALUE = 0x00000b91
+GL_STENCIL_FUNC = 0x00000b92
+GL_STENCIL_FAIL = 0x00000b94
+GL_STENCIL_PASS_DEPTH_FAIL = 0x00000b95
+GL_STENCIL_PASS_DEPTH_PASS = 0x00000b96
+GL_STENCIL_REF = 0x00000b97
+GL_STENCIL_VALUE_MASK = 0x00000b93
+GL_STENCIL_WRITEMASK = 0x00000b98
+GL_STENCIL_BACK_FUNC = 0x00008800
+GL_STENCIL_BACK_FAIL = 0x00008801
+GL_STENCIL_BACK_PASS_DEPTH_FAIL = 0x00008802
+GL_STENCIL_BACK_PASS_DEPTH_PASS = 0x00008803
+GL_STENCIL_BACK_REF = 0x00008ca3
+GL_STENCIL_BACK_VALUE_MASK = 0x00008ca4
+GL_STENCIL_BACK_WRITEMASK = 0x00008ca5
+GL_VIEWPORT = 0x00000ba2
+GL_SCISSOR_BOX = 0x00000c10
+GL_COLOR_CLEAR_VALUE = 0x00000c22
+GL_COLOR_WRITEMASK = 0x00000c23
+GL_UNPACK_ALIGNMENT = 0x00000cf5
+GL_PACK_ALIGNMENT = 0x00000d05
+GL_MAX_TEXTURE_SIZE = 0x00000d33
+GL_MAX_VIEWPORT_DIMS = 0x00000d3a
+GL_SUBPIXEL_BITS = 0x00000d50
+GL_RED_BITS = 0x00000d52
+GL_GREEN_BITS = 0x00000d53
+GL_BLUE_BITS = 0x00000d54
+GL_ALPHA_BITS = 0x00000d55
+GL_DEPTH_BITS = 0x00000d56
+GL_STENCIL_BITS = 0x00000d57
+GL_POLYGON_OFFSET_UNITS = 0x00002a00
+GL_POLYGON_OFFSET_FACTOR = 0x00008038
+GL_TEXTURE_BINDING_2D = 0x00008069
+GL_SAMPLE_BUFFERS = 0x000080a8
+GL_SAMPLES = 0x000080a9
+GL_SAMPLE_COVERAGE_VALUE = 0x000080aa
 GL_SAMPLE_COVERAGE_INVERT = 0x000080ab
 GL_NUM_COMPRESSED_TEXTURE_FORMATS = 0x000086a2
-GL_LINES = 0x00000001
-GL_ONE = 0x00000001
-GL_TEXTURE19 = 0x000084d3
-GL_TEXTURE16 = 0x000084d0
-GL_TEXTURE0 = 0x000084c0
-GL_LINE_WIDTH = 0x00000b21
-GL_GENERATE_MIPMAP_HINT = 0x00008192
-GL_TEXTURE12 = 0x000084cc
-GL_COLOR_CLEAR_VALUE = 0x00000c22
-GL_TEXTURE10 = 0x000084ca
-GL_TEXTURE1 = 0x000084c1
-GL_BUFFER_USAGE = 0x00008765
-GL_BLEND_EQUATION_RGB = 0x00008009
-GL_TEXTURE13 = 0x000084cd
-GL_LINK_STATUS = 0x00008b82
-GL_TRIANGLE_STRIP = 0x00000005
-GL_VERSION = 0x00001f02
-GL_BLEND_DST_ALPHA = 0x000080ca
-GL_BLEND_COLOR = 0x00008005
-GL_FUNC_ADD = 0x00008006
-GL_ALPHA_BITS = 0x00000d55
-GL_TEXTURE_CUBE_MAP_POSITIVE_X = 0x00008515
-GL_FLOAT_VEC4 = 0x00008b52
-GL_VERTEX_ATTRIB_ARRAY_NORMALIZED = 0x0000886a
-GL_RENDERER = 0x00001f01
-GL_ONE_MINUS_CONSTANT_ALPHA = 0x00008004
-GL_NEAREST_MIPMAP_LINEAR = 0x00002702
-GL_DEPTH_ATTACHMENT = 0x00008d00
-GL_CURRENT_VERTEX_ATTRIB = 0x00008626
-GL_ARRAY_BUFFER_BINDING = 0x00008894
-GL_TEXTURE_2D = 0x00000de1
-GL_SHADER_BINARY_FORMATS = 0x00008df8
-GL_CONSTANT_COLOR = 0x00008001
-GL_DYNAMIC_DRAW = 0x000088e8
-GL_OUT_OF_MEMORY = 0x00000505
-GL_TEXTURE15 = 0x000084cf
-GL_BOOL_VEC3 = 0x00008b58
-GL_STENCIL_FUNC = 0x00000b92
-GL_VENDOR = 0x00001f00
-GL_FRAMEBUFFER_INCOMPLETE_DIMENSIONS = 0x00008cd9
-GL_VERTEX_ATTRIB_ARRAY_TYPE = 0x00008625
-GL_IMPLEMENTATION_COLOR_READ_TYPE = 0x00008b9a
-GL_SAMPLER_2D = 0x00008b5e
-GL_TEXTURE14 = 0x000084ce
-GL_ALIASED_LINE_WIDTH_RANGE = 0x0000846e
-GL_MAX_TEXTURE_SIZE = 0x00000d33
-GL_STENCIL_INDEX8 = 0x00008d48
-GL_STENCIL_WRITEMASK = 0x00000b98
-GL_DECR = 0x00001e03
-GL_BACK = 0x00000405
-GL_STENCIL_ATTACHMENT = 0x00008d20
-GL_INT = 0x00001404
-GL_ES_VERSION_2_0 = 0x00000001
-GL_ARRAY_BUFFER = 0x00008892
-GL_NUM_SHADER_BINARY_FORMATS = 0x00008df9
-GL_UNSIGNED_SHORT_5_5_5_1 = 0x00008034
-GL_BOOL_VEC4 = 0x00008b59
-GL_FLOAT_MAT4 = 0x00008b5c
-GL_POLYGON_OFFSET_FILL = 0x00008037
-GL_STREAM_DRAW = 0x000088e0
-GL_ZERO = 0x00000000
-GL_FRAMEBUFFER_BINDING = 0x00008ca6
-GL_ELEMENT_ARRAY_BUFFER = 0x00008893
-GL_MAX_CUBE_MAP_TEXTURE_SIZE = 0x0000851c
-GL_FRONT_AND_BACK = 0x00000408
-GL_CURRENT_PROGRAM = 0x00008b8d
-GL_FRAMEBUFFER = 0x00008d40
-GL_FALSE = 0x00000000
-GL_LINEAR_MIPMAP_NEAREST = 0x00002701
-GL_STENCIL_TEST = 0x00000b90
-GL_ONE_MINUS_SRC_ALPHA = 0x00000303
-GL_UNSIGNED_SHORT_4_4_4_4 = 0x00008033
-GL_SRC_ALPHA = 0x00000302
-GL_STENCIL_CLEAR_VALUE = 0x00000b91
-GL_FRAMEBUFFER_ATTACHMENT_TEXTURE_LEVEL = 0x00008cd2
-GL_GREEN_BITS = 0x00000d53
-GL_ONE_MINUS_CONSTANT_COLOR = 0x00008002
-GL_LUMINANCE_ALPHA = 0x0000190a
-GL_FRAMEBUFFER_INCOMPLETE_MISSING_ATTACHMENT = 0x00008cd7
-GL_NEAREST_MIPMAP_NEAREST = 0x00002700
-GL_SHADING_LANGUAGE_VERSION = 0x00008b8c
-GL_NOTEQUAL = 0x00000205
-GL_INVERT = 0x0000150a
-GL_MAX_VARYING_VECTORS = 0x00008dfc
-GL_STENCIL_BACK_FAIL = 0x00008801
-GL_POLYGON_OFFSET_FACTOR = 0x00008038
-GL_INCR = 0x00001e02
-GL_CULL_FACE = 0x00000b44
-GL_SAMPLE_ALPHA_TO_COVERAGE = 0x0000809e
-GL_STENCIL_BITS = 0x00000d57
-GL_SAMPLE_COVERAGE_VALUE = 0x000080aa
-GL_FRAGMENT_SHADER = 0x00008b30
-GL_LEQUAL = 0x00000203
-GL_TRIANGLE_FAN = 0x00000006
-GL_RENDERBUFFER_RED_SIZE = 0x00008d50
-GL_STENCIL_PASS_DEPTH_FAIL = 0x00000b95
-GL_MAX_VIEWPORT_DIMS = 0x00000d3a
-GL_RENDERBUFFER_HEIGHT = 0x00008d43
-GL_BLEND_SRC_RGB = 0x000080c9
-GL_ACTIVE_UNIFORM_MAX_LENGTH = 0x00008b87
-GL_NO_ERROR = 0x00000000
-GL_STENCIL_BACK_WRITEMASK = 0x00008ca5
-GL_FUNC_REVERSE_SUBTRACT = 0x0000800b
-GL_VIEWPORT = 0x00000ba2
-GL_FRAMEBUFFER_ATTACHMENT_OBJECT_NAME = 0x00008cd1
-GL_BLEND_SRC_ALPHA = 0x000080cb
-GL_INVALID_FRAMEBUFFER_OPERATION = 0x00000506
-GL_RENDERBUFFER_ALPHA_SIZE = 0x00008d53
-GL_TRIANGLES = 0x00000004
-GL_TEXTURE_MAG_FILTER = 0x00002800
-GL_STENCIL_VALUE_MASK = 0x00000b93
-GL_INVALID_OPERATION = 0x00000502
-GL_RENDERBUFFER = 0x00008d41
-GL_LOW_INT = 0x00008df3
-GL_NONE = 0x00000000
-GL_STENCIL_BACK_PASS_DEPTH_PASS = 0x00008803
-GL_KEEP = 0x00001e00
-GL_RGB565 = 0x00008d62
-GL_DELETE_STATUS = 0x00008b80
-GL_RENDERBUFFER_DEPTH_SIZE = 0x00008d54
-GL_TEXTURE11 = 0x000084cb
-GL_COLOR_ATTACHMENT0 = 0x00008ce0
-GL_SHADER_COMPILER = 0x00008dfa
-GL_CLAMP_TO_EDGE = 0x0000812f
-GL_MAX_VERTEX_TEXTURE_IMAGE_UNITS = 0x00008b4c
-GL_FRONT = 0x00000404
-GL_SCISSOR_BOX = 0x00000c10
-GL_FIXED = 0x0000140c
-GL_RGBA4 = 0x00008056
-GL_SRC_COLOR = 0x00000300
-GL_DEPTH_WRITEMASK = 0x00000b72
-GL_PACK_ALIGNMENT = 0x00000d05
-GL_SUBPIXEL_BITS = 0x00000d50
-GL_SHORT = 0x00001402
-GL_CULL_FACE_MODE = 0x00000b45
-GL_MAX_FRAGMENT_UNIFORM_VECTORS = 0x00008dfd
-GL_CW = 0x00000900
-GL_UNSIGNED_BYTE = 0x00001401
-GL_SAMPLE_BUFFERS = 0x000080a8
-GL_SAMPLER_CUBE = 0x00008b60
+GL_COMPRESSED_TEXTURE_FORMATS = 0x000086a3
+GL_DONT_CARE = 0x00001100
+GL_FASTEST = 0x00001101
 GL_NICEST = 0x00001102
-GL_BOOL = 0x00008b56
-GL_ACTIVE_ATTRIBUTE_MAX_LENGTH = 0x00008b8a
-GL_EXTENSIONS = 0x00001f03
-GL_BUFFER_SIZE = 0x00008764
-GL_STENCIL_BACK_FUNC = 0x00008800
-GL_ACTIVE_TEXTURE = 0x000084e0
+GL_GENERATE_MIPMAP_HINT = 0x00008192
+GL_BYTE = 0x00001400
+GL_UNSIGNED_BYTE = 0x00001401
+GL_SHORT = 0x00001402
+GL_UNSIGNED_SHORT = 0x00001403
+GL_INT = 0x00001404
+GL_UNSIGNED_INT = 0x00001405
+GL_FLOAT = 0x00001406
+GL_FIXED = 0x0000140c
+GL_DEPTH_COMPONENT = 0x00001902
 GL_ALPHA = 0x00001906
-GL_STATIC_DRAW = 0x000088e4
-GL_RENDERBUFFER_BINDING = 0x00008ca7
+GL_RGB = 0x00001907
+GL_RGBA = 0x00001908
+GL_LUMINANCE = 0x00001909
+GL_LUMINANCE_ALPHA = 0x0000190a
+GL_UNSIGNED_SHORT_4_4_4_4 = 0x00008033
+GL_UNSIGNED_SHORT_5_5_5_1 = 0x00008034
+GL_UNSIGNED_SHORT_5_6_5 = 0x00008363
+GL_FRAGMENT_SHADER = 0x00008b30
+GL_VERTEX_SHADER = 0x00008b31
+GL_MAX_VERTEX_ATTRIBS = 0x00008869
+GL_MAX_VERTEX_UNIFORM_VECTORS = 0x00008dfb
+GL_MAX_VARYING_VECTORS = 0x00008dfc
+GL_MAX_COMBINED_TEXTURE_IMAGE_UNITS = 0x00008b4d
+GL_MAX_VERTEX_TEXTURE_IMAGE_UNITS = 0x00008b4c
+GL_MAX_TEXTURE_IMAGE_UNITS = 0x00008872
+GL_MAX_FRAGMENT_UNIFORM_VECTORS = 0x00008dfd
+GL_SHADER_TYPE = 0x00008b4f
+GL_DELETE_STATUS = 0x00008b80
+GL_LINK_STATUS = 0x00008b82
+GL_VALIDATE_STATUS = 0x00008b83
+GL_ATTACHED_SHADERS = 0x00008b85
+GL_ACTIVE_UNIFORMS = 0x00008b86
+GL_ACTIVE_UNIFORM_MAX_LENGTH = 0x00008b87
+GL_ACTIVE_ATTRIBUTES = 0x00008b89
+GL_ACTIVE_ATTRIBUTE_MAX_LENGTH = 0x00008b8a
+GL_SHADING_LANGUAGE_VERSION = 0x00008b8c
+GL_CURRENT_PROGRAM = 0x00008b8d
 GL_NEVER = 0x00000200
-GL_ONE_MINUS_DST_ALPHA = 0x00000305
-GL_COLOR_WRITEMASK = 0x00000c23
-GL_DST_COLOR = 0x00000306
-GL_MEDIUM_INT = 0x00008df4
-GL_DEPTH_BUFFER_BIT = 0x00000100
-GL_STENCIL_BACK_PASS_DEPTH_FAIL = 0x00008802
-GL_DEPTH_FUNC = 0x00000b74
+GL_LESS = 0x00000201
+GL_EQUAL = 0x00000202
+GL_LEQUAL = 0x00000203
+GL_GREATER = 0x00000204
+GL_NOTEQUAL = 0x00000205
+GL_GEQUAL = 0x00000206
 GL_ALWAYS = 0x00000207
+GL_KEEP = 0x00001e00
+GL_REPLACE = 0x00001e01
+GL_INCR = 0x00001e02
+GL_DECR = 0x00001e03
+GL_INVERT = 0x0000150a
+GL_INCR_WRAP = 0x00008507
+GL_DECR_WRAP = 0x00008508
+GL_VENDOR = 0x00001f00
+GL_RENDERER = 0x00001f01
+GL_VERSION = 0x00001f02
+GL_EXTENSIONS = 0x00001f03
+GL_NEAREST = 0x00002600
+GL_LINEAR = 0x00002601
+GL_NEAREST_MIPMAP_NEAREST = 0x00002700
+GL_LINEAR_MIPMAP_NEAREST = 0x00002701
+GL_NEAREST_MIPMAP_LINEAR = 0x00002702
+GL_LINEAR_MIPMAP_LINEAR = 0x00002703
+GL_TEXTURE_MAG_FILTER = 0x00002800
+GL_TEXTURE_MIN_FILTER = 0x00002801
 GL_TEXTURE_WRAP_S = 0x00002802
 GL_TEXTURE_WRAP_T = 0x00002803
-__gl2_h_ = 0x00000001
-GL_VERTEX_ATTRIB_ARRAY_POINTER = 0x00008645
-GL_INVALID_ENUM = 0x00000500
-GL_FLOAT_MAT2 = 0x00008b5a
-GL_INT_VEC4 = 0x00008b55
-GL_INT_VEC3 = 0x00008b54
-GL_ALIASED_POINT_SIZE_RANGE = 0x0000846d
-GL_INT_VEC2 = 0x00008b53
-GL_STENCIL_FAIL = 0x00000b94
-GL_LUMINANCE = 0x00001909
-GL_CCW = 0x00000901
-GL_MAX_VERTEX_ATTRIBS = 0x00008869
-GL_DEPTH_COMPONENT = 0x00001902
-GL_SCISSOR_TEST = 0x00000c11
-GL_DEPTH_TEST = 0x00000b71
-GL_BOOL_VEC2 = 0x00008b57
-GL_SHADER_TYPE = 0x00008b4f
-GL_FRAMEBUFFER_UNSUPPORTED = 0x00008cdd
-GL_DST_ALPHA = 0x00000304
-GL_TRUE = 0x00000001
-GL_TEXTURE_MIN_FILTER = 0x00002801
-GL_BLEND_DST_RGB = 0x000080c8
-GL_LINEAR = 0x00002601
-GL_BLUE_BITS = 0x00000d54
-GL_FUNC_SUBTRACT = 0x0000800a
-GL_FRAMEBUFFER_ATTACHMENT_TEXTURE_CUBE_MAP_FACE = 0x00008cd3
-GL_LESS = 0x00000201
-GL_RENDERBUFFER_GREEN_SIZE = 0x00008d51
-GL_VERTEX_ATTRIB_ARRAY_BUFFER_BINDING = 0x0000889f
-GL_RGB = 0x00001907
-GL_EQUAL = 0x00000202
-GL_IMPLEMENTATION_COLOR_READ_FORMAT = 0x00008b9b
+GL_TEXTURE = 0x00001702
+GL_TEXTURE_CUBE_MAP = 0x00008513
 GL_TEXTURE_BINDING_CUBE_MAP = 0x00008514
+GL_TEXTURE_CUBE_MAP_POSITIVE_X = 0x00008515
+GL_TEXTURE_CUBE_MAP_NEGATIVE_X = 0x00008516
+GL_TEXTURE_CUBE_MAP_POSITIVE_Y = 0x00008517
+GL_TEXTURE_CUBE_MAP_NEGATIVE_Y = 0x00008518
 GL_TEXTURE_CUBE_MAP_POSITIVE_Z = 0x00008519
-GL_RENDERBUFFER_WIDTH = 0x00008d42
-GL_RED_BITS = 0x00000d52
-GL_STENCIL_BACK_VALUE_MASK = 0x00008ca4
+GL_TEXTURE_CUBE_MAP_NEGATIVE_Z = 0x0000851a
+GL_MAX_CUBE_MAP_TEXTURE_SIZE = 0x0000851c
+GL_TEXTURE0 = 0x000084c0
+GL_TEXTURE1 = 0x000084c1
+GL_TEXTURE2 = 0x000084c2
+GL_TEXTURE3 = 0x000084c3
+GL_TEXTURE4 = 0x000084c4
+GL_TEXTURE5 = 0x000084c5
+GL_TEXTURE6 = 0x000084c6
+GL_TEXTURE7 = 0x000084c7
+GL_TEXTURE8 = 0x000084c8
+GL_TEXTURE9 = 0x000084c9
+GL_TEXTURE10 = 0x000084ca
+GL_TEXTURE11 = 0x000084cb
+GL_TEXTURE12 = 0x000084cc
+GL_TEXTURE13 = 0x000084cd
+GL_TEXTURE14 = 0x000084ce
+GL_TEXTURE15 = 0x000084cf
+GL_TEXTURE16 = 0x000084d0
+GL_TEXTURE17 = 0x000084d1
+GL_TEXTURE18 = 0x000084d2
+GL_TEXTURE19 = 0x000084d3
+GL_TEXTURE20 = 0x000084d4
+GL_TEXTURE21 = 0x000084d5
+GL_TEXTURE22 = 0x000084d6
 GL_TEXTURE23 = 0x000084d7
-GL_HIGH_FLOAT = 0x00008df2
-GL_DEPTH_RANGE = 0x00000b70
-GL_GREATER = 0x00000204
-GL_MAX_COMBINED_TEXTURE_IMAGE_UNITS = 0x00008b4d
-GL_NEAREST = 0x00002600
-GL_COMPRESSED_TEXTURE_FORMATS = 0x000086a3
-GL_SAMPLE_COVERAGE = 0x000080a0
-GL_MAX_TEXTURE_IMAGE_UNITS = 0x00008872
-GL_MEDIUM_FLOAT = 0x00008df1
-GL_TEXTURE_BINDING_2D = 0x00008069
+GL_TEXTURE24 = 0x000084d8
+GL_TEXTURE25 = 0x000084d9
+GL_TEXTURE26 = 0x000084da
+GL_TEXTURE27 = 0x000084db
+GL_TEXTURE28 = 0x000084dc
+GL_TEXTURE29 = 0x000084dd
+GL_TEXTURE30 = 0x000084de
+GL_TEXTURE31 = 0x000084df
+GL_ACTIVE_TEXTURE = 0x000084e0
+GL_REPEAT = 0x00002901
+GL_CLAMP_TO_EDGE = 0x0000812f
+GL_MIRRORED_REPEAT = 0x00008370
+GL_FLOAT_VEC2 = 0x00008b50
+GL_FLOAT_VEC3 = 0x00008b51
+GL_FLOAT_VEC4 = 0x00008b52
+GL_INT_VEC2 = 0x00008b53
+GL_INT_VEC3 = 0x00008b54
+GL_INT_VEC4 = 0x00008b55
+GL_BOOL = 0x00008b56
+GL_BOOL_VEC2 = 0x00008b57
+GL_BOOL_VEC3 = 0x00008b58
+GL_BOOL_VEC4 = 0x00008b59
+GL_FLOAT_MAT2 = 0x00008b5a
 GL_FLOAT_MAT3 = 0x00008b5b
-GL_FRONT_FACE = 0x00000b46
-GL_STENCIL_BACK_REF = 0x00008ca3
-GL_REPLACE = 0x00001e01
+GL_FLOAT_MAT4 = 0x00008b5c
+GL_SAMPLER_2D = 0x00008b5e
+GL_SAMPLER_CUBE = 0x00008b60
+GL_VERTEX_ATTRIB_ARRAY_ENABLED = 0x00008622
+GL_VERTEX_ATTRIB_ARRAY_SIZE = 0x00008623
 GL_VERTEX_ATTRIB_ARRAY_STRIDE = 0x00008624
+GL_VERTEX_ATTRIB_ARRAY_TYPE = 0x00008625
+GL_VERTEX_ATTRIB_ARRAY_NORMALIZED = 0x0000886a
+GL_VERTEX_ATTRIB_ARRAY_POINTER = 0x00008645
+GL_VERTEX_ATTRIB_ARRAY_BUFFER_BINDING = 0x0000889f
+GL_IMPLEMENTATION_COLOR_READ_TYPE = 0x00008b9a
+GL_IMPLEMENTATION_COLOR_READ_FORMAT = 0x00008b9b
+GL_COMPILE_STATUS = 0x00008b81
+GL_INFO_LOG_LENGTH = 0x00008b84
+GL_SHADER_SOURCE_LENGTH = 0x00008b88
+GL_SHADER_COMPILER = 0x00008dfa
+GL_SHADER_BINARY_FORMATS = 0x00008df8
+GL_NUM_SHADER_BINARY_FORMATS = 0x00008df9
 GL_LOW_FLOAT = 0x00008df0
-GL_UNPACK_ALIGNMENT = 0x00000cf5
+GL_MEDIUM_FLOAT = 0x00008df1
+GL_HIGH_FLOAT = 0x00008df2
+GL_LOW_INT = 0x00008df3
+GL_MEDIUM_INT = 0x00008df4
 GL_HIGH_INT = 0x00008df5
-GL_SAMPLES = 0x000080a9
+GL_FRAMEBUFFER = 0x00008d40
+GL_RENDERBUFFER = 0x00008d41
+GL_RGBA4 = 0x00008056
+GL_RGB5_A1 = 0x00008057
+GL_RGB565 = 0x00008d62
+GL_DEPTH_COMPONENT16 = 0x000081a5
+GL_STENCIL_INDEX8 = 0x00008d48
+GL_RENDERBUFFER_WIDTH = 0x00008d42
+GL_RENDERBUFFER_HEIGHT = 0x00008d43
+GL_RENDERBUFFER_INTERNAL_FORMAT = 0x00008d44
+GL_RENDERBUFFER_RED_SIZE = 0x00008d50
+GL_RENDERBUFFER_GREEN_SIZE = 0x00008d51
+GL_RENDERBUFFER_BLUE_SIZE = 0x00008d52
+GL_RENDERBUFFER_ALPHA_SIZE = 0x00008d53
+GL_RENDERBUFFER_DEPTH_SIZE = 0x00008d54
+GL_RENDERBUFFER_STENCIL_SIZE = 0x00008d55
+GL_FRAMEBUFFER_ATTACHMENT_OBJECT_TYPE = 0x00008cd0
+GL_FRAMEBUFFER_ATTACHMENT_OBJECT_NAME = 0x00008cd1
+GL_FRAMEBUFFER_ATTACHMENT_TEXTURE_LEVEL = 0x00008cd2
+GL_FRAMEBUFFER_ATTACHMENT_TEXTURE_CUBE_MAP_FACE = 0x00008cd3
+GL_COLOR_ATTACHMENT0 = 0x00008ce0
+GL_DEPTH_ATTACHMENT = 0x00008d00
+GL_STENCIL_ATTACHMENT = 0x00008d20
+GL_NONE = 0x00000000
+GL_FRAMEBUFFER_COMPLETE = 0x00008cd5
+GL_FRAMEBUFFER_INCOMPLETE_ATTACHMENT = 0x00008cd6
+GL_FRAMEBUFFER_INCOMPLETE_MISSING_ATTACHMENT = 0x00008cd7
+GL_FRAMEBUFFER_INCOMPLETE_DIMENSIONS = 0x00008cd9
+GL_FRAMEBUFFER_UNSUPPORTED = 0x00008cdd
+GL_FRAMEBUFFER_BINDING = 0x00008ca6
+GL_RENDERBUFFER_BINDING = 0x00008ca7
+GL_MAX_RENDERBUFFER_SIZE = 0x000084e8
+GL_INVALID_FRAMEBUFFER_OPERATION = 0x00000506
 
 # GL Functions
 try:
@@ -323,7 +323,6 @@ try:
     cfunc.restype = restype
     cfunc.argtypes = argtypes
     return cfunc(texture)
-
 
   # Check if the function actually exists
   f = c.glActiveTexture
@@ -344,7 +343,6 @@ try:
     cfunc.restype = restype
     cfunc.argtypes = argtypes
     return cfunc(program, shader)
-
 
   # Check if the function actually exists
   f = c.glAttachShader
@@ -371,7 +369,6 @@ try:
     cfunc.argtypes = argtypes
     return cfunc(program, index, param0)
 
-
   # Check if the function actually exists
   f = c.glBindAttribLocation
   del f
@@ -391,7 +388,6 @@ try:
     cfunc.restype = restype
     cfunc.argtypes = argtypes
     return cfunc(target, buffer)
-
 
   # Check if the function actually exists
   f = c.glBindBuffer
@@ -416,7 +412,6 @@ try:
     cfunc.argtypes = argtypes
     return cfunc(target, framebuffer)
 
-
   # Check if the function actually exists
   f = c.glBindFramebuffer
   del f
@@ -440,7 +435,6 @@ try:
     cfunc.argtypes = argtypes
     return cfunc(target, renderbuffer)
 
-
   # Check if the function actually exists
   f = c.glBindRenderbuffer
   del f
@@ -460,7 +454,6 @@ try:
     cfunc.restype = restype
     cfunc.argtypes = argtypes
     return cfunc(target, texture)
-
 
   # Check if the function actually exists
   f = c.glBindTexture
@@ -489,7 +482,6 @@ try:
     cfunc.argtypes = argtypes
     return cfunc(red, green, blue, alpha)
 
-
   # Check if the function actually exists
   f = c.glBlendColor
   del f
@@ -509,7 +501,6 @@ try:
     cfunc.restype = restype
     cfunc.argtypes = argtypes
     return cfunc(mode)
-
 
   # Check if the function actually exists
   f = c.glBlendEquation
@@ -534,7 +525,6 @@ try:
     cfunc.argtypes = argtypes
     return cfunc(modeRGB, modeAlpha)
 
-
   # Check if the function actually exists
   f = c.glBlendEquationSeparate
   del f
@@ -554,7 +544,6 @@ try:
     cfunc.restype = restype
     cfunc.argtypes = argtypes
     return cfunc(sfactor, dfactor)
-
 
   # Check if the function actually exists
   f = c.glBlendFunc
@@ -583,7 +572,6 @@ try:
     cfunc.argtypes = argtypes
     return cfunc(sfactorRGB, dfactorRGB, sfactorAlpha, dfactorAlpha)
 
-
   # Check if the function actually exists
   f = c.glBlendFuncSeparate
   del f
@@ -610,7 +598,6 @@ try:
     cfunc.restype = restype
     cfunc.argtypes = argtypes
     return cfunc(target, size, voiddata, usage)
-
 
   # Check if the function actually exists
   f = c.glBufferData
@@ -639,7 +626,6 @@ try:
     cfunc.argtypes = argtypes
     return cfunc(target, offset, size, voiddata)
 
-
   # Check if the function actually exists
   f = c.glBufferSubData
   del f
@@ -660,7 +646,6 @@ try:
     cfunc.argtypes = argtypes
     return cfunc(target)
 
-
   # Check if the function actually exists
   f = c.glCheckFramebufferStatus
   del f
@@ -680,7 +665,6 @@ try:
     cfunc.restype = restype
     cfunc.argtypes = argtypes
     return cfunc(mask)
-
 
   # Check if the function actually exists
   f = c.glClear
@@ -709,7 +693,6 @@ try:
     cfunc.argtypes = argtypes
     return cfunc(red, green, blue, alpha)
 
-
   # Check if the function actually exists
   f = c.glClearColor
   del f
@@ -730,7 +713,6 @@ try:
     cfunc.argtypes = argtypes
     return cfunc(d)
 
-
   # Check if the function actually exists
   f = c.glClearDepthf
   del f
@@ -750,7 +732,6 @@ try:
     cfunc.restype = restype
     cfunc.argtypes = argtypes
     return cfunc(s)
-
 
   # Check if the function actually exists
   f = c.glClearStencil
@@ -779,7 +760,6 @@ try:
     cfunc.argtypes = argtypes
     return cfunc(red, green, blue, alpha)
 
-
   # Check if the function actually exists
   f = c.glColorMask
   del f
@@ -799,7 +779,6 @@ try:
     cfunc.restype = restype
     cfunc.argtypes = argtypes
     return cfunc(shader)
-
 
   # Check if the function actually exists
   f = c.glCompileShader
@@ -839,7 +818,6 @@ try:
     cfunc.argtypes = argtypes
     return cfunc(target, level, internalformat, width, height, border,
                  imageSize, voiddata)
-
 
   # Check if the function actually exists
   f = c.glCompressedTexImage2D
@@ -882,7 +860,6 @@ try:
     return cfunc(target, level, xoffset, yoffset, width, height, format,
                  imageSize, voiddata)
 
-
   # Check if the function actually exists
   f = c.glCompressedTexSubImage2D
   del f
@@ -921,7 +898,6 @@ try:
     cfunc.argtypes = argtypes
     return cfunc(target, level, internalformat, x, y, width, height, border)
 
-
   # Check if the function actually exists
   f = c.glCopyTexImage2D
   del f
@@ -959,7 +935,6 @@ try:
     cfunc.argtypes = argtypes
     return cfunc(target, level, xoffset, yoffset, x, y, width, height)
 
-
   # Check if the function actually exists
   f = c.glCopyTexSubImage2D
   del f
@@ -979,7 +954,6 @@ try:
     cfunc.restype = restype
     cfunc.argtypes = argtypes
     return cfunc(void)
-
 
   # Check if the function actually exists
   f = c.glCreateProgram
@@ -1001,7 +975,6 @@ try:
     cfunc.argtypes = argtypes
     return cfunc(type)
 
-
   # Check if the function actually exists
   f = c.glCreateShader
   del f
@@ -1021,7 +994,6 @@ try:
     cfunc.restype = restype
     cfunc.argtypes = argtypes
     return cfunc(mode)
-
 
   # Check if the function actually exists
   f = c.glCullFace
@@ -1043,7 +1015,6 @@ try:
     cfunc.argtypes = argtypes
     return cfunc(n, param0)
 
-
   # Check if the function actually exists
   f = c.glDeleteBuffers
   del f
@@ -1063,7 +1034,6 @@ try:
     cfunc.restype = restype
     cfunc.argtypes = argtypes
     return cfunc(n, param0)
-
 
   # Check if the function actually exists
   f = c.glDeleteFramebuffers
@@ -1085,7 +1055,6 @@ try:
     cfunc.argtypes = argtypes
     return cfunc(program)
 
-
   # Check if the function actually exists
   f = c.glDeleteProgram
   del f
@@ -1105,7 +1074,6 @@ try:
     cfunc.restype = restype
     cfunc.argtypes = argtypes
     return cfunc(n, param0)
-
 
   # Check if the function actually exists
   f = c.glDeleteRenderbuffers
@@ -1127,7 +1095,6 @@ try:
     cfunc.argtypes = argtypes
     return cfunc(shader)
 
-
   # Check if the function actually exists
   f = c.glDeleteShader
   del f
@@ -1147,7 +1114,6 @@ try:
     cfunc.restype = restype
     cfunc.argtypes = argtypes
     return cfunc(n, param0)
-
 
   # Check if the function actually exists
   f = c.glDeleteTextures
@@ -1169,7 +1135,6 @@ try:
     cfunc.argtypes = argtypes
     return cfunc(func)
 
-
   # Check if the function actually exists
   f = c.glDepthFunc
   del f
@@ -1189,7 +1154,6 @@ try:
     cfunc.restype = restype
     cfunc.argtypes = argtypes
     return cfunc(flag)
-
 
   # Check if the function actually exists
   f = c.glDepthMask
@@ -1211,7 +1175,6 @@ try:
     cfunc.argtypes = argtypes
     return cfunc(n, f)
 
-
   # Check if the function actually exists
   f = c.glDepthRangef
   del f
@@ -1231,7 +1194,6 @@ try:
     cfunc.restype = restype
     cfunc.argtypes = argtypes
     return cfunc(program, shader)
-
 
   # Check if the function actually exists
   f = c.glDetachShader
@@ -1253,7 +1215,6 @@ try:
     cfunc.argtypes = argtypes
     return cfunc(cap)
 
-
   # Check if the function actually exists
   f = c.glDisable
   del f
@@ -1273,7 +1234,6 @@ try:
     cfunc.restype = restype
     cfunc.argtypes = argtypes
     return cfunc(index)
-
 
   # Check if the function actually exists
   f = c.glDisableVertexAttribArray
@@ -1299,7 +1259,6 @@ try:
     cfunc.restype = restype
     cfunc.argtypes = argtypes
     return cfunc(mode, first, count)
-
 
   # Check if the function actually exists
   f = c.glDrawArrays
@@ -1328,7 +1287,6 @@ try:
     cfunc.argtypes = argtypes
     return cfunc(mode, count, type, voidindices)
 
-
   # Check if the function actually exists
   f = c.glDrawElements
   del f
@@ -1348,7 +1306,6 @@ try:
     cfunc.restype = restype
     cfunc.argtypes = argtypes
     return cfunc(cap)
-
 
   # Check if the function actually exists
   f = c.glEnable
@@ -1370,7 +1327,6 @@ try:
     cfunc.argtypes = argtypes
     return cfunc(index)
 
-
   # Check if the function actually exists
   f = c.glEnableVertexAttribArray
   del f
@@ -1391,7 +1347,6 @@ try:
     cfunc.argtypes = argtypes
     return cfunc(void)
 
-
   # Check if the function actually exists
   f = c.glFinish
   del f
@@ -1411,7 +1366,6 @@ try:
     cfunc.restype = restype
     cfunc.argtypes = argtypes
     return cfunc(void)
-
 
   # Check if the function actually exists
   f = c.glFlush
@@ -1439,7 +1393,6 @@ try:
     cfunc.restype = restype
     cfunc.argtypes = argtypes
     return cfunc(target, attachment, renderbuffertarget, renderbuffer)
-
 
   # Check if the function actually exists
   f = c.glFramebufferRenderbuffer
@@ -1470,7 +1423,6 @@ try:
     cfunc.argtypes = argtypes
     return cfunc(target, attachment, textarget, texture, level)
 
-
   # Check if the function actually exists
   f = c.glFramebufferTexture2D
   del f
@@ -1490,7 +1442,6 @@ try:
     cfunc.restype = restype
     cfunc.argtypes = argtypes
     return cfunc(mode)
-
 
   # Check if the function actually exists
   f = c.glFrontFace
@@ -1512,7 +1463,6 @@ try:
     cfunc.argtypes = argtypes
     return cfunc(n, param0)
 
-
   # Check if the function actually exists
   f = c.glGenBuffers
   del f
@@ -1532,7 +1482,6 @@ try:
     cfunc.restype = restype
     cfunc.argtypes = argtypes
     return cfunc(target)
-
 
   # Check if the function actually exists
   f = c.glGenerateMipmap
@@ -1554,7 +1503,6 @@ try:
     cfunc.argtypes = argtypes
     return cfunc(n, param0)
 
-
   # Check if the function actually exists
   f = c.glGenFramebuffers
   del f
@@ -1575,7 +1523,6 @@ try:
     cfunc.argtypes = argtypes
     return cfunc(n, param0)
 
-
   # Check if the function actually exists
   f = c.glGenRenderbuffers
   del f
@@ -1595,7 +1542,6 @@ try:
     cfunc.restype = restype
     cfunc.argtypes = argtypes
     return cfunc(n, param0)
-
 
   # Check if the function actually exists
   f = c.glGenTextures
@@ -1632,7 +1578,6 @@ try:
     cfunc.argtypes = argtypes
     return cfunc(program, index, bufSize, param0, param1, param2, param3)
 
-
   # Check if the function actually exists
   f = c.glGetActiveAttrib
   del f
@@ -1668,7 +1613,6 @@ try:
     cfunc.argtypes = argtypes
     return cfunc(program, index, bufSize, param0, param1, param2, param3)
 
-
   # Check if the function actually exists
   f = c.glGetActiveUniform
   del f
@@ -1696,7 +1640,6 @@ try:
     cfunc.argtypes = argtypes
     return cfunc(program, maxCount, param0, param1)
 
-
   # Check if the function actually exists
   f = c.glGetAttachedShaders
   del f
@@ -1717,7 +1660,6 @@ try:
     cfunc.argtypes = argtypes
     return cfunc(program, param0)
 
-
   # Check if the function actually exists
   f = c.glGetAttribLocation
   del f
@@ -1737,7 +1679,6 @@ try:
     cfunc.restype = restype
     cfunc.argtypes = argtypes
     return cfunc(pname, param0)
-
 
   # Check if the function actually exists
   f = c.glGetBooleanv
@@ -1764,7 +1705,6 @@ try:
     cfunc.argtypes = argtypes
     return cfunc(target, pname, param0)
 
-
   # Check if the function actually exists
   f = c.glGetBufferParameteriv
   del f
@@ -1785,7 +1725,6 @@ try:
     cfunc.argtypes = argtypes
     return cfunc(void)
 
-
   # Check if the function actually exists
   f = c.glGetError
   del f
@@ -1805,7 +1744,6 @@ try:
     cfunc.restype = restype
     cfunc.argtypes = argtypes
     return cfunc(pname, param0)
-
 
   # Check if the function actually exists
   f = c.glGetFloatv
@@ -1834,7 +1772,6 @@ try:
     cfunc.argtypes = argtypes
     return cfunc(target, attachment, pname, param0)
 
-
   # Check if the function actually exists
   f = c.glGetFramebufferAttachmentParameteriv
   del f
@@ -1854,7 +1791,6 @@ try:
     cfunc.restype = restype
     cfunc.argtypes = argtypes
     return cfunc(pname, param0)
-
 
   # Check if the function actually exists
   f = c.glGetIntegerv
@@ -1880,7 +1816,6 @@ try:
     cfunc.restype = restype
     cfunc.argtypes = argtypes
     return cfunc(program, pname, param0)
-
 
   # Check if the function actually exists
   f = c.glGetProgramiv
@@ -1909,7 +1844,6 @@ try:
     cfunc.argtypes = argtypes
     return cfunc(program, bufSize, param0, param1)
 
-
   # Check if the function actually exists
   f = c.glGetProgramInfoLog
   del f
@@ -1935,7 +1869,6 @@ try:
     cfunc.argtypes = argtypes
     return cfunc(target, pname, param0)
 
-
   # Check if the function actually exists
   f = c.glGetRenderbufferParameteriv
   del f
@@ -1960,7 +1893,6 @@ try:
     cfunc.restype = restype
     cfunc.argtypes = argtypes
     return cfunc(shader, pname, param0)
-
 
   # Check if the function actually exists
   f = c.glGetShaderiv
@@ -1989,7 +1921,6 @@ try:
     cfunc.argtypes = argtypes
     return cfunc(shader, bufSize, param0, param1)
 
-
   # Check if the function actually exists
   f = c.glGetShaderInfoLog
   del f
@@ -2016,7 +1947,6 @@ try:
     cfunc.restype = restype
     cfunc.argtypes = argtypes
     return cfunc(shadertype, precisiontype, param0, param1)
-
 
   # Check if the function actually exists
   f = c.glGetShaderPrecisionFormat
@@ -2045,7 +1975,6 @@ try:
     cfunc.argtypes = argtypes
     return cfunc(shader, bufSize, param0, param1)
 
-
   # Check if the function actually exists
   f = c.glGetShaderSource
   del f
@@ -2070,7 +1999,6 @@ try:
     cfunc.restype = restype
     cfunc.argtypes = argtypes
     return cfunc(target, pname, param0)
-
 
   # Check if the function actually exists
   f = c.glGetTexParameterfv
@@ -2097,7 +2025,6 @@ try:
     cfunc.argtypes = argtypes
     return cfunc(target, pname, param0)
 
-
   # Check if the function actually exists
   f = c.glGetTexParameteriv
   del f
@@ -2122,7 +2049,6 @@ try:
     cfunc.restype = restype
     cfunc.argtypes = argtypes
     return cfunc(program, location, param0)
-
 
   # Check if the function actually exists
   f = c.glGetUniformfv
@@ -2149,7 +2075,6 @@ try:
     cfunc.argtypes = argtypes
     return cfunc(program, location, param0)
 
-
   # Check if the function actually exists
   f = c.glGetUniformiv
   del f
@@ -2169,7 +2094,6 @@ try:
     cfunc.restype = restype
     cfunc.argtypes = argtypes
     return cfunc(program, param0)
-
 
   # Check if the function actually exists
   f = c.glGetUniformLocation
@@ -2196,7 +2120,6 @@ try:
     cfunc.argtypes = argtypes
     return cfunc(index, pname, param0)
 
-
   # Check if the function actually exists
   f = c.glGetVertexAttribfv
   del f
@@ -2221,7 +2144,6 @@ try:
     cfunc.restype = restype
     cfunc.argtypes = argtypes
     return cfunc(index, pname, param0)
-
 
   # Check if the function actually exists
   f = c.glGetVertexAttribiv
@@ -2248,7 +2170,6 @@ try:
     cfunc.argtypes = argtypes
     return cfunc(index, pname, voidpointer)
 
-
   # Check if the function actually exists
   f = c.glGetVertexAttribPointerv
   del f
@@ -2268,7 +2189,6 @@ try:
     cfunc.restype = restype
     cfunc.argtypes = argtypes
     return cfunc(target, mode)
-
 
   # Check if the function actually exists
   f = c.glHint
@@ -2290,7 +2210,6 @@ try:
     cfunc.argtypes = argtypes
     return cfunc(buffer)
 
-
   # Check if the function actually exists
   f = c.glIsBuffer
   del f
@@ -2310,7 +2229,6 @@ try:
     cfunc.restype = restype
     cfunc.argtypes = argtypes
     return cfunc(cap)
-
 
   # Check if the function actually exists
   f = c.glIsEnabled
@@ -2332,7 +2250,6 @@ try:
     cfunc.argtypes = argtypes
     return cfunc(framebuffer)
 
-
   # Check if the function actually exists
   f = c.glIsFramebuffer
   del f
@@ -2352,7 +2269,6 @@ try:
     cfunc.restype = restype
     cfunc.argtypes = argtypes
     return cfunc(program)
-
 
   # Check if the function actually exists
   f = c.glIsProgram
@@ -2374,7 +2290,6 @@ try:
     cfunc.argtypes = argtypes
     return cfunc(renderbuffer)
 
-
   # Check if the function actually exists
   f = c.glIsRenderbuffer
   del f
@@ -2394,7 +2309,6 @@ try:
     cfunc.restype = restype
     cfunc.argtypes = argtypes
     return cfunc(shader)
-
 
   # Check if the function actually exists
   f = c.glIsShader
@@ -2416,7 +2330,6 @@ try:
     cfunc.argtypes = argtypes
     return cfunc(texture)
 
-
   # Check if the function actually exists
   f = c.glIsTexture
   del f
@@ -2436,7 +2349,6 @@ try:
     cfunc.restype = restype
     cfunc.argtypes = argtypes
     return cfunc(width)
-
 
   # Check if the function actually exists
   f = c.glLineWidth
@@ -2458,7 +2370,6 @@ try:
     cfunc.argtypes = argtypes
     return cfunc(program)
 
-
   # Check if the function actually exists
   f = c.glLinkProgram
   del f
@@ -2479,7 +2390,6 @@ try:
     cfunc.argtypes = argtypes
     return cfunc(pname, param)
 
-
   # Check if the function actually exists
   f = c.glPixelStorei
   del f
@@ -2499,7 +2409,6 @@ try:
     cfunc.restype = restype
     cfunc.argtypes = argtypes
     return cfunc(factor, units)
-
 
   # Check if the function actually exists
   f = c.glPolygonOffset
@@ -2534,7 +2443,6 @@ try:
     cfunc.argtypes = argtypes
     return cfunc(x, y, width, height, format, type, voidpixels)
 
-
   # Check if the function actually exists
   f = c.glReadPixels
   del f
@@ -2554,7 +2462,6 @@ try:
     cfunc.restype = restype
     cfunc.argtypes = argtypes
     return cfunc(void)
-
 
   # Check if the function actually exists
   f = c.glReleaseShaderCompiler
@@ -2583,7 +2490,6 @@ try:
     cfunc.argtypes = argtypes
     return cfunc(target, internalformat, width, height)
 
-
   # Check if the function actually exists
   f = c.glRenderbufferStorage
   del f
@@ -2603,7 +2509,6 @@ try:
     cfunc.restype = restype
     cfunc.argtypes = argtypes
     return cfunc(value, invert)
-
 
   # Check if the function actually exists
   f = c.glSampleCoverage
@@ -2632,7 +2537,6 @@ try:
     cfunc.argtypes = argtypes
     return cfunc(x, y, width, height)
 
-
   # Check if the function actually exists
   f = c.glScissor
   del f
@@ -2647,21 +2551,20 @@ try:
 
   def glShaderBinary(count,
                      param0,
-                     binaryformat,
+                     binaryFormat,
                      voidbinary,
                      length,
                      count_t=GLsizei,
                      param0_t=GLuint,
-                     binaryformat_t=GLenum,
+                     binaryFormat_t=GLenum,
                      voidbinary_t=ctypes.c_void_p,
                      length_t=GLsizei):
     restype = None
-    argtypes = [count_t, param0_t, binaryformat_t, voidbinary_t, length_t]
+    argtypes = [count_t, param0_t, binaryFormat_t, voidbinary_t, length_t]
     cfunc = c.glShaderBinary
     cfunc.restype = restype
     cfunc.argtypes = argtypes
-    return cfunc(count, param0, binaryformat, voidbinary, length)
-
+    return cfunc(count, param0, binaryFormat, voidbinary, length)
 
   # Check if the function actually exists
   f = c.glShaderBinary
@@ -2690,7 +2593,6 @@ try:
     cfunc.argtypes = argtypes
     return cfunc(shader, count, param0, param1)
 
-
   # Check if the function actually exists
   f = c.glShaderSource
   del f
@@ -2711,7 +2613,6 @@ try:
     cfunc.restype = restype
     cfunc.argtypes = argtypes
     return cfunc(func, ref, mask)
-
 
   # Check if the function actually exists
   f = c.glStencilFunc
@@ -2740,7 +2641,6 @@ try:
     cfunc.argtypes = argtypes
     return cfunc(face, func, ref, mask)
 
-
   # Check if the function actually exists
   f = c.glStencilFuncSeparate
   del f
@@ -2761,7 +2661,6 @@ try:
     cfunc.argtypes = argtypes
     return cfunc(mask)
 
-
   # Check if the function actually exists
   f = c.glStencilMask
   del f
@@ -2781,7 +2680,6 @@ try:
     cfunc.restype = restype
     cfunc.argtypes = argtypes
     return cfunc(face, mask)
-
 
   # Check if the function actually exists
   f = c.glStencilMaskSeparate
@@ -2807,7 +2705,6 @@ try:
     cfunc.restype = restype
     cfunc.argtypes = argtypes
     return cfunc(fail, zfail, zpass)
-
 
   # Check if the function actually exists
   f = c.glStencilOp
@@ -2835,7 +2732,6 @@ try:
     cfunc.restype = restype
     cfunc.argtypes = argtypes
     return cfunc(face, sfail, dpfail, dppass)
-
 
   # Check if the function actually exists
   f = c.glStencilOpSeparate
@@ -2878,7 +2774,6 @@ try:
     return cfunc(target, level, internalformat, width, height, border, format,
                  type, voidpixels)
 
-
   # Check if the function actually exists
   f = c.glTexImage2D
   del f
@@ -2903,7 +2798,6 @@ try:
     cfunc.restype = restype
     cfunc.argtypes = argtypes
     return cfunc(target, pname, param)
-
 
   # Check if the function actually exists
   f = c.glTexParameterf
@@ -2930,7 +2824,6 @@ try:
     cfunc.argtypes = argtypes
     return cfunc(target, pname, param0)
 
-
   # Check if the function actually exists
   f = c.glTexParameterfv
   del f
@@ -2956,7 +2849,6 @@ try:
     cfunc.argtypes = argtypes
     return cfunc(target, pname, param)
 
-
   # Check if the function actually exists
   f = c.glTexParameteri
   del f
@@ -2981,7 +2873,6 @@ try:
     cfunc.restype = restype
     cfunc.argtypes = argtypes
     return cfunc(target, pname, param0)
-
 
   # Check if the function actually exists
   f = c.glTexParameteriv
@@ -3024,7 +2915,6 @@ try:
     return cfunc(target, level, xoffset, yoffset, width, height, format, type,
                  voidpixels)
 
-
   # Check if the function actually exists
   f = c.glTexSubImage2D
   del f
@@ -3044,7 +2934,6 @@ try:
     cfunc.restype = restype
     cfunc.argtypes = argtypes
     return cfunc(location, v0)
-
 
   # Check if the function actually exists
   f = c.glUniform1f
@@ -3071,7 +2960,6 @@ try:
     cfunc.argtypes = argtypes
     return cfunc(location, count, param0)
 
-
   # Check if the function actually exists
   f = c.glUniform1fv
   del f
@@ -3090,11 +2978,7 @@ try:
     cfunc = c.glUniform1i
     cfunc.restype = restype
     cfunc.argtypes = argtypes
-    try:
-      return cfunc(location, v0)
-    except Exception:
-      return None
-
+    return cfunc(location, v0)
 
   # Check if the function actually exists
   f = c.glUniform1i
@@ -3103,8 +2987,7 @@ try:
 except AttributeError as e:
   loaded[1] += 1
   if DEBUG > 0:
-    print
-    'could not load the function glUniform1i'
+    print('could not load the function')
     print(e)
 
 try:
@@ -3121,7 +3004,6 @@ try:
     cfunc.restype = restype
     cfunc.argtypes = argtypes
     return cfunc(location, count, param0)
-
 
   # Check if the function actually exists
   f = c.glUniform1iv
@@ -3148,7 +3030,6 @@ try:
     cfunc.argtypes = argtypes
     return cfunc(location, v0, v1)
 
-
   # Check if the function actually exists
   f = c.glUniform2f
   del f
@@ -3174,7 +3055,6 @@ try:
     cfunc.argtypes = argtypes
     return cfunc(location, count, param0)
 
-
   # Check if the function actually exists
   f = c.glUniform2fv
   del f
@@ -3194,7 +3074,6 @@ try:
     cfunc.restype = restype
     cfunc.argtypes = argtypes
     return cfunc(location, v0, v1)
-
 
   # Check if the function actually exists
   f = c.glUniform2i
@@ -3220,7 +3099,6 @@ try:
     cfunc.restype = restype
     cfunc.argtypes = argtypes
     return cfunc(location, count, param0)
-
 
   # Check if the function actually exists
   f = c.glUniform2iv
@@ -3249,7 +3127,6 @@ try:
     cfunc.argtypes = argtypes
     return cfunc(location, v0, v1, v2)
 
-
   # Check if the function actually exists
   f = c.glUniform3f
   del f
@@ -3274,7 +3151,6 @@ try:
     cfunc.restype = restype
     cfunc.argtypes = argtypes
     return cfunc(location, count, param0)
-
 
   # Check if the function actually exists
   f = c.glUniform3fv
@@ -3303,7 +3179,6 @@ try:
     cfunc.argtypes = argtypes
     return cfunc(location, v0, v1, v2)
 
-
   # Check if the function actually exists
   f = c.glUniform3i
   del f
@@ -3328,7 +3203,6 @@ try:
     cfunc.restype = restype
     cfunc.argtypes = argtypes
     return cfunc(location, count, param0)
-
 
   # Check if the function actually exists
   f = c.glUniform3iv
@@ -3359,7 +3233,6 @@ try:
     cfunc.argtypes = argtypes
     return cfunc(location, v0, v1, v2, v3)
 
-
   # Check if the function actually exists
   f = c.glUniform4f
   del f
@@ -3384,7 +3257,6 @@ try:
     cfunc.restype = restype
     cfunc.argtypes = argtypes
     return cfunc(location, count, param0)
-
 
   # Check if the function actually exists
   f = c.glUniform4fv
@@ -3415,7 +3287,6 @@ try:
     cfunc.argtypes = argtypes
     return cfunc(location, v0, v1, v2, v3)
 
-
   # Check if the function actually exists
   f = c.glUniform4i
   del f
@@ -3440,7 +3311,6 @@ try:
     cfunc.restype = restype
     cfunc.argtypes = argtypes
     return cfunc(location, count, param0)
-
 
   # Check if the function actually exists
   f = c.glUniform4iv
@@ -3469,7 +3339,6 @@ try:
     cfunc.argtypes = argtypes
     return cfunc(location, count, transpose, param0)
 
-
   # Check if the function actually exists
   f = c.glUniformMatrix2fv
   del f
@@ -3496,7 +3365,6 @@ try:
     cfunc.restype = restype
     cfunc.argtypes = argtypes
     return cfunc(location, count, transpose, param0)
-
 
   # Check if the function actually exists
   f = c.glUniformMatrix3fv
@@ -3525,7 +3393,6 @@ try:
     cfunc.argtypes = argtypes
     return cfunc(location, count, transpose, param0)
 
-
   # Check if the function actually exists
   f = c.glUniformMatrix4fv
   del f
@@ -3545,7 +3412,6 @@ try:
     cfunc.restype = restype
     cfunc.argtypes = argtypes
     return cfunc(program)
-
 
   # Check if the function actually exists
   f = c.glUseProgram
@@ -3567,7 +3433,6 @@ try:
     cfunc.argtypes = argtypes
     return cfunc(program)
 
-
   # Check if the function actually exists
   f = c.glValidateProgram
   del f
@@ -3587,7 +3452,6 @@ try:
     cfunc.restype = restype
     cfunc.argtypes = argtypes
     return cfunc(index, x)
-
 
   # Check if the function actually exists
   f = c.glVertexAttrib1f
@@ -3609,7 +3473,6 @@ try:
     cfunc.argtypes = argtypes
     return cfunc(index, param0)
 
-
   # Check if the function actually exists
   f = c.glVertexAttrib1fv
   del f
@@ -3630,7 +3493,6 @@ try:
     cfunc.argtypes = argtypes
     return cfunc(index, x, y)
 
-
   # Check if the function actually exists
   f = c.glVertexAttrib2f
   del f
@@ -3650,7 +3512,6 @@ try:
     cfunc.restype = restype
     cfunc.argtypes = argtypes
     return cfunc(index, param0)
-
 
   # Check if the function actually exists
   f = c.glVertexAttrib2fv
@@ -3679,7 +3540,6 @@ try:
     cfunc.argtypes = argtypes
     return cfunc(index, x, y, z)
 
-
   # Check if the function actually exists
   f = c.glVertexAttrib3f
   del f
@@ -3699,7 +3559,6 @@ try:
     cfunc.restype = restype
     cfunc.argtypes = argtypes
     return cfunc(index, param0)
-
 
   # Check if the function actually exists
   f = c.glVertexAttrib3fv
@@ -3730,7 +3589,6 @@ try:
     cfunc.argtypes = argtypes
     return cfunc(index, x, y, z, w)
 
-
   # Check if the function actually exists
   f = c.glVertexAttrib4f
   del f
@@ -3750,7 +3608,6 @@ try:
     cfunc.restype = restype
     cfunc.argtypes = argtypes
     return cfunc(index, param0)
-
 
   # Check if the function actually exists
   f = c.glVertexAttrib4fv
@@ -3783,7 +3640,6 @@ try:
     cfunc.argtypes = argtypes
     return cfunc(index, size, type, normalized, stride, voidpointer)
 
-
   # Check if the function actually exists
   f = c.glVertexAttribPointer
   del f
@@ -3811,7 +3667,6 @@ try:
     cfunc.argtypes = argtypes
     return cfunc(x, y, width, height)
 
-
   # Check if the function actually exists
   f = c.glViewport
   del f
@@ -3822,8 +3677,9 @@ except AttributeError as e:
     print('could not load the function')
     print(e)
 
-print('Loaded %i functions and failed to load %i functions of %i functions in the header gl2.h' % (
-loaded[0], loaded[1], sum(loaded)))
+print(
+  'Loaded %i functions and failed to load %i functions of %i functions in the header gl2.h'
+  % (loaded[0], loaded[1], sum(loaded)))
 
 __all__ = [
   'glActiveTexture', 'glAttachShader', 'glBindAttribLocation', 'glBindBuffer',
@@ -3864,105 +3720,110 @@ __all__ = [
   'glUseProgram', 'glValidateProgram', 'glVertexAttrib1f', 'glVertexAttrib1fv',
   'glVertexAttrib2f', 'glVertexAttrib2fv', 'glVertexAttrib3f',
   'glVertexAttrib3fv', 'glVertexAttrib4f', 'glVertexAttrib4fv',
-  'glVertexAttribPointer', 'glViewport', 'GL_INFO_LOG_LENGTH',
-  'GL_FRAMEBUFFER_INCOMPLETE_ATTACHMENT', 'GL_DEPTH_BITS', 'GL_LINE_STRIP',
-  'GL_TEXTURE24', 'GL_FRAMEBUFFER_COMPLETE', 'GL_UNSIGNED_SHORT_5_6_5',
-  'GL_RGB5_A1', 'GL_TEXTURE30', 'GL_TEXTURE31', 'GL_VERTEX_ATTRIB_ARRAY_SIZE',
-  'GL_TEXTURE_CUBE_MAP', 'GL_SRC_ALPHA_SATURATE', 'GL_VERTEX_SHADER',
-  'GL_TEXTURE5', 'GL_CONSTANT_ALPHA', 'GL_DEPTH_CLEAR_VALUE', 'GL_DITHER',
-  'GL_VERTEX_ATTRIB_ARRAY_ENABLED', 'GL_TEXTURE20', 'GL_FLOAT_VEC2',
-  'GL_FLOAT_VEC3', 'GL_RENDERBUFFER_INTERNAL_FORMAT', 'GL_TEXTURE18',
-  'GL_FRAMEBUFFER_ATTACHMENT_OBJECT_TYPE', 'GL_STENCIL_REF',
-  'GL_VALIDATE_STATUS', 'GL_FLOAT', 'GL_ACTIVE_ATTRIBUTES',
-  'GL_COMPILE_STATUS', 'GL_POINTS', 'GL_TEXTURE17', 'GL_BLEND',
-  'GL_MIRRORED_REPEAT', 'GL_STENCIL_BUFFER_BIT', 'GL_RENDERBUFFER_BLUE_SIZE',
-  'GL_UNSIGNED_SHORT', 'GL_FASTEST', 'GL_REPEAT', 'GL_MAX_RENDERBUFFER_SIZE',
-  'GL_DEPTH_COMPONENT16', 'GL_POLYGON_OFFSET_UNITS', 'GL_SHADER_SOURCE_LENGTH',
-  'GL_ONE_MINUS_DST_COLOR', 'GL_ONE_MINUS_SRC_COLOR', 'GL_TEXTURE22',
-  'GL_TEXTURE21', 'GL_TEXTURE7', 'GL_TEXTURE27', 'GL_TEXTURE26',
-  'GL_TEXTURE25', 'GL_TEXTURE', 'GL_BLEND_EQUATION_ALPHA', 'GL_TEXTURE8',
-  'GL_TEXTURE29', 'GL_TEXTURE28', 'GL_ELEMENT_ARRAY_BUFFER_BINDING',
-  'GL_TEXTURE9', 'GL_TEXTURE_CUBE_MAP_NEGATIVE_Y',
-  'GL_TEXTURE_CUBE_MAP_NEGATIVE_X', 'GL_TEXTURE_CUBE_MAP_NEGATIVE_Z',
-  'GL_STENCIL_PASS_DEPTH_PASS', 'GL_INCR_WRAP', 'GL_LINE_LOOP', 'GL_TEXTURE4',
-  'GL_COLOR_BUFFER_BIT', 'GL_TEXTURE6', 'GL_DONT_CARE', 'GL_ACTIVE_UNIFORMS',
-  'GL_LINEAR_MIPMAP_LINEAR', 'GL_TEXTURE2', 'GL_TEXTURE3',
-  'GL_TEXTURE_CUBE_MAP_POSITIVE_Y', 'GL_DECR_WRAP', 'GL_UNSIGNED_INT',
-  'GL_BLEND_EQUATION', 'GL_BYTE', 'GL_MAX_VERTEX_UNIFORM_VECTORS', 'GL_RGBA',
-  'GL_ATTACHED_SHADERS', 'GL_INVALID_VALUE', 'GL_RENDERBUFFER_STENCIL_SIZE',
-  'GL_GEQUAL', 'GL_SAMPLE_COVERAGE_INVERT',
-  'GL_NUM_COMPRESSED_TEXTURE_FORMATS', 'GL_LINES', 'GL_ONE', 'GL_TEXTURE19',
-  'GL_TEXTURE16', 'GL_TEXTURE0', 'GL_LINE_WIDTH', 'GL_GENERATE_MIPMAP_HINT',
-  'GL_TEXTURE12', 'GL_COLOR_CLEAR_VALUE', 'GL_TEXTURE10', 'GL_TEXTURE1',
-  'GL_BUFFER_USAGE', 'GL_BLEND_EQUATION_RGB', 'GL_TEXTURE13', 'GL_LINK_STATUS',
-  'GL_TRIANGLE_STRIP', 'GL_VERSION', 'GL_BLEND_DST_ALPHA', 'GL_BLEND_COLOR',
-  'GL_FUNC_ADD', 'GL_ALPHA_BITS', 'GL_TEXTURE_CUBE_MAP_POSITIVE_X',
-  'GL_FLOAT_VEC4', 'GL_VERTEX_ATTRIB_ARRAY_NORMALIZED', 'GL_RENDERER',
-  'GL_ONE_MINUS_CONSTANT_ALPHA', 'GL_NEAREST_MIPMAP_LINEAR',
-  'GL_DEPTH_ATTACHMENT', 'GL_CURRENT_VERTEX_ATTRIB', 'GL_ARRAY_BUFFER_BINDING',
-  'GL_TEXTURE_2D', 'GL_SHADER_BINARY_FORMATS', 'GL_CONSTANT_COLOR',
-  'GL_DYNAMIC_DRAW', 'GL_OUT_OF_MEMORY', 'GL_TEXTURE15', 'GL_BOOL_VEC3',
-  'GL_STENCIL_FUNC', 'GL_VENDOR', 'GL_FRAMEBUFFER_INCOMPLETE_DIMENSIONS',
-  'GL_VERTEX_ATTRIB_ARRAY_TYPE', 'GL_IMPLEMENTATION_COLOR_READ_TYPE',
-  'GL_SAMPLER_2D', 'GL_TEXTURE14', 'GL_ALIASED_LINE_WIDTH_RANGE',
-  'GL_MAX_TEXTURE_SIZE', 'GL_STENCIL_INDEX8', 'GL_STENCIL_WRITEMASK',
-  'GL_DECR', 'GL_BACK', 'GL_STENCIL_ATTACHMENT', 'GL_INT', 'GL_ES_VERSION_2_0',
-  'GL_ARRAY_BUFFER', 'GL_NUM_SHADER_BINARY_FORMATS',
-  'GL_UNSIGNED_SHORT_5_5_5_1', 'GL_BOOL_VEC4', 'GL_FLOAT_MAT4',
-  'GL_POLYGON_OFFSET_FILL', 'GL_STREAM_DRAW', 'GL_ZERO',
-  'GL_FRAMEBUFFER_BINDING', 'GL_ELEMENT_ARRAY_BUFFER',
-  'GL_MAX_CUBE_MAP_TEXTURE_SIZE', 'GL_FRONT_AND_BACK', 'GL_CURRENT_PROGRAM',
-  'GL_FRAMEBUFFER', 'GL_FALSE', 'GL_LINEAR_MIPMAP_NEAREST', 'GL_STENCIL_TEST',
-  'GL_ONE_MINUS_SRC_ALPHA', 'GL_UNSIGNED_SHORT_4_4_4_4', 'GL_SRC_ALPHA',
-  'GL_STENCIL_CLEAR_VALUE', 'GL_FRAMEBUFFER_ATTACHMENT_TEXTURE_LEVEL',
-  'GL_GREEN_BITS', 'GL_ONE_MINUS_CONSTANT_COLOR', 'GL_LUMINANCE_ALPHA',
-  'GL_FRAMEBUFFER_INCOMPLETE_MISSING_ATTACHMENT', 'GL_NEAREST_MIPMAP_NEAREST',
-  'GL_SHADING_LANGUAGE_VERSION', 'GL_NOTEQUAL', 'GL_INVERT',
-  'GL_MAX_VARYING_VECTORS', 'GL_STENCIL_BACK_FAIL', 'GL_POLYGON_OFFSET_FACTOR',
-  'GL_INCR', 'GL_CULL_FACE', 'GL_SAMPLE_ALPHA_TO_COVERAGE', 'GL_STENCIL_BITS',
-  'GL_SAMPLE_COVERAGE_VALUE', 'GL_FRAGMENT_SHADER', 'GL_LEQUAL',
-  'GL_TRIANGLE_FAN', 'GL_RENDERBUFFER_RED_SIZE', 'GL_STENCIL_PASS_DEPTH_FAIL',
-  'GL_MAX_VIEWPORT_DIMS', 'GL_RENDERBUFFER_HEIGHT', 'GL_BLEND_SRC_RGB',
-  'GL_ACTIVE_UNIFORM_MAX_LENGTH', 'GL_NO_ERROR', 'GL_STENCIL_BACK_WRITEMASK',
-  'GL_FUNC_REVERSE_SUBTRACT', 'GL_VIEWPORT',
-  'GL_FRAMEBUFFER_ATTACHMENT_OBJECT_NAME', 'GL_BLEND_SRC_ALPHA',
-  'GL_INVALID_FRAMEBUFFER_OPERATION', 'GL_RENDERBUFFER_ALPHA_SIZE',
-  'GL_TRIANGLES', 'GL_TEXTURE_MAG_FILTER', 'GL_STENCIL_VALUE_MASK',
-  'GL_INVALID_OPERATION', 'GL_RENDERBUFFER', 'GL_LOW_INT', 'GL_NONE',
-  'GL_STENCIL_BACK_PASS_DEPTH_PASS', 'GL_KEEP', 'GL_RGB565',
-  'GL_DELETE_STATUS', 'GL_RENDERBUFFER_DEPTH_SIZE', 'GL_TEXTURE11',
-  'GL_COLOR_ATTACHMENT0', 'GL_SHADER_COMPILER', 'GL_CLAMP_TO_EDGE',
-  'GL_MAX_VERTEX_TEXTURE_IMAGE_UNITS', 'GL_FRONT', 'GL_SCISSOR_BOX',
-  'GL_FIXED', 'GL_RGBA4', 'GL_SRC_COLOR', 'GL_DEPTH_WRITEMASK',
-  'GL_PACK_ALIGNMENT', 'GL_SUBPIXEL_BITS', 'GL_SHORT', 'GL_CULL_FACE_MODE',
-  'GL_MAX_FRAGMENT_UNIFORM_VECTORS', 'GL_CW', 'GL_UNSIGNED_BYTE',
-  'GL_SAMPLE_BUFFERS', 'GL_SAMPLER_CUBE', 'GL_NICEST', 'GL_BOOL',
-  'GL_ACTIVE_ATTRIBUTE_MAX_LENGTH', 'GL_EXTENSIONS', 'GL_BUFFER_SIZE',
-  'GL_STENCIL_BACK_FUNC', 'GL_ACTIVE_TEXTURE', 'GL_ALPHA', 'GL_STATIC_DRAW',
-  'GL_RENDERBUFFER_BINDING', 'GL_NEVER', 'GL_ONE_MINUS_DST_ALPHA',
-  'GL_COLOR_WRITEMASK', 'GL_DST_COLOR', 'GL_MEDIUM_INT', 'GL_DEPTH_BUFFER_BIT',
-  'GL_STENCIL_BACK_PASS_DEPTH_FAIL', 'GL_DEPTH_FUNC', 'GL_ALWAYS',
-  'GL_TEXTURE_WRAP_S', 'GL_TEXTURE_WRAP_T', '__gl2_h_',
-  'GL_VERTEX_ATTRIB_ARRAY_POINTER', 'GL_INVALID_ENUM', 'GL_FLOAT_MAT2',
-  'GL_INT_VEC4', 'GL_INT_VEC3', 'GL_ALIASED_POINT_SIZE_RANGE', 'GL_INT_VEC2',
-  'GL_STENCIL_FAIL', 'GL_LUMINANCE', 'GL_CCW', 'GL_MAX_VERTEX_ATTRIBS',
-  'GL_DEPTH_COMPONENT', 'GL_SCISSOR_TEST', 'GL_DEPTH_TEST', 'GL_BOOL_VEC2',
-  'GL_SHADER_TYPE', 'GL_FRAMEBUFFER_UNSUPPORTED', 'GL_DST_ALPHA', 'GL_TRUE',
-  'GL_TEXTURE_MIN_FILTER', 'GL_BLEND_DST_RGB', 'GL_LINEAR', 'GL_BLUE_BITS',
-  'GL_FUNC_SUBTRACT', 'GL_FRAMEBUFFER_ATTACHMENT_TEXTURE_CUBE_MAP_FACE',
-  'GL_LESS', 'GL_RENDERBUFFER_GREEN_SIZE',
-  'GL_VERTEX_ATTRIB_ARRAY_BUFFER_BINDING', 'GL_RGB', 'GL_EQUAL',
-  'GL_IMPLEMENTATION_COLOR_READ_FORMAT', 'GL_TEXTURE_BINDING_CUBE_MAP',
-  'GL_TEXTURE_CUBE_MAP_POSITIVE_Z', 'GL_RENDERBUFFER_WIDTH', 'GL_RED_BITS',
-  'GL_STENCIL_BACK_VALUE_MASK', 'GL_TEXTURE23', 'GL_HIGH_FLOAT',
-  'GL_DEPTH_RANGE', 'GL_GREATER', 'GL_MAX_COMBINED_TEXTURE_IMAGE_UNITS',
-  'GL_NEAREST', 'GL_COMPRESSED_TEXTURE_FORMATS', 'GL_SAMPLE_COVERAGE',
-  'GL_MAX_TEXTURE_IMAGE_UNITS', 'GL_MEDIUM_FLOAT', 'GL_TEXTURE_BINDING_2D',
-  'GL_FLOAT_MAT3', 'GL_FRONT_FACE', 'GL_STENCIL_BACK_REF', 'GL_REPLACE',
-  'GL_VERTEX_ATTRIB_ARRAY_STRIDE', 'GL_LOW_FLOAT', 'GL_UNPACK_ALIGNMENT',
-  'GL_HIGH_INT', 'GL_SAMPLES', 'GLchar', 'GLenum', 'GLboolean', 'GLbitfield',
-  'GLbyte', 'GLshort', 'GLint', 'GLint64', 'GLsizei', 'GLubyte', 'GLushort',
-  'GLuint', 'GLfloat', 'GLclampf', 'GLfixed', 'GLintptr', 'GLsizeiptr',
-  'GLclampx', 'void', 'GLvoid', 'GLsync', 'GLeglImageOES', 'GLDEBUGPROCKHR',
-  'GLuint64'
+  'glVertexAttribPointer', 'glViewport', '__gles2_gl2_h_',
+  'GL_GLES_PROTOTYPES', 'GL_ES_VERSION_2_0', 'GL_DEPTH_BUFFER_BIT',
+  'GL_STENCIL_BUFFER_BIT', 'GL_COLOR_BUFFER_BIT', 'GL_FALSE', 'GL_TRUE',
+  'GL_POINTS', 'GL_LINES', 'GL_LINE_LOOP', 'GL_LINE_STRIP', 'GL_TRIANGLES',
+  'GL_TRIANGLE_STRIP', 'GL_TRIANGLE_FAN', 'GL_ZERO', 'GL_ONE', 'GL_SRC_COLOR',
+  'GL_ONE_MINUS_SRC_COLOR', 'GL_SRC_ALPHA', 'GL_ONE_MINUS_SRC_ALPHA',
+  'GL_DST_ALPHA', 'GL_ONE_MINUS_DST_ALPHA', 'GL_DST_COLOR',
+  'GL_ONE_MINUS_DST_COLOR', 'GL_SRC_ALPHA_SATURATE', 'GL_FUNC_ADD',
+  'GL_BLEND_EQUATION', 'GL_BLEND_EQUATION_RGB', 'GL_BLEND_EQUATION_ALPHA',
+  'GL_FUNC_SUBTRACT', 'GL_FUNC_REVERSE_SUBTRACT', 'GL_BLEND_DST_RGB',
+  'GL_BLEND_SRC_RGB', 'GL_BLEND_DST_ALPHA', 'GL_BLEND_SRC_ALPHA',
+  'GL_CONSTANT_COLOR', 'GL_ONE_MINUS_CONSTANT_COLOR', 'GL_CONSTANT_ALPHA',
+  'GL_ONE_MINUS_CONSTANT_ALPHA', 'GL_BLEND_COLOR', 'GL_ARRAY_BUFFER',
+  'GL_ELEMENT_ARRAY_BUFFER', 'GL_ARRAY_BUFFER_BINDING',
+  'GL_ELEMENT_ARRAY_BUFFER_BINDING', 'GL_STREAM_DRAW', 'GL_STATIC_DRAW',
+  'GL_DYNAMIC_DRAW', 'GL_BUFFER_SIZE', 'GL_BUFFER_USAGE',
+  'GL_CURRENT_VERTEX_ATTRIB', 'GL_FRONT', 'GL_BACK', 'GL_FRONT_AND_BACK',
+  'GL_TEXTURE_2D', 'GL_CULL_FACE', 'GL_BLEND', 'GL_DITHER', 'GL_STENCIL_TEST',
+  'GL_DEPTH_TEST', 'GL_SCISSOR_TEST', 'GL_POLYGON_OFFSET_FILL',
+  'GL_SAMPLE_ALPHA_TO_COVERAGE', 'GL_SAMPLE_COVERAGE', 'GL_NO_ERROR',
+  'GL_INVALID_ENUM', 'GL_INVALID_VALUE', 'GL_INVALID_OPERATION',
+  'GL_OUT_OF_MEMORY', 'GL_CW', 'GL_CCW', 'GL_LINE_WIDTH',
+  'GL_ALIASED_POINT_SIZE_RANGE', 'GL_ALIASED_LINE_WIDTH_RANGE',
+  'GL_CULL_FACE_MODE', 'GL_FRONT_FACE', 'GL_DEPTH_RANGE', 'GL_DEPTH_WRITEMASK',
+  'GL_DEPTH_CLEAR_VALUE', 'GL_DEPTH_FUNC', 'GL_STENCIL_CLEAR_VALUE',
+  'GL_STENCIL_FUNC', 'GL_STENCIL_FAIL', 'GL_STENCIL_PASS_DEPTH_FAIL',
+  'GL_STENCIL_PASS_DEPTH_PASS', 'GL_STENCIL_REF', 'GL_STENCIL_VALUE_MASK',
+  'GL_STENCIL_WRITEMASK', 'GL_STENCIL_BACK_FUNC', 'GL_STENCIL_BACK_FAIL',
+  'GL_STENCIL_BACK_PASS_DEPTH_FAIL', 'GL_STENCIL_BACK_PASS_DEPTH_PASS',
+  'GL_STENCIL_BACK_REF', 'GL_STENCIL_BACK_VALUE_MASK',
+  'GL_STENCIL_BACK_WRITEMASK', 'GL_VIEWPORT', 'GL_SCISSOR_BOX',
+  'GL_COLOR_CLEAR_VALUE', 'GL_COLOR_WRITEMASK', 'GL_UNPACK_ALIGNMENT',
+  'GL_PACK_ALIGNMENT', 'GL_MAX_TEXTURE_SIZE', 'GL_MAX_VIEWPORT_DIMS',
+  'GL_SUBPIXEL_BITS', 'GL_RED_BITS', 'GL_GREEN_BITS', 'GL_BLUE_BITS',
+  'GL_ALPHA_BITS', 'GL_DEPTH_BITS', 'GL_STENCIL_BITS',
+  'GL_POLYGON_OFFSET_UNITS', 'GL_POLYGON_OFFSET_FACTOR',
+  'GL_TEXTURE_BINDING_2D', 'GL_SAMPLE_BUFFERS', 'GL_SAMPLES',
+  'GL_SAMPLE_COVERAGE_VALUE', 'GL_SAMPLE_COVERAGE_INVERT',
+  'GL_NUM_COMPRESSED_TEXTURE_FORMATS', 'GL_COMPRESSED_TEXTURE_FORMATS',
+  'GL_DONT_CARE', 'GL_FASTEST', 'GL_NICEST', 'GL_GENERATE_MIPMAP_HINT',
+  'GL_BYTE', 'GL_UNSIGNED_BYTE', 'GL_SHORT', 'GL_UNSIGNED_SHORT', 'GL_INT',
+  'GL_UNSIGNED_INT', 'GL_FLOAT', 'GL_FIXED', 'GL_DEPTH_COMPONENT', 'GL_ALPHA',
+  'GL_RGB', 'GL_RGBA', 'GL_LUMINANCE', 'GL_LUMINANCE_ALPHA',
+  'GL_UNSIGNED_SHORT_4_4_4_4', 'GL_UNSIGNED_SHORT_5_5_5_1',
+  'GL_UNSIGNED_SHORT_5_6_5', 'GL_FRAGMENT_SHADER', 'GL_VERTEX_SHADER',
+  'GL_MAX_VERTEX_ATTRIBS', 'GL_MAX_VERTEX_UNIFORM_VECTORS',
+  'GL_MAX_VARYING_VECTORS', 'GL_MAX_COMBINED_TEXTURE_IMAGE_UNITS',
+  'GL_MAX_VERTEX_TEXTURE_IMAGE_UNITS', 'GL_MAX_TEXTURE_IMAGE_UNITS',
+  'GL_MAX_FRAGMENT_UNIFORM_VECTORS', 'GL_SHADER_TYPE', 'GL_DELETE_STATUS',
+  'GL_LINK_STATUS', 'GL_VALIDATE_STATUS', 'GL_ATTACHED_SHADERS',
+  'GL_ACTIVE_UNIFORMS', 'GL_ACTIVE_UNIFORM_MAX_LENGTH', 'GL_ACTIVE_ATTRIBUTES',
+  'GL_ACTIVE_ATTRIBUTE_MAX_LENGTH', 'GL_SHADING_LANGUAGE_VERSION',
+  'GL_CURRENT_PROGRAM', 'GL_NEVER', 'GL_LESS', 'GL_EQUAL', 'GL_LEQUAL',
+  'GL_GREATER', 'GL_NOTEQUAL', 'GL_GEQUAL', 'GL_ALWAYS', 'GL_KEEP',
+  'GL_REPLACE', 'GL_INCR', 'GL_DECR', 'GL_INVERT', 'GL_INCR_WRAP',
+  'GL_DECR_WRAP', 'GL_VENDOR', 'GL_RENDERER', 'GL_VERSION', 'GL_EXTENSIONS',
+  'GL_NEAREST', 'GL_LINEAR', 'GL_NEAREST_MIPMAP_NEAREST',
+  'GL_LINEAR_MIPMAP_NEAREST', 'GL_NEAREST_MIPMAP_LINEAR',
+  'GL_LINEAR_MIPMAP_LINEAR', 'GL_TEXTURE_MAG_FILTER', 'GL_TEXTURE_MIN_FILTER',
+  'GL_TEXTURE_WRAP_S', 'GL_TEXTURE_WRAP_T', 'GL_TEXTURE',
+  'GL_TEXTURE_CUBE_MAP', 'GL_TEXTURE_BINDING_CUBE_MAP',
+  'GL_TEXTURE_CUBE_MAP_POSITIVE_X', 'GL_TEXTURE_CUBE_MAP_NEGATIVE_X',
+  'GL_TEXTURE_CUBE_MAP_POSITIVE_Y', 'GL_TEXTURE_CUBE_MAP_NEGATIVE_Y',
+  'GL_TEXTURE_CUBE_MAP_POSITIVE_Z', 'GL_TEXTURE_CUBE_MAP_NEGATIVE_Z',
+  'GL_MAX_CUBE_MAP_TEXTURE_SIZE', 'GL_TEXTURE0', 'GL_TEXTURE1', 'GL_TEXTURE2',
+  'GL_TEXTURE3', 'GL_TEXTURE4', 'GL_TEXTURE5', 'GL_TEXTURE6', 'GL_TEXTURE7',
+  'GL_TEXTURE8', 'GL_TEXTURE9', 'GL_TEXTURE10', 'GL_TEXTURE11', 'GL_TEXTURE12',
+  'GL_TEXTURE13', 'GL_TEXTURE14', 'GL_TEXTURE15', 'GL_TEXTURE16',
+  'GL_TEXTURE17', 'GL_TEXTURE18', 'GL_TEXTURE19', 'GL_TEXTURE20',
+  'GL_TEXTURE21', 'GL_TEXTURE22', 'GL_TEXTURE23', 'GL_TEXTURE24',
+  'GL_TEXTURE25', 'GL_TEXTURE26', 'GL_TEXTURE27', 'GL_TEXTURE28',
+  'GL_TEXTURE29', 'GL_TEXTURE30', 'GL_TEXTURE31', 'GL_ACTIVE_TEXTURE',
+  'GL_REPEAT', 'GL_CLAMP_TO_EDGE', 'GL_MIRRORED_REPEAT', 'GL_FLOAT_VEC2',
+  'GL_FLOAT_VEC3', 'GL_FLOAT_VEC4', 'GL_INT_VEC2', 'GL_INT_VEC3',
+  'GL_INT_VEC4', 'GL_BOOL', 'GL_BOOL_VEC2', 'GL_BOOL_VEC3', 'GL_BOOL_VEC4',
+  'GL_FLOAT_MAT2', 'GL_FLOAT_MAT3', 'GL_FLOAT_MAT4', 'GL_SAMPLER_2D',
+  'GL_SAMPLER_CUBE', 'GL_VERTEX_ATTRIB_ARRAY_ENABLED',
+  'GL_VERTEX_ATTRIB_ARRAY_SIZE', 'GL_VERTEX_ATTRIB_ARRAY_STRIDE',
+  'GL_VERTEX_ATTRIB_ARRAY_TYPE', 'GL_VERTEX_ATTRIB_ARRAY_NORMALIZED',
+  'GL_VERTEX_ATTRIB_ARRAY_POINTER', 'GL_VERTEX_ATTRIB_ARRAY_BUFFER_BINDING',
+  'GL_IMPLEMENTATION_COLOR_READ_TYPE', 'GL_IMPLEMENTATION_COLOR_READ_FORMAT',
+  'GL_COMPILE_STATUS', 'GL_INFO_LOG_LENGTH', 'GL_SHADER_SOURCE_LENGTH',
+  'GL_SHADER_COMPILER', 'GL_SHADER_BINARY_FORMATS',
+  'GL_NUM_SHADER_BINARY_FORMATS', 'GL_LOW_FLOAT', 'GL_MEDIUM_FLOAT',
+  'GL_HIGH_FLOAT', 'GL_LOW_INT', 'GL_MEDIUM_INT', 'GL_HIGH_INT',
+  'GL_FRAMEBUFFER', 'GL_RENDERBUFFER', 'GL_RGBA4', 'GL_RGB5_A1', 'GL_RGB565',
+  'GL_DEPTH_COMPONENT16', 'GL_STENCIL_INDEX8', 'GL_RENDERBUFFER_WIDTH',
+  'GL_RENDERBUFFER_HEIGHT', 'GL_RENDERBUFFER_INTERNAL_FORMAT',
+  'GL_RENDERBUFFER_RED_SIZE', 'GL_RENDERBUFFER_GREEN_SIZE',
+  'GL_RENDERBUFFER_BLUE_SIZE', 'GL_RENDERBUFFER_ALPHA_SIZE',
+  'GL_RENDERBUFFER_DEPTH_SIZE', 'GL_RENDERBUFFER_STENCIL_SIZE',
+  'GL_FRAMEBUFFER_ATTACHMENT_OBJECT_TYPE',
+  'GL_FRAMEBUFFER_ATTACHMENT_OBJECT_NAME',
+  'GL_FRAMEBUFFER_ATTACHMENT_TEXTURE_LEVEL',
+  'GL_FRAMEBUFFER_ATTACHMENT_TEXTURE_CUBE_MAP_FACE', 'GL_COLOR_ATTACHMENT0',
+  'GL_DEPTH_ATTACHMENT', 'GL_STENCIL_ATTACHMENT', 'GL_NONE',
+  'GL_FRAMEBUFFER_COMPLETE', 'GL_FRAMEBUFFER_INCOMPLETE_ATTACHMENT',
+  'GL_FRAMEBUFFER_INCOMPLETE_MISSING_ATTACHMENT',
+  'GL_FRAMEBUFFER_INCOMPLETE_DIMENSIONS', 'GL_FRAMEBUFFER_UNSUPPORTED',
+  'GL_FRAMEBUFFER_BINDING', 'GL_RENDERBUFFER_BINDING',
+  'GL_MAX_RENDERBUFFER_SIZE', 'GL_INVALID_FRAMEBUFFER_OPERATION', 'GLchar',
+  'GLenum', 'GLboolean', 'GLbitfield', 'GLbyte', 'GLshort', 'GLint', 'GLint64',
+  'GLsizei', 'GLubyte', 'GLushort', 'GLuint', 'GLfloat', 'GLclampf', 'GLfixed',
+  'GLintptr', 'GLsizeiptr', 'GLclampx', 'void', 'GLvoid', 'GLsync',
+  'GLeglImageOES', 'GLDEBUGPROCKHR', 'GLuint64'
 ]
+
