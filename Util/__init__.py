@@ -5,17 +5,18 @@ Utilities Module
 This module contains most of the commonly required and most
 used components that are not a part of OpenGLES, GLKit or EAGL.
 """
+
 import ctypes
-from objc_util import *
+#from objc_util import *
 import math
 
-#from GLES.gles1 import *
+from GLES.gles1 import *
 #from OpenGLES.GLES.gles2 import *
 #from OpenGLES.GLES.gles3 import *
 #from OpenGLES.GLES.headers.GLConstants import *
 # import euclid
 
-from OpenGLES.GLKit.glkmath import vector3 as v3
+from GLKit.glkmath import vector3 as v3
 #from OpenGLES.GLKit.glkmath import matrix4 as m4
 
 __all__ = [

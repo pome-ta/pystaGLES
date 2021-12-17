@@ -58,14 +58,14 @@ __all__ = ['GLKEffectPropertyLight', 'GLKLightingType']
 
 if __name__ == '__main__':
     l = GLKEffectPropertyLight()
-    print dir(l._light)
-    print l.position
+    print (dir(l._light))
+    print (l.position)
     l.position = GLKVector4(x=10, y=10, z=10, w=1)
-    print l.position
+    print (l.position)
     t = l.transform
-    print t
+    print (t)
     tmv = GLKMatrix4()
     tmv.m[:] = [1,1,1,1, 0,0,0,0, 1,1,1,1, 0,0,0,0]
     t.modelviewMatrix = tmv
-    print t.modelviewMatrix
-    print t
+    print (t.modelviewMatrix)
+    print (t)

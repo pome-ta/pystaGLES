@@ -1,18 +1,18 @@
 # coding: utf-8
 import ui
 import ctypes
-import weakref
-from objc_util import *
+#import weakref
+#from objc_util import *
 
-from effect import *
-from view import *
-from glkmath import *
-from fog import *
-from light import *
-from texture import *
-from material import *
+from . import effect
+from .view import *
+from .glkmath import *
+from .fog import *
+from .light import *
+from .texture import *
+from .material import *
 
-ObjCClass("NSBundle").bundleWithPath_("/System/Library/Frameworks/GLKit.framework").load()
+#ObjCClass("NSBundle").bundleWithPath_("/System/Library/Frameworks/GLKit.framework").load()
 
 __all__ = ["GLKView", "GLKViewDelegate", "setRenderEngine", "getRenderEngine"]
 
