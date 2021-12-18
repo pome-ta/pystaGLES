@@ -4,11 +4,12 @@ from objc_util import *
 import glkmath as GLKMath
 
 
+
 class GLKEffectPropertyMaterial:
   def __init__(self, c_mat=None):
     if c_mat is None:
       self._mat = ObjCClass('GLKEffectPropertyMaterial').alloc().init()
-      print dir(self._mat)
+      print(dir(self._mat))
     else:
       self._mat = c_mat
 

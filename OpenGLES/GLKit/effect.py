@@ -4,9 +4,9 @@ from objc_util import *
 from OpenGLES.GLES.headers.GLConstants import GLboolean
 from OpenGLES.GLES.gles1 import GL_TRUE, GL_FALSE
 
-import light
+import OpenGLES.GLKit.light
 #from . import light
-import material
+import OpenGLES.GLKit.material
 import texture
 import glkmath as GLKMath
 from glkmath import *

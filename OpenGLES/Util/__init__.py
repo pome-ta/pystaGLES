@@ -16,7 +16,7 @@ from OpenGLES.GLES.gles1 import *
 #from OpenGLES.GLES.headers.GLConstants import *
 # import euclid
 
-from .glkmath import vector3 as v3
+from OpenGLES.GLKit.glkmath import vector3 as v3
 #from OpenGLES.GLKit.glkmath import matrix4 as m4
 
 __all__ = [

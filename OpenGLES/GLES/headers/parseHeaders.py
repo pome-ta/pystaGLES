@@ -76,6 +76,11 @@ def build_constants_file():
     f.write("GLsync = None\n")
     f.write("GLeglImageOES = void\n")
     f.write("GLDEBUGPROCKHR = void\n")
+    # add
+    f.write("GLeglClientBufferEXT = void\n")
+    f.write("GLint64EXT = ctypes.c_uint64\n")
+    f.write("GLuint64EXT = ctypes.c_uint64\n")
+    f.write("GLdouble = ctypes.c_double\n")
 
 
 def build_gl_header_file():

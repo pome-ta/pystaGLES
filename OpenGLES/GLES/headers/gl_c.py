@@ -2,7 +2,7 @@
 # Generated on: 12/17/21 09:04:38
 import ctypes
 from objc_util import c
-from GLConstants import *
+from .GLConstants import *
 
 DEBUG = 0
 loaded = [0, 0]

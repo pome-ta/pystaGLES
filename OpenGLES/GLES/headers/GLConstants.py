@@ -23,3 +23,7 @@ GLvoid = ctypes.c_void_p
 GLsync = None
 GLeglImageOES = void
 GLDEBUGPROCKHR = void
+GLeglClientBufferEXT = void
+GLint64EXT = ctypes.c_uint64
+GLuint64EXT = ctypes.c_uint64
+GLdouble = ctypes.c_double

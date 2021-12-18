@@ -1,9 +1,9 @@
 # coding: utf-8
 import ctypes
-from objc_util import *
-from glkmath import *
+from objc_util import parse_struct, ObjCClass
+from OpenGLES.GLKit.glkmath import *
 import OpenGLES.GLES.gles1 as ES
-import transform
+import OpenGLES.GLKit.transform
 
 
 PropLight = ObjCClass('GLKEffectPropertyLight')

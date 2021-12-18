@@ -5,7 +5,7 @@ import weakref
 #from objc_util import *
 
 #from . import effect
-from effect import *
+from .effect import *
 from view import *
 from glkmath import *
 from fog import *
