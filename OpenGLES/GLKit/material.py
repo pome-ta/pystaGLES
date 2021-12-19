@@ -1,6 +1,6 @@
 # coding: utf-8
 import ctypes
-from objc_util import *
+from objc_util import ObjCClass
 import glkmath as GLKMath
 
 

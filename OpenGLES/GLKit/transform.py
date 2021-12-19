@@ -1,10 +1,10 @@
 # coding: utf-8
 import ctypes
-from objc_util import *
+from objc_util import ObjCClass
 
-from OpenGLES.GLKit.glkmath.vector4 import *
-#from OpenGLES.GLKit.glkmath.matrix4 import *
-#from OpenGLES.GLKit.glkmath.matrix3 import *
+from glkmath.vector4 import *
+from glkmath.matrix4 import *
+from glkmath.matrix3 import *
 
 PropTans = ObjCClass('GLKEffectPropertyTransform')
 
@@ -185,4 +185,3 @@ if __name__ == '__main__':
   # print t.projectionMatrixLoc
   # print t.projectionMatrix
   # print t.vshSource
-

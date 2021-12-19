@@ -1,4 +1,5 @@
 import ctypes
+
 GLchar = ctypes.c_char
 GLenum = ctypes.c_uint32
 GLboolean = ctypes.c_uint8

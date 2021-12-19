@@ -7036,7 +7036,7 @@ except AttributeError as e:
     print(e)
 
 print('Loaded %i functions and failed to load %i functions of %i functions in the header gl31.h' % (
-loaded[0], loaded[1], sum(loaded)))
+  loaded[0], loaded[1], sum(loaded)))
 
 __all__ = ['glActiveTexture', 'glAttachShader', 'glBindAttribLocation', 'glBindBuffer', 'glBindFramebuffer',
            'glBindRenderbuffer', 'glBindTexture', 'glBlendColor', 'glBlendEquation', 'glBlendEquationSeparate',

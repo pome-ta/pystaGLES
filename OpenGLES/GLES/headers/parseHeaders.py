@@ -25,7 +25,7 @@ def download_header_files(force_download=False):
       os.path.join(os.getcwd(), headers[0])) or force_download:
     if VERBOSITY >= 0:
       print("Downloading headers...")
-    #import urllib2
+    # import urllib2
     import urllib.request, urllib.error
     for header in headers:
       if '2' in header:
@@ -118,7 +118,7 @@ def build_gl_header_file():
           try:
             agn = [
               x.replace("const ", "").replace(" *", "").replace("*", "")
-              .split(" ")[-1] for x in values
+                .split(" ")[-1] for x in values
             ]
           except IndexError as e:
             if VERBOSITY >= 2:
@@ -171,17 +171,17 @@ def build_gl_header_file():
     f = c.{funcname}
     del f
     '''
-          func = func.format(* [], **{
+          func = func.format(*[], **{
             'funcname':
-            name,
+              name,
             'return_type':
-            return_type,
+              return_type,
             'argument_types':
-            ', '.join(['%s_t' % x for x in agn]),
+              ', '.join(['%s_t' % x for x in agn]),
             'arg_names':
-            ', '.join(agn),
+              ', '.join(agn),
             'arg_names1':
-            ', '.join(agn2),
+              ', '.join(agn2),
           })
           func = func.replace("'", "")
           functions.append(func)
@@ -232,7 +232,7 @@ def build_gl_header_file():
       ])
       f.write("__all__ = %s" % str(all_obj))
     # xxx: `.h` が消せない😇
-    #exec(header.replace(".h", "_c.py"), {}, {})
+    # exec(header.replace(".h", "_c.py"), {}, {})
     if VERBOSITY >= 0:
       print("Finished parsing header %s" % header)
 

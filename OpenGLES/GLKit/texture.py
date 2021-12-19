@@ -1,6 +1,6 @@
 # coding: utf-8
 import ctypes
-from objc_util import *
+from objc_util import ObjCClass
 from glkmath import *
 import OpenGLES.GLES.gles1 as ES
 import OpenGLES.GLES.gles1 as ES2
@@ -147,7 +147,7 @@ class GLKTextureInfo(object):
 
 
 def GLKTextureLoaderCallback(_texinfo, _error):
-  print _texinfo, _error
+  print(_texinfo, _error)
 
 
 class CBlock(ObjCBlock):

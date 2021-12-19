@@ -4,9 +4,8 @@ from objc_util import *
 from OpenGLES.GLES.headers.GLConstants import GLboolean
 from OpenGLES.GLES.gles1 import GL_TRUE, GL_FALSE
 
-import OpenGLES.GLKit.light
-#from . import light
-import OpenGLES.GLKit.material
+import light
+import material
 import texture
 import glkmath as GLKMath
 from glkmath import *
@@ -262,4 +261,3 @@ if __name__ == "__main__":
   print(s)
   print(s.center)
   print(s.xSize)
-

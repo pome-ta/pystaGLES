@@ -51,7 +51,7 @@ def glkView_drawInRect_(_self, _cmd, _view, _rect):
 def glkViewControllerUpdate_(_self, _cmd, _controller):
   controller = ObjCInstance(_controller)
   getRenderEngine().update(controller.timeSinceLastUpdate())
-  #renderEngine.fps = controller.frameInterval()
+  # renderEngine.fps = controller.frameInterval()
   getRenderEngine().fps = controller.framesPerSecond()
   getRenderEngine().framesDisplayed = controller.framesDisplayed()
 
@@ -209,7 +209,7 @@ class TouchController(ui.View):
     d4 = ''
     if m[1] != 0:
       d3 = 'Moving %s' % ('forward' if m[1] > 0 else 'backward'
-                          if m[1] < 0 else '')
+      if m[1] < 0 else '')
     if m[0] != 0:
       d4 = 'Strafe %s' % ('left' if m[0] > 0 else 'right' if m[0] < 0 else '')
     self.label2.text = '%s\n%s' % (d3, d4)
@@ -340,4 +340,3 @@ class GLKView(ui.View):
 if __name__ == '__main__':
   getRenderEngine()
   print(GLKView)
-
