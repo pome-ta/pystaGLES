@@ -538,14 +538,14 @@ def GLKMatrix4RotateZ(matrix, radians):
 def GLKMatrix4MultiplyVector3(matrixLeft, vectorRight):
   v4 = GLKMatrix4MultiplyVector4(
     matrixLeft,
-    GLKVector4Make(vectorRight.v[0], vectorRight.v[1], vectorRight.v[2], 0.0))
+    vector4.GLKVector4Make(vectorRight.v[0], vectorRight.v[1], vectorRight.v[2], 0.0))
   return vector3.GLKVector3Make(v4.v[0], v4.v[1], v4.v[2])
 
 
 def GLKMatrix4MultiplyVector3WithTranslation(matrixLeft, vectorRight):
   v4 = GLKMatrix4MultiplyVector4(
     matrixLeft,
-    GLKVector4Make(vectorRight.v[0], vectorRight.v[1], vectorRight.v[2], 1.0))
+    vector4.GLKVector4Make(vectorRight.v[0], vectorRight.v[1], vectorRight.v[2], 1.0))
   return vector3.GLKVector3Make(v4.v[0], v4.v[1], v4.v[2])
 
 

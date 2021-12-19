@@ -1,7 +1,9 @@
 # coding: utf-8
-from objc_util import ObjCClass, on_main_thread, create_objc_class
+from objc_util import ObjCClass, on_main_thread, create_objc_class, ObjCInstance
 import motion
 import ui
+
+from OpenGLES.EAGL import EAGLContext
 
 renderEngine = None  # RenderCycle()
 

@@ -1,6 +1,7 @@
 # coding: utf-8
 import ctypes
-from objc_util import ObjCClass
+import os
+from objc_util import ObjCClass, ObjCBlock, ObjCInstance, nsurl, type_encodings, ns
 from glkmath import *
 import OpenGLES.GLES.gles1 as ES
 import OpenGLES.GLES.gles1 as ES2
@@ -244,7 +245,7 @@ def loadTexture(pathOrURL, tex_pos=None):
   ES.glGenerateMipmapOES(ES.GL_TEXTURE_2D)
 
   ES.glTexImage2D(ES.GL_TEXTURE_2D, 0, ES.GL_RGBA, width, height, 0,
-                  ES.GL_RGBA, ES.GL_UNSIGNED_BYTE, byref(pt))
+                  ES.GL_RGBA, ES.GL_UNSIGNED_BYTE, ctypes.byref(pt))
   del pt
   return tex_id
 

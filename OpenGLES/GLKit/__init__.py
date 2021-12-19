@@ -3,8 +3,9 @@
 import ui
 import ctypes
 import weakref
-from objc_util import *
+# from objc_util import *
 
+from OpenGLES.GLKit.view import GLKViewDelegate, setRenderEngine, getRenderEngine
 from effect import *
 from view import *
 from glkmath import *
@@ -18,7 +19,7 @@ from material import *
 __all__ = ["GLKView", "GLKViewDelegate", "setRenderEngine", "getRenderEngine"]
 
 if __name__ == "__main__":
-  from view import *
+  from OpenGLES.GLKit.view import GKLViewController,GLKViewControllerDelegate, TouchController
 
   v = GLKView(frame=(0, 0, 800, 600))
   d = GLKViewDelegate()

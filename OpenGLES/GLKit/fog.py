@@ -1,6 +1,8 @@
 # coding: utf-8
-from objc_util import *
-from glkmath import *
+from objc_util import ObjCClass
+
+from OpenGLES.GLKit import setGLKVector4, getGLKVector4
+# from glkmath import *
 import OpenGLES.GLES.gles1 as ES
 
 

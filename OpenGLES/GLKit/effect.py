@@ -1,13 +1,16 @@
 # coding: utf-8
 import ctypes
-from objc_util import *
+from objc_util import ObjCClass
 from OpenGLES.GLES.headers.GLConstants import GLboolean
 from OpenGLES.GLES.gles1 import GL_TRUE, GL_FALSE
 
 import light
 import material
 import texture
-import glkmath as GLKMath
+# import glkmath as GLKMath
+from OpenGLES.GLKit.glkmath.matrix3 import GLKMatrix3
+from OpenGLES.GLKit.glkmath.vector3 import setGLKVector3, getGLKVector3, GLKVector3
+from OpenGLES.GLKit.glkmath.vector4 import setGLKVector4, getGLKVector4, GLKVector4
 from glkmath import *
 import transform
 from transform import *
@@ -164,10 +167,10 @@ class GLKReflectionMapEffect(GLKBaseEffect):
   textureCubeMap = property(getTextureCubeMap, setTextureCubeMap)
 
   def setMatrix(self, mat):
-    self._effect.setMatrix_(mat, argtypes=[GLKMath.GLKMatrix3], restype=None)
+    self._effect.setMatrix_(mat, argtypes=[GLKMatrix3], restype=None)
 
   def getMatrix(self):
-    return self._effect.matrix(argtypes=[], restype=GLKMath.GLKMatrix3)
+    return self._effect.matrix(argtypes=[], restype=GLKMatrix3)
 
   matrix = property(getMatrix, setMatrix)
 
