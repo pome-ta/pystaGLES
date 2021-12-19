@@ -2,9 +2,9 @@
 import ui
 import ctypes
 import weakref
-#from objc_util import *
+# from objc_util import *
 
-#from . import effect
+# from . import effect
 from .effect import *
 from view import *
 from glkmath import *
@@ -13,20 +13,21 @@ from light import *
 from texture import *
 from material import *
 
-#ObjCClass("NSBundle").bundleWithPath_("/System/Library/Frameworks/GLKit.framework").load()
+# ObjCClass("NSBundle").bundleWithPath_("/System/Library/Frameworks/GLKit.framework").load()
 
 __all__ = ["GLKView", "GLKViewDelegate", "setRenderEngine", "getRenderEngine"]
 
 if __name__ == "__main__":
-    from view import *
-    v = GLKView(frame=(0,0,800,600))
-    d = GLKViewDelegate()
-    vc = GKLViewController("GLKit Demo", v)
-    vcd = GLKViewControllerDelegate()
-    vc.delegate = vcd
-    t = TouchController()
-    t.present(debug=True)
-    # print v
-    # print d
-    # print vc
-    # print vcd
+  from view import *
+
+  v = GLKView(frame=(0, 0, 800, 600))
+  d = GLKViewDelegate()
+  vc = GKLViewController("GLKit Demo", v)
+  vcd = GLKViewControllerDelegate()
+  vc.delegate = vcd
+  t = TouchController()
+  t.present(debug=True)
+  # print v
+  # print d
+  # print vc
+  # print vcd

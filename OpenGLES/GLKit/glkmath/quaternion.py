@@ -1,7 +1,7 @@
 # coding: utf-8
 import math
 import ctypes
-# from objc_util import *
+from objc_util import c
 import vector3
 import vector4
 import matrix3

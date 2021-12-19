@@ -5,8 +5,7 @@ import vector3
 import matrix2
 import quaternion
 
-
-# from objc_util import *
+from objc_util import c
 
 
 class m9(ctypes.Structure):

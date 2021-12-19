@@ -90,44 +90,20 @@ def GLKMatrix4MakeWithArrayAndTranspose(values):
 
 def GLKMatrix4MakeWithRows(row0, row1, row2, row3):
   array = [
-    row0.x,
-    row1.x,
-    row2.x,
-    row3.x,
-    row0.y,
-    row1.y,
-    row2.y,
-    row3.y,
-    row0.z,
-    row1.z,
-    row2.z,
-    row3.z,
-    row0.w,
-    row1.w,
-    row2.w,
-    row3.w,
+    row0.x, row1.x, row2.x, row3.x,
+    row0.y, row1.y, row2.y, row3.y,
+    row0.z, row1.z, row2.z, row3.z,
+    row0.w, row1.w, row2.w, row3.w,
   ]
   return GLKMatrix4MakeWithArray(array)
 
 
 def GLKMatrix4MakeWithColumns(col0, col1, col2, col3):
   array = [
-    col0.x,
-    col0.y,
-    col0.z,
-    col0.w,
-    col1.x,
-    col1.y,
-    col1.z,
-    col1.w,
-    col2.x,
-    col2.y,
-    col2.z,
-    col2.w,
-    col3.x,
-    col3.y,
-    col3.z,
-    col3.w,
+    col0.x, col0.y, col0.z, col0.w,
+    col1.x, col1.y, col1.z, col1.w,
+    col2.x, col2.y, col2.z, col2.w,
+    col3.x, col3.y, col3.z, col3.w,
   ]
   return GLKMatrix4MakeWithArray(array)
 
@@ -191,7 +167,6 @@ def GLKMatrix4MakeRotation(radians, x, y, z):
 def GLKMatrix4MakeXRotation(radians):
   cos = math.cos(radians)
   sin = math.sin(radians)
-
   array = [
     1.0, 0.0, 0.0, 0.0,
     0.0, cos, sin, 0.0,
@@ -639,6 +614,14 @@ def GLKMatrix4Invert(matrix):
   func.argtypes = [GLKMatrix4]
   func.restype = GLKMatrix4
   return func(matrix)
+
+
+#
+# def GLKMatrix4Transpose(matrix):
+#   func = c.GLKMatrix4Transpose
+#   func.argtypes = [GLKMatrix4]
+#   func.restype = GLKMatrix4
+#   return func(matrix)
 
 
 __all__ = [
