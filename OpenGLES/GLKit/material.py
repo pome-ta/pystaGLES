@@ -1,7 +1,8 @@
 # coding: utf-8
 import ctypes
 from objc_util import ObjCClass
-import glkmath as GLKMath
+#import OpenGLES.GLKit.glkmath as GLKMath
+from OpenGLES.GLKit.glkmath.vector4 import setGLKVector4, getGLKVector4
 
 
 
@@ -17,34 +18,34 @@ class GLKEffectPropertyMaterial:
     return str(self._mat.description())
 
   def setAmbientColor(self, color):
-    return GLKMath.setGLKVector4(self._mat.setAmbientColor_, color)
+    return setGLKVector4(self._mat.setAmbientColor_, color)
 
   def getAmbientColor(self):
-    return GLKMath.getGLKVector4(self._mat.ambientColor)
+    return getGLKVector4(self._mat.ambientColor)
 
   ambientColor = property(getAmbientColor, setAmbientColor)
 
   def setDiffuseColor(self, color):
-    return GLKMath.setGLKVector4(self._mat.setDiffuseColor_, color)
+    return setGLKVector4(self._mat.setDiffuseColor_, color)
 
   def getDiffuseColor(self):
-    return GLKMath.getGLKVector4(self._mat.diffuseColor)
+    return getGLKVector4(self._mat.diffuseColor)
 
   diffuseColor = property(getDiffuseColor, setDiffuseColor)
 
   def setEmissiveColor(self, color):
-    return GLKMath.setGLKVector4(self._mat.setEmissiveColor_, color)
+    return setGLKVector4(self._mat.setEmissiveColor_, color)
 
   def getEmissiveColor(self):
-    return GLKMath.getGLKVector4(self._mat.emissiveColor)
+    return getGLKVector4(self._mat.emissiveColor)
 
   emissiveColor = property(getEmissiveColor, setEmissiveColor)
 
   def setSpecularColor(self, color):
-    return GLKMath.setGLKVector4(self._mat.setSpecularColor_, color)
+    return setGLKVector4(self._mat.setSpecularColor_, color)
 
   def getSpecularColor(self):
-    return GLKMath.getGLKVector4(self._mat.specularColor)
+    return getGLKVector4(self._mat.specularColor)
 
   specularColor = property(getSpecularColor, setSpecularColor)
 
@@ -53,7 +54,7 @@ __all__ = ['GLKEffectPropertyMaterial']
 
 if __name__ == '__main__':
   m = GLKEffectPropertyMaterial()
-  m.ambientColor = GLKMath.GLKVector4(r=0.0, g=1.0, b=0.5, a=0.2)
+  m.ambientColor = GLKVector4(r=0.0, g=1.0, b=0.5, a=0.2)
   print('ambientColor', m.ambientColor)
   print('diffuseColor', m.diffuseColor)
   print('emissiveColor', m.emissiveColor)

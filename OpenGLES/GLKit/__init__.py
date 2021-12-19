@@ -5,14 +5,15 @@ import ctypes
 import weakref
 # from objc_util import *
 
-from OpenGLES.GLKit.view import GLKViewDelegate, setRenderEngine, getRenderEngine
-from effect import *
-from view import *
-from glkmath import *
-from fog import *
-from light import *
-from texture import *
-from material import *
+from OpenGLES.GLKit.view import GLKViewDelegate, setRenderEngine, getRenderEngine, GLKView
+from OpenGLES.GLKit.effect import *
+#from view import *
+from OpenGLES.GLKit.glkmath import *
+from OpenGLES.GLKit.fog import *
+from OpenGLES.GLKit.light import *
+from OpenGLES.GLKit.texture import *
+from OpenGLES.GLKit.material import *
+
 
 # ObjCClass("NSBundle").bundleWithPath_("/System/Library/Frameworks/GLKit.framework").load()
 

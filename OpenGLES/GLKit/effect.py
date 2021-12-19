@@ -4,16 +4,16 @@ from objc_util import ObjCClass
 from OpenGLES.GLES.headers.GLConstants import GLboolean
 from OpenGLES.GLES.gles1 import GL_TRUE, GL_FALSE
 
-import light
-import material
-import texture
+import OpenGLES.GLKit.light
+import OpenGLES.GLKit.material
+import OpenGLES.GLKit.texture
 # import glkmath as GLKMath
 from OpenGLES.GLKit.glkmath.matrix3 import GLKMatrix3
 from OpenGLES.GLKit.glkmath.vector3 import setGLKVector3, getGLKVector3, GLKVector3
 from OpenGLES.GLKit.glkmath.vector4 import setGLKVector4, getGLKVector4, GLKVector4
-from glkmath import *
-import transform
-from transform import *
+#from glkmath import *
+#import OpenGLES.GLKit.transform
+from OpenGLES.GLKit.transform import *
 
 
 class GLKBaseEffect(object):

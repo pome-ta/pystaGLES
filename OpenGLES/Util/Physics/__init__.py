@@ -12,8 +12,10 @@ import ui
 import time
 import json
 import dialogs
-import urllib2
-import urlparse
+#import urllib2
+import urllib.request, urllib.error
+#import urlparse
+import urllib.parse
 import threading
 import objc_util
 
@@ -35,7 +37,7 @@ def get_library(lib_name, url_path=None):
   """
   lib_file = os.path.join(LIB_DIR, lib_name)
   if os.path.exists(lib_file):
-    with open(lib_file, 'rb') as f:
+    with open(lib_file, 'r') as f:
       data = f.read()
   else:
     if url_path:
@@ -44,7 +46,7 @@ def get_library(lib_name, url_path=None):
       # opener = urllib2.build_opener(proxy_handler)
       # urllib2.install_opener(opener)
       print("Could not find: '%s'.\nDownloading it from %s" % (lib_name, url_path))
-      f = urllib2.urlopen(url_path)
+      f = urllib.request.urlopen(url_path)
       data = f.read()
       with open(lib_file, "wb") as r:
         r.write(data)
@@ -89,7 +91,7 @@ class CannonJS(object):
     if not 'python' in url:
       return True
     else:
-      t = urlparse.parse_qs(url.replace("python://method?", ""))
+      t = urllib.parse.parse_qs(url.replace("python://method?", ""))
       try:
         s = time.clock()
         func = getattr(self, t['name'][0])

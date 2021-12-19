@@ -2,9 +2,10 @@
 import math
 import ctypes
 from objc_util import c
-import vector3
-import vector4
-import matrix3
+from OpenGLES.GLKit.glkmath import vector3
+#import OpenGLES.GLKit.glkmath.vector3
+import OpenGLES.GLKit.glkmath.vector4
+import OpenGLES.GLKit.glkmath.matrix3
 
 
 class vectScale(ctypes.Structure):

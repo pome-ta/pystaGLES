@@ -1,10 +1,11 @@
 # coding: utf-8
 import math
 import ctypes
-import vector3
-import vector4
-import matrix2
-import quaternion
+import OpenGLES.GLKit.glkmath.vector3
+from OpenGLES.GLKit.glkmath import vector4
+#import OpenGLES.GLKit.glkmath.vector4
+import OpenGLES.GLKit.glkmath.matrix2
+import OpenGLES.GLKit.glkmath.quaternion
 from objc_util import c
 
 

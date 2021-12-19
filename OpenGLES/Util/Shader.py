@@ -7,7 +7,7 @@ import ctypes
 from OpenGLES.GLES import gles2
 from OpenGLES.GLES.gles2 import *
 
-reload(gles2)
+#reload(gles2)
 
 
 class ShaderSource(object):
@@ -31,7 +31,7 @@ class ShaderSource(object):
         compiled (bool): Is the shadersource compiled or not
         shader_id (int): the id of this shader
     """
-    if isinstance(source, file):
+    if isinstance(source, bytes):  # file
       print("Source is of File type")
       with open(source, "rb") as f:
         self.source = f.read()

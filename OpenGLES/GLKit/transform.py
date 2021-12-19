@@ -2,9 +2,9 @@
 import ctypes
 from objc_util import ObjCClass
 
-from glkmath.vector4 import *
-from glkmath.matrix4 import *
-from glkmath.matrix3 import *
+from OpenGLES.GLKit.glkmath.vector4 import *
+from OpenGLES.GLKit.glkmath.matrix4 import *
+from OpenGLES.GLKit.glkmath.matrix3 import *
 
 PropTans = ObjCClass('GLKEffectPropertyTransform')
 

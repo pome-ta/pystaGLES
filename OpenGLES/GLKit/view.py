@@ -1,5 +1,5 @@
 # coding: utf-8
-from objc_util import ObjCClass, on_main_thread, create_objc_class, ObjCInstance
+from objc_util import ObjCClass, on_main_thread, create_objc_class, ObjCInstance, CGRect, CGPoint, CGSize
 import motion
 import ui
 

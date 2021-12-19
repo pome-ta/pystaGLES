@@ -2,7 +2,7 @@
 import ctypes
 import os
 from objc_util import ObjCClass, ObjCBlock, ObjCInstance, nsurl, type_encodings, ns
-from glkmath import *
+#from glkmath import *
 import OpenGLES.GLES.gles1 as ES
 import OpenGLES.GLES.gles1 as ES2
 import OpenGLES.GLES.gles3 as ES3
