@@ -9,6 +9,7 @@ import matrix2
 import vector3
 import vector4
 import quaternion
+from OpenGLES.GLKit.glkmath import vector2
 
 
 def GLKMathDegreesToRadians(degrees):
