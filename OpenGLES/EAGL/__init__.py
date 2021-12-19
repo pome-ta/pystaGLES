@@ -2,7 +2,7 @@
 import ctypes
 from objc_util import ObjCClass
 import ui
-import RenderingAPI
+import OpenGLES.EAGL.RenderingAPI
 
 '''
 ObjCClass("NSBundle").bundleWithPath_(
