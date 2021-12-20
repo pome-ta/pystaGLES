@@ -1,9 +1,8 @@
 # coding: utf-8
 import ctypes
 from objc_util import ObjCClass
-#import OpenGLES.GLKit.glkmath as GLKMath
+# import OpenGLES.GLKit.glkmath as GLKMath
 from OpenGLES.GLKit.glkmath.vector4 import setGLKVector4, getGLKVector4
-
 
 
 class GLKEffectPropertyMaterial:
@@ -59,4 +58,3 @@ if __name__ == '__main__':
   print('diffuseColor', m.diffuseColor)
   print('emissiveColor', m.emissiveColor)
   print('specularColor', m.specularColor)
-

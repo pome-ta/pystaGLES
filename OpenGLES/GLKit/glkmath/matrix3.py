@@ -1,11 +1,13 @@
 # coding: utf-8
 import math
 import ctypes
-import OpenGLES.GLKit.glkmath.vector3
-import OpenGLES.GLKit.glkmath.matrix2
-import OpenGLES.GLKit.glkmath.quaternion
+# import OpenGLES.GLKit.glkmath.vector3
+# import OpenGLES.GLKit.glkmath.matrix2
+# import OpenGLES.GLKit.glkmath.quaternion
 
 from objc_util import c
+
+from OpenGLES.GLKit.glkmath import vector3, matrix2, quaternion
 
 
 class m9(ctypes.Structure):

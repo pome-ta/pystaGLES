@@ -7,7 +7,8 @@ import ctypes
 from OpenGLES.GLES import gles2
 from OpenGLES.GLES.gles2 import *
 
-#reload(gles2)
+
+# reload(gles2)
 
 
 class ShaderSource(object):

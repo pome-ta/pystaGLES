@@ -3,9 +3,9 @@
 import ctypes
 from objc_util import ObjCClass, parse_struct
 
-#from OpenGLES.GLKit import GLKVector4
+# from OpenGLES.GLKit import GLKVector4
 from OpenGLES.GLKit.glkmath.matrix4 import GLKMatrix4
-#from glkmath import *
+# from glkmath import *
 import OpenGLES.GLES.gles1 as ES
 import OpenGLES.GLKit.transform
 

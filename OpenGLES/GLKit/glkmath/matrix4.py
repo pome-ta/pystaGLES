@@ -1,12 +1,13 @@
 # coding: utf-8
 import math
 import ctypes
-import OpenGLES.GLKit.glkmath.vector3
-from OpenGLES.GLKit.glkmath import vector4
-#import OpenGLES.GLKit.glkmath.vector4
-import OpenGLES.GLKit.glkmath.matrix2
-import OpenGLES.GLKit.glkmath.quaternion
+# import OpenGLES.GLKit.glkmath.vector3
+# import OpenGLES.GLKit.glkmath.vector4
+# import OpenGLES.GLKit.glkmath.matrix2
+# import OpenGLES.GLKit.glkmath.quaternion
 from objc_util import c
+
+from OpenGLES.GLKit.glkmath import vector4, vector3, quaternion
 
 
 class float16(ctypes.Structure):

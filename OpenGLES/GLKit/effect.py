@@ -11,8 +11,8 @@ import OpenGLES.GLKit.texture
 from OpenGLES.GLKit.glkmath.matrix3 import GLKMatrix3
 from OpenGLES.GLKit.glkmath.vector3 import setGLKVector3, getGLKVector3, GLKVector3
 from OpenGLES.GLKit.glkmath.vector4 import setGLKVector4, getGLKVector4, GLKVector4
-#from glkmath import *
-#import OpenGLES.GLKit.transform
+# from glkmath import *
+# import OpenGLES.GLKit.transform
 from OpenGLES.GLKit.transform import *
 
 

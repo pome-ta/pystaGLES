@@ -12,9 +12,9 @@ import ui
 import time
 import json
 import dialogs
-#import urllib2
+# import urllib2
 import urllib.request, urllib.error
-#import urlparse
+# import urlparse
 import urllib.parse
 import threading
 import objc_util

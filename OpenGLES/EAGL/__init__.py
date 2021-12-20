@@ -4,7 +4,6 @@ from objc_util import ObjCClass
 import ui
 import OpenGLES.EAGL.RenderingAPI
 
-
 '''
 ObjCClass("NSBundle").bundleWithPath_(
   "/System/Library/Frameworks/OpenGLES.framework").load()
@@ -91,4 +90,3 @@ if __name__ == '__main__':
   setCurrentContext(c._context)
   setCurrentContext(None)
   print(currentContext())
-

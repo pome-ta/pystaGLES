@@ -1,7 +1,7 @@
 # Generated Files. DO NOT EDIT
 # Generated on: 12/17/21 09:04:39
 import ctypes
-#from objc_util import *
+# from objc_util import *
 from GLConstants import *
 
 DEBUG = 0
@@ -20,4 +20,3 @@ __all__ = [
   'GLfixed', 'GLintptr', 'GLsizeiptr', 'GLclampx', 'void', 'GLvoid', 'GLsync',
   'GLeglImageOES', 'GLDEBUGPROCKHR', 'GLuint64'
 ]
-

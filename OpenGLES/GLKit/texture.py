@@ -2,7 +2,7 @@
 import ctypes
 import os
 from objc_util import ObjCClass, ObjCBlock, ObjCInstance, nsurl, type_encodings, ns
-#from glkmath import *
+# from glkmath import *
 import OpenGLES.GLES.gles1 as ES
 import OpenGLES.GLES.gles1 as ES2
 import OpenGLES.GLES.gles3 as ES3
@@ -273,9 +273,11 @@ if __name__ == '__main__':
     func.restype = ctypes.c_void_p
     return ObjCInstance(func(name, parent))
 
+
   textureloader = ObjCClass('GLKTextureLoader')
   print(dir(textureloader.alloc()))
   queue = dispatch_queue_create('test_queue', None)
+
 
   def callback_func(_self, _info, _error):
     if _error is not None:
@@ -284,6 +286,7 @@ if __name__ == '__main__':
     else:
       print(ObjCInstance(_info))
 
+
   callback = ObjCBlock(callback_func, None,
                        [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p])
   textureloader.alloc(
@@ -291,8 +294,10 @@ if __name__ == '__main__':
     nsurl(os.path.abspath('test.png')), DEFAULTS, queue, callback)
 
   import sys
+
   sys.exit(0)
   from OpenGLES.EAGL import setCurrentContext, EAGLContext
+
   c = EAGLContext()
   c.label = 'Test Context'
   setCurrentContext(c)
@@ -312,6 +317,7 @@ if __name__ == '__main__':
   print(ti.containsMipmaps)
 
   from ui import Image as image
+
   i = image.named('test:Lenna')
   d = i.to_png()
   with open('test.png', 'wb') as f:
@@ -334,4 +340,3 @@ if __name__ == '__main__':
   # useTexture(loadTexture('http://i.imgur.com/hCrSRTN.png'), s)
   # tl.textureFromFile('test.png')
   # tl.textureFromURL('http://i.imgur.com/hCrSRTN.png')
-
