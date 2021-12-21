@@ -6,8 +6,6 @@ import ui
 from OpenGLES.EAGL import EAGLContext
 
 
-import pdbg
-
 renderEngine = None  # RenderCycle()
 
 
