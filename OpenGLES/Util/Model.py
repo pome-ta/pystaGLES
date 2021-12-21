@@ -20,7 +20,7 @@ import ctypes
 import time
 import os
 import xmltodict
-from objc_util import *
+#from objc_util import *
 
 __all__ = ["XMLModel", "PhysicsObject", "setPhysicsWorld"]
 

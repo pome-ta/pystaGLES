@@ -5,6 +5,9 @@ import ui
 
 from OpenGLES.EAGL import EAGLContext
 
+
+import pdbg
+
 renderEngine = None  # RenderCycle()
 
 
@@ -298,23 +301,30 @@ class GLKView(ui.View):
     self.glview.setEnableSetNeedsDisplay_(False)
     self.tc = TouchController(frame=(0, 0, 400, 400))
 
+  @on_main_thread
   def present(self, *args, **kwargs):
     ui.View.present(self, *args, **kwargs)
     self_objc = ObjCInstance(self)
+    
     if self.vc:
+      
+      #pdbg.state(self_objc.nextResponder())
       self_objc.nextResponder().addChildViewController_(self.vc)
+      
       self_objc.addSubview_(self.glview)
       frame = CGRect(CGPoint(0, 0), CGSize(self.width, self.height))
       self.glview.setFrame_(frame)
     else:
       raise RuntimeError("GLKViewController property ('vc') must not be None")
 
+    
     self.add_subview(self.tc)
     self.tc.width = self.width
     self.tc.height = self.height
     self.tc.multitouch_enabled = True
     self.tc.present()
     self.tc.bring_to_front()
+    
 
   def will_close(self):
     ui.cancel_delays()

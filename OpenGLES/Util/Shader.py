@@ -3,6 +3,8 @@
 OpenGLES.Util.Shader.py
 Create and manipulate ShaderPrograms with ShaderSources.
 """
+from io import IOBase
+
 import ctypes
 from OpenGLES.GLES import gles2
 from OpenGLES.GLES.gles2 import *
@@ -32,8 +34,8 @@ class ShaderSource(object):
         compiled (bool): Is the shadersource compiled or not
         shader_id (int): the id of this shader
     """
-    if isinstance(source, bytes):  # file
-      print("Source is of File type")
+    if isinstance(source, IOBase):  # file
+      print("Source is of IOBase type")
       with open(source, "rb") as f:
         self.source = f.read()
     else:
@@ -172,7 +174,9 @@ class ShaderProgram(object):
       print("Shaders Compiled and Attatched")
       # Bind vPosition to attribute 0
       attr = (GLchar * 8)()
-      attr[:] = "position"
+      for n ,c in enumerate('position'):
+        attr[n] = ord(c)
+      
       glBindAttribLocation(
         programObject,
         0,
@@ -241,7 +245,8 @@ class ShaderProgram(object):
     else:
       name_c_p = (GLchar * len(name))
       name_c = name_c_p()
-      name_c[:] = name
+      for n, c in enumerate(name):
+        name_c[n] = ord(c)
       mid = glGetUniformLocation(
         self.programObject,
         name_c,

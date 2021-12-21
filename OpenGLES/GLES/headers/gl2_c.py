@@ -1298,6 +1298,7 @@ try:
     cfunc = c.glDrawArrays
     cfunc.restype = restype
     cfunc.argtypes = argtypes
+    print('++++++',mode, first, count)
     return cfunc(mode, first, count)
 
 
