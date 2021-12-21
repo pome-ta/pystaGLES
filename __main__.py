@@ -95,13 +95,11 @@ class Renderer(Util.RenderCycle):
     for x in range(-10, 10, 4):
       for y in range(10, 14, 4):
         for z in range(-10, 10, 4):
-          o1 = Util.Model.PhysicsObject("test_model.xml",
-                                        v3.GLKVector3Make(x, y, z))
+          o1 = Util.Model.PhysicsObject("test_model.xml", v3.GLKVector3Make(x, y, z))
           self.objects.append(o1)
 
     for _ in range(0, 25):
-      o1 = Util.Model.PhysicsObject("test_model.xml",
-                                    v3.GLKVector3Make(0, 0, 0))
+      o1 = Util.Model.PhysicsObject("test_model.xml", v3.GLKVector3Make(0, 0, 0))
       self.objects.append(o1)
 
     o1 = Util.Model.XMLModel("plane.xml", v3.GLKVector3Make(-20, 0, -20))
@@ -109,14 +107,12 @@ class Renderer(Util.RenderCycle):
     self.objects.append(o1)
 
     self.v = Util.Shader.ShaderSource(VERTEX_SHADER_SOURCE, GL_VERTEX_SHADER)
-    self.f = Util.Shader.ShaderSource(FRAGMENT_SHADER_SOURCE,
-                                      GL_FRAGMENT_SHADER)
+    self.f = Util.Shader.ShaderSource(FRAGMENT_SHADER_SOURCE, GL_FRAGMENT_SHADER)
     self.sp = Util.Shader.ShaderProgram(self.v, self.f)
 
     self.eye = PhysicsCamera(v3.GLKVector3Make(-20, 10, -20), yaw=0, pitch=0)
 
-    self.projection = m4.GLKMatrix4MakePerspective(45.0, 800.0 / 600.0, 0.1,
-                                                   1000.0)
+    self.projection = m4.GLKMatrix4MakePerspective(45.0, 800.0 / 600.0, 0.1, 1000.0)
     self.view = self.eye.view
     self.model = m4.GLKMatrix4Identity()
 
@@ -133,7 +129,7 @@ class Renderer(Util.RenderCycle):
       self.sp.build()
       self.sp.bind()
 
-      # self.texture = texture.loadTexture('test.png', 0)
+      #self.texture = texture.loadTexture('test.png', 0)
 
       print(len(self.objects), " object/s in the world")
       for rObj in self.objects:

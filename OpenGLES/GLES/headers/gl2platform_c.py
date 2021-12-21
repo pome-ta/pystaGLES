@@ -10,9 +10,6 @@ loaded = [0, 0]
 # GLES Constants
 
 # GL Functions
-print(
-  'Loaded %i functions and failed to load %i functions of %i functions in the header gl2platform.h'
-  % (loaded[0], loaded[1], sum(loaded)))
 
 __all__ = [
   'GLchar', 'GLenum', 'GLboolean', 'GLbitfield', 'GLbyte', 'GLshort', 'GLint',
@@ -20,3 +17,7 @@ __all__ = [
   'GLfixed', 'GLintptr', 'GLsizeiptr', 'GLclampx', 'void', 'GLvoid', 'GLsync',
   'GLeglImageOES', 'GLDEBUGPROCKHR', 'GLuint64'
 ]
+
+if __name__ == '__main__':
+  print('Loaded %i functions and failed to load %i functions of %i functions in the header gl2platform.h' % (loaded[0], loaded[1], sum(loaded)))
+

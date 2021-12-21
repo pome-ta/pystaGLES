@@ -6710,9 +6710,6 @@ except AttributeError as e:
     print('could not load the function')
     print(e)
 
-print(
-  'Loaded %i functions and failed to load %i functions of %i functions in the header gl3.h'
-  % (loaded[0], loaded[1], sum(loaded)))
 
 __all__ = [
   'glActiveTexture', 'glAttachShader', 'glBindAttribLocation', 'glBindBuffer',
@@ -7013,3 +7010,7 @@ __all__ = [
   'GLintptr', 'GLsizeiptr', 'GLclampx', 'void', 'GLvoid', 'GLsync',
   'GLeglImageOES', 'GLDEBUGPROCKHR', 'GLuint64'
 ]
+
+if __name__ == '__main__':
+  print('Loaded %i functions and failed to load %i functions of %i functions in the header gl3.h'% (loaded[0], loaded[1], sum(loaded)))
+
