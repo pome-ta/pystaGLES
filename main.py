@@ -28,7 +28,7 @@ PhysicsWorld = OpenGLES.Util.Physics.getPhysicsWorld()
 LightsCameras.setPhysicsWorld(PhysicsWorld)
 Util.Model.setPhysicsWorld(PhysicsWorld)
 
-MAX_DIST = 100
+MAX_DIST = 50
 
 with open("shader.vs", "rb") as f:
   VERTEX_SHADER_SOURCE = f.read()
