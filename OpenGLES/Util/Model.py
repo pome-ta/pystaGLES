@@ -138,7 +138,7 @@ class XMLModel(OpenGLES.Util.RenderObject):
       GLES2.glVertexAttribPointer(0, 3, GLES1.GL_FLOAT, GLES1.GL_FALSE, 0, self.vVertices,
                                   voidpointer_t=(GLES1.GLfloat * self.vSize));
       GLES2.glEnableVertexAttribArray(0);
-      GLES2.glDrawArrays(GLES2.GL_TRIANGLES, 0, self.vSize / 3);
+      GLES2.glDrawArrays(GLES2.GL_TRIANGLES, 0, int(self.vSize / 3));
       # GLES2.glBindBuffer(GLES2.GL_ARRAY_BUFFER, 0)
 
   def update(self, dt):
