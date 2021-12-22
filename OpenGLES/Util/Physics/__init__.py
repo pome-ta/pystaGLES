@@ -32,8 +32,7 @@ def get_library(lib_name, url_path=None):
   Check if a file exist otherwise try to download it
   Args:
       lib_name (str): The name of the library
-      url_path (Optional[str]): If not none and file cannot be
-                                found download it from this location
+      url_path (Optional[str]): If not none and file cannot be found download it from this location
   """
   lib_file = os.path.join(LIB_DIR, lib_name)
   if os.path.exists(lib_file):
@@ -55,8 +54,9 @@ def get_library(lib_name, url_path=None):
       print("Could not find '%s' and could not download it. Assuming it does not exist" % lib_name)
   return data
 
+#https://raw.githubusercontent.com/schteppe/cannon.js/master/build/cannon.min.js
+CANNON = get_library('Cannon.js', 'https://raw.githubusercontent.com/schteppe/cannon.js/master/build/cannon.js')
 
-CANNON = get_library('Cannon.js', 'https://raw.githubusercontent.com/schteppe/cannon.js/master/build/cannon.min.js')
 
 
 class CannonJS(object):
@@ -89,6 +89,7 @@ class CannonJS(object):
         nav_type (str): the type of navigation
     """
     if not 'python' in url:
+      print('url', url)
       return True
     else:
       t = urllib.parse.parse_qs(url.replace("python://method?", ""))
@@ -98,8 +99,9 @@ class CannonJS(object):
         func(*t['param'])
         e = time.clock()
       except AttributeError as e:
-        print(e)
-      print(url, t)
+        print('webview_should_start_load: ', e)
+      # --- log
+      #print(url, t)
       return False
 
   def ios_log(self, msg):
@@ -108,7 +110,7 @@ class CannonJS(object):
     Args:
         msg (str): the message to print
     """
-    print("BULLET-LOG:\t%s" % msg)
+    print('ios_log: ', "BULLET-LOG:\t%s" % msg)
 
   def ios_error(self, msg):
     """
@@ -116,7 +118,7 @@ class CannonJS(object):
     Args:
         msg (str): the message to print
     """
-    print("BULLET-ERROR:\t%s" % msg)
+    print('ios_error: ', "BULLET-ERROR:\t%s" % msg)
 
   def object_pos(self, oid, x, y, z):
     """
@@ -270,7 +272,7 @@ if __name__ == '__main__':
   c.js.present()
   import OpenGLES.Util.Model as Model
 
-  m = Model.XMLModel("../../test_model.xml")
+  m = Model.XMLModel("../../../test_model.xml")
   # oid = c.add_cube(0, 0, 0)
   for x in range(-10, 10, 4):
     for y in range(10, 14, 4):
